@@ -1,0 +1,893 @@
+/* =========================
+# Colors:
+    main font: #3e4444;
+    CFM logo: #3d6ca3 / #e9832e;
+    Nav: link: #003262;
+    Nav: link-hover: #ed4e33;
+    Nav: dropdown-hover: #00a598;
+    Main: link, link-visited: #3d6ca3;
+    Main: link-hover, link-active: #e9832e;
+========================= */
+
+
+/* =========================
+# General
+========================= */
+html,
+body {
+  font-family: Montserrat, "Noto Sans", "Lato", "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3e4444;
+  background-color: #ffffff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  flex: 1; 
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 2.625rem);
+}
+h2 { 
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+}
+h3 { 
+  font-size: clamp(1.17rem, 3.5vw, 1.838rem);
+}
+h4 { 
+  font-size: clamp(1rem, 3vw, 1.575rem);
+}
+h5 { 
+  font-size: clamp(.875rem, 2.5vw, 1.313rem);
+}
+h6 { 
+  font-size: clamp(.875rem, 2vw, 1.05rem);
+}
+p {
+  font-size: clamp(.875rem, 2vw, 1.05rem);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+nav a:link, nav a:visited {
+  color: #003262;
+  text-decoration: none;
+}
+nav a:hover, nav a:active {
+  color: #ed4e33;
+  text-decoration: underline;
+}
+main a:link, main a:visited {
+  color: #3d6ca3;
+  text-decoration: none;
+}
+main a:hover, main a:active {
+  color: #e9832e;
+  text-decoration: underline;
+}
+
+/* =========================
+# Navigation Initial Mobile View
+========================= */
+.navBar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 2vw;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 10px -10px #3e4444;
+  transition: top 0.53s;
+  z-index: 500;
+}
+.navLogo a {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-family: "Bebas Neue";
+  font-variant: small-caps;
+  line-height: 50px;
+}
+.navLogo a:hover {
+  text-decoration: none;
+}
+#cfm {
+  color: #3d6ca3;
+}
+.navToggle {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.icon-bar {
+  display: block;
+  position: absolute;
+  right: 1.5vw;
+  width: 26px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.icon-bar:nth-child(1) {
+  top: 17px;
+  background-color: #ed4e33;
+}
+.icon-bar:nth-child(2) {
+  top: 25px;
+  background-color: #00b0da;
+}
+.icon-bar:nth-child(3) {
+  top: 33px;
+  background-color: #003262;
+}
+
+/* =========================
+# Icon Bar Animation
+========================= */
+.navToggle.active .icon-bar:nth-child(1) {
+  top: 24px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.navToggle.active .icon-bar:nth-child(2) {
+  width: 0;
+}
+.navToggle.active .icon-bar:nth-child(3) {
+  top: 24px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* =========================
+# Navigation Menu Toggle
+========================= */
+.navMenu {
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 0;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(to top right, rgba(255,255,255,.95), rgba(0,165,152,1));
+}
+.navMenu.active {
+  height: 100%;
+}
+.navMenu > ul {
+  margin-top: 10vh;
+  margin-left: 12vw;
+}
+.navList > a {
+  display: block;
+  font-size: clamp(1.17rem, 3.5vw, 1.838rem);
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+  width: 100vw;
+  margin-top: 1.5vh;
+}
+.navDropdown {
+  padding-left: 3vw;
+}
+
+/* =========================
+# Navigation Menu Large Screen View
+========================= */
+@media screen and (min-width: 768px) {
+  .navBar {
+    justify-content: space-between;
+    height: 50px;
+  }
+  .navLogo a {
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+  }
+  .navToggle {
+    display: none;
+  }
+  .navMenu {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    background-image: none;
+    overflow: hidden;
+  }
+  .navMenu > ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  .navList > a {
+    font-size: clamp(1rem, 3vw, 1.575rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 50px;
+    width: auto;
+    padding: 0 2vw;
+    margin-top: 0;
+  }
+  .navList > a:hover {
+    text-decoration: none;
+  }
+  .navList > a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 49px;
+    background-color: rgba(0, 0, 0, 0.15);
+    visibility: hidden;
+    transition: all .8s ease-out;
+  }
+  .navList > a:hover:before {
+    visibility: visible;
+    transform: translateX(-1vw);
+    width: clamp(60px, 20vw, 160px);
+  }
+  #svsd.navList > a:hover:before {
+    width: clamp(200px, 30vw, 250px);
+  }
+  .navDropdown {
+    display: none;
+  }
+  .navList:hover > .navDropdown {
+    display: block;
+    position: fixed;
+    width: clamp(60px, 20vw, 160px);
+    padding-left: 0;
+    z-index: 501;
+    box-shadow: 1px 15px 10px -10px #3e4444;
+    transform: translateX(1vw);
+  }
+  #svsd.navList > .navDropdown {
+    width: clamp(200px, 30vw, 250px);
+  }
+  .navDropdown > li > a {
+    padding: 1vh 1vw; 
+    display: block;
+    line-height: 35px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .navDropdown > li > a:hover {
+    color: #ffffff;
+    background-color: #00a598;
+    text-decoration: none;
+  }
+  .navDropdown > li:last-child > a {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navMenu > ul {
+    margin-right: 5vw;
+  }
+}
+
+/* =========================
+# Banner-Top
+========================= */
+.anchor {
+  display: block;
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.bnrContainer {
+  position: relative;
+  background-size: cover;
+  background-position: 50%;
+  margin-top: 50px;
+  height: 50vh;
+  overflow: hidden;  /* for skrollr */
+}
+#bnrBcg-1 {
+  background-image: url("../images/uc-berkeley-sather-gate.jpg");
+}
+@media screen and (min-width: 768px) {
+  .bnrContainer {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bnrContainer {
+    height: 80vh;
+  }
+}
+.bnrOverlay-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: transparent; 
+  background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.01), rgba(0,0,0,.0001));
+}
+.bnrOverlay-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: transparent;   
+  background-image: linear-gradient(to left, rgba(0,0,0,.7), rgba(0,0,0,.01), rgba(0,0,0,.0001));
+}
+.bnrContent-bl {
+  position: absolute;
+  background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.0001));
+  bottom: 0;
+  width: 100%;
+  padding-left: 5%;
+  text-transform: uppercase;
+}
+.bnrContent-bl h1 {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(30px, 5vw, 40px); 
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.4), 4px 8px 13px rgba(0,0,0,0.1), 4px 18px 23px rgba(0,0,0,0.1);
+  font-weight: 600;
+  padding-bottom: 2%;
+}
+@media screen and (min-width: 768px) {
+  .bnrContent-bl h1 {
+    font-size: clamp(36px, 5vw, 50px); 
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bnrContent-bl h1 {
+    font-size: clamp(55px, 6vw, 60px); 
+  }
+}
+
+/* =========================
+# Flex Container - Half
+========================= */
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: relative;
+}
+.flexContainer.flexMiddle {
+  align-items: center;
+}
+.flexHalf {
+  flex: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+.flexText {
+  padding: 0% 10%;
+}
+.flexImg {
+  width: 100%;
+  height: 50vh;
+  max-height: 300px;
+}
+@media screen and (min-width: 768px) {
+  .flexHalf {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .flexText {
+    padding: 0% 5%;
+  }
+  .flexImg {
+    height: 60vh;
+    max-height: 550px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flexImg {
+    height: 65vh;
+    max-height: 600px;
+  }
+}
+
+/* =========================
+# Quote Container
+========================= */
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.quoteContent {
+  font-size: clamp(28px, 5vw, 35px);
+  font-family: "IM Fell Great Primer";
+}
+.quoteContent:before {
+  content: "\f10d";
+  display: block;
+  font-family: "FontAwesome";
+  color: #ed4e33;
+  font-size: clamp(46px, 8vw, 50px);
+  font-style: normal;
+  font-weight: normal;
+}
+.quoteName {
+  font-size: clamp(15px, 2.5vw, 18px);
+}
+@media screen and (min-width: 768px) {
+  .quoteContent {
+    font-size: clamp(35px, 4.5vw, 38px);
+  }
+  .quoteContent:before {
+    font-size: clamp(50px, 7vw, 55px);
+  }
+  .quoteName {
+    font-size: clamp(18px, 2.5vw, 20px);
+  }
+}
+
+/* =========================
+# Main - Background Image-1
+========================= */
+#mainBcg-1 {
+  background: #00a598 url("../images/students-visiting-Lawrence-Hall-of-Science.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+/* =========================
+# Program Reivew - Header & Footer
+========================= */
+.progHeader h1, .progFooter h1 {
+  color: #b9d3b6;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(28px, 6vw, 35px);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+@media screen and (max-width: 450px) {
+  .progHeader h1, .progFooter h1 {
+    font-size: clamp(20px, 5vw, 25px); 
+  }
+}
+@media screen and (min-width: 768px) {
+  .progHeader h1, .progFooter h1 {
+    font-size: clamp(35px, 6vw, 48px); 
+  }
+}
+@media screen and (min-width: 992px) {
+  .progHeader h1, .progFooter h1 {
+    font-size: clamp(48px, 6.5vw, 60px); 
+  }
+}
+.progHeader h1 {
+  padding: 0 0 0 .5%;
+  transform: translateY(20%);
+}
+.progHeader h1:before {
+  content: "";
+  background-color: #b9d3b6;
+  width: 90%;  
+  height: 2px;
+  display: block;
+}
+.progFooter h1 {
+  text-align: right;
+  padding: 0 .5% 0 0;
+  transform: translateY(-20%);
+}
+.progFooter h1:after {
+  content: "";
+  background-color: #b9d3b6;
+  width: 90%;
+  right: 0;
+  height: 2px;
+  display: block;
+  position: absolute;
+}
+.flexContainer.satherBackground {
+  background-color: #b9d3b6;
+  padding: 5vh 0;
+  margin: 0;
+}
+
+/* =========================
+# Flex Container - Third
+========================= */
+.flexThird {
+  flex: 40%;
+  max-width: 40%;
+  position: relative;
+}
+.satherBackground .flexThird {
+  background-color: #ffffff;
+  margin: 1rem;
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+  .flexThird {
+    flex: 80%;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flexThird {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flexThird {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+.flexThird figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.flexThird:hover figure::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.5));
+}
+.flexThird img {
+  width: 100%;
+  object-fit: cover;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  border-radius: 10px 10px 0 0;
+}
+.flexThird:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+p.learnMore {
+  position: absolute;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: all .3s ease-out;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 3vw;
+  text-align: center;
+  border: 2px solid #ffffff;
+  width: 70%;
+  padding: 1% 5%;
+}
+@media screen and (max-width: 600px) {
+  p.learnMore {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  p.learnMore {
+    font-size: 1.5vw;
+  }
+}
+.flexThird:hover p.learnMore {
+  opacity: 1;
+}
+.figureCaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0% 5%;
+}
+
+/* =========================
+# Main - Banner
+========================= */
+#mainBcg-2 {
+  background-image: url("../images/students-visiting-BAIR-Lab.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 75% 50%;
+}
+@media screen and (min-width: 768px) {
+  #mainBcg-2 {
+    background-position: 100% 50%;
+  }
+}
+.taglineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.taglineContent:before {
+  content: "\f02e";
+  display: block;
+  font-family: "FontAwesome";
+  color: #00b0da;
+  font-size: clamp(46px, 8vw, 50px);
+}
+.taglineContent {
+  font-size: clamp(28px, 5vw, 35px);
+  font-family: "IM Fell Great Primer";
+}
+@media screen and (min-width: 768px) {
+  .taglineContent {
+    font-size: clamp(35px, 4.5vw, 40px);
+  }
+  .taglineContent:before {
+    font-size: clamp(50px, 7vw, 55px);
+  }
+}
+
+/* =========================
+# Main - Video
+========================= */
+.bnrContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bnrOverlay-w-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: transparent;   
+  background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.bnrOverlay-w-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: transparent;   
+  background-image: linear-gradient(to left, rgba(255,255,255,.7), rgba(255,255,255,.01), rgba(255,255,255,.001));
+}
+.bnrOverlay-w-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: transparent; 
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,.001), rgba(255,255,255,0));
+}
+.videoTitle {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+}
+.videoTitle h1 {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(30px, 5vw, 40px); 
+  text-shadow: 4px 4px 5px rgba(0,0,0,0.4), 4px 8px 15px rgba(0,0,0,0.3), 4px 18px 30px rgba(0,0,0,0.2);
+  font-weight: 600;
+  margin: 5% 0 0 5%;
+}
+@media screen and (min-width: 768px) {
+  .videoTitle h1 {
+    font-size: clamp(36px, 5vw, 50px); 
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 992px) {
+  .videoTitle h1 {
+    font-size: clamp(55px, 6vw, 60px); 
+  }
+}
+
+/* =========================
+# Footer
+========================= */
+footer {
+  background-color: #b9d3b6;
+  box-shadow: 0px -15px 10px -10px #3e4444;
+  z-index: 600;
+}
+.flexFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 3vw;
+  margin-bottom: 50px;
+}
+.footerRow {
+  flex: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+.flexFooter .footerRow:last-child {
+  border-bottom: none;
+}
+.coName a {
+  text-decoration: none;
+}
+.coName h3 {
+  line-height: 25px;
+  padding: 0 5px;
+  margin: 0;
+  color: #3d6ca3;
+  font-size: 16px;
+}
+#coName {
+  border: 1px solid #3d6ca3;
+}
+#coSlogan {
+  color: #ffffff;
+  background-color: #3d6ca3;
+  border: 1px solid #3d6ca3;
+}
+.coMedia a {
+  padding-left: 10px;
+}
+.coMedia img {
+  width: 30px;
+  transform: translateY(25%);
+}
+#coAbout.footerRow {
+  justify-content: space-between;
+}
+#coAbout.footerRow a {
+  color: #3d6ca3;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 10px 0 0 0;
+  text-decoration: none;
+}
+#coAbout.footerRow a:last-child {
+  color: #e9832e;
+}
+#coAbout.footerRow a:hover {
+  color: #ed4e33;
+  text-decoration: underline;
+}
+#coContact.footerRow td {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 10px 20px 0 0;
+  text-decoration: none;
+}
+#coContact.footerRow td:nth-child(2) {
+  font-weight: normal;
+}
+#coContact.footerRow a {
+  color: #3d6ca3;
+  text-decoration: none;
+}
+#coContact.footerRow a:hover {
+  color: #ed4e33;
+  text-decoration: underline;
+}
+.footerBox {
+  justify-content: space-evenly;
+}
+.footerBox figure:nth-child(1) {
+  background-color: #00b0da;
+}
+.footerBox figure:nth-child(2) {
+  background-color: #0030CC;
+}
+.footerBox figure:nth-child(3) {
+  background-color: #295E79;
+}
+.footerBox figure:nth-child(4) {
+  background-color: #78a300;
+}
+.footerBox figure:nth-child(5) {
+  background-color: #ffc000;
+}
+.footerBox figure:nth-child(6) {
+  background-color: #ff3300;
+}
+.progBox {
+  flex: 30%;
+  max-width: 30%;
+  text-align: center;
+  line-height: 30px;
+  padding: 2%;
+  margin: 2% 1%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.progBox a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+.progBox a:hover {
+  text-decoration: underline;
+}
+.progBox li a {
+  font-size: 18px;
+  font-weight: normal;
+}
+.copyright {
+  text-align: center;
+  height: 15vh;
+  line-height: 15vh;
+  margin-bottom: 0;
+}
+
+
+
+
+/*.taglineContainer {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.0001));
+}
+p.taglineContent {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(20px, 4vw, 24px);
+  text-shadow: 4px 4px 5px rgba(0,0,0,0.4), 4px 8px 15px rgba(0,0,0,0.3), 4px 18px 30px rgba(0,0,0,0.2);
+  font-weight: 600;
+  margin: 5%;
+}
+@media screen and (min-width: 768px) {
+  p.taglineContent {
+    font-size: clamp(24px, 4vw, 32px); 
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 992px) {
+  p.taglineContent {
+    font-size: clamp(32px, 4vw, 40px); 
+  }
+}*/

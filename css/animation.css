@@ -1,0 +1,24 @@
+.animation-element {
+	opacity: 0;
+	position: relative;
+}
+.animation-element.slide-right {
+  opacity: 0;
+  transition: all .3s ease-out;
+  transform: translate3d(-100px, 0px, 0px);
+}
+.animation-element.slide-right.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.animation-element {
+	opacity: 0;
+	position: relative;
+}
+.animation-element.show {
+  opacity: 0;
+  transition: all .5s ease-out;
+}
+.animation-element.show.in-view {
+  opacity: 1;
+}
