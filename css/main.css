@@ -727,16 +727,21 @@ main a.myBtn {
 /* =========================
 # Video Gallery
 =========================*/ 
-.video-gallery {
+.allGallery {
+  background-color: #eeeeee;
+  margin-top: 50px;
+}
+.videoGallery {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 3% 0;
   max-width: 1000px;
 }
-.video-gallery .gallery-item {
+.videoGallery .galleryItem {
   position: relative;
   overflow: hidden;
   width: 90%;
@@ -747,12 +752,12 @@ main a.myBtn {
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .video-gallery .gallery-item {
-    width: 48%;
-    margin: 10px auto;
+  .videoGallery .galleryItem {
+    width: 45%;
+    max-width: 45%;
   }
 }
-.video-gallery .gallery-item img {
+.videoGallery .galleryItem img {
   position: relative;
   display: block;
   opacity: .7;
@@ -763,44 +768,36 @@ main a.myBtn {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.video-gallery .gallery-item:hover img {
+.videoGallery .galleryItem:hover img {
   opacity: .4;
   transform: scale(1.1);
 }
-.video-gallery .gallery-item .gallery-item-caption {
+.videoGallery .galleryItem .galleryItem-caption {
   padding: 2em;
   color: #fff;
   text-transform: uppercase;
 }
-.video-gallery .gallery-item .gallery-item-caption,
-.video-gallery .gallery-item .gallery-item-caption > a {
+.videoGallery .galleryItem .galleryItem-caption,
+.videoGallery .galleryItem .galleryItem-caption > a {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.video-gallery .gallery-item h2 {
+.videoGallery .galleryItem .galleryItem-caption > a {
+  z-index: 800;
+}
+.videoGallery .galleryItem .galleryItem-caption h2 {
+  position: relative;
   font-size: 1.6rem;
   font-weight: 300;
   overflow: hidden;
   padding: 0.5em 0;
-}
-.video-gallery .gallery-item h2,
-.video-gallery .gallery-item p {
-  position: relative;
   margin: 0;
   z-index: 10;
 }
-.video-gallery .gallery-item p {
-  letter-spacing: 1px;
-  font-size: 68%;
-  padding: 1em 0;
-  opacity: 0;
-  transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(10%, 0, 0);
-}
-.video-gallery .gallery-item h2::after {
+.videoGallery .galleryItem .galleryItem-caption h2::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -811,13 +808,17 @@ main a.myBtn {
   transition: transform 0.3s;
   transform: translate3d(-100%, 0, 0);
 }
-.video-gallery .gallery-item:hover h2::after {
+.videoGallery .galleryItem .galleryItem-caption:hover h2::after {
   transform: translate3d(0, 0, 0);
 }
-.video-gallery .gallery-item:hover p {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.videoGallery .galleryItem .galleryItem-caption i {
+  position: absolute;
+  font-size: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 
 /* =========================
@@ -1002,45 +1003,3 @@ footer {
 
 
 
-
-
-
-.lightboxContain {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2000;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.lightboxContain .indLightbox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 56%;
-  height: 62%;
-}
-
-@media screen and (max-height: 600px) {
-
-.lightboxContain .indLightbox { height: 90%; }
-
-}
-.lightboxContain iframe {
-  border: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.lightboxContain img {
-  float: none;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  margin: 0 auto;
-}
