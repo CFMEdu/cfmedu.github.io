@@ -15,21 +15,21 @@ $(function() {
 // --------------------------------------------------
 // Hide Menu on Desktop View Only Scroll
 // --------------------------------------------------
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  var windowWidth = $(window).width();
-  if (windowWidth > 767) {
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navBar").style.top = "0";
-    } else {
-      document.getElementById("navBar").style.top = "-50px";
-    }
-  } else {
-    document.getElementById("navBar").style.top = "0";
-  }
-  prevScrollpos = currentScrollPos;
-};
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   var windowWidth = $(window).width();
+//   if (windowWidth >= 768) {
+//     if (prevScrollpos > currentScrollPos) {
+//       document.getElementById("navBar").style.top = "0";
+//     } else {
+//       document.getElementById("navBar").style.top = "-50px";
+//     }
+//   } else {
+//     document.getElementById("navBar").style.top = "0";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 // var prevScrollpos = window.pageYOffset;
 // window.onscroll = function() {
@@ -57,15 +57,14 @@ $(function() {
 // --------------------------------------------------
 // External Link Warning
 // --------------------------------------------------
-$("a").filter(function() {
-  return this.hostname && this.hostname !== location.hostname;
-}).click(function(e) {
-  if(!confirm("You are about to proceed to an external website."))
-    {
-      e.preventDefault();
-    };
-});
-
+// $("a").filter(function() {
+//   return this.hostname && this.hostname !== location.hostname;
+// }).click(function(e) {
+//   if(!confirm("You are about to proceed to an external website."))
+//     {
+//       e.preventDefault();
+//     };
+// });
 
 
 
