@@ -9,39 +9,41 @@
   <!-- Vendor -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  
+	<link rel="stylesheet" href="css/vendor/simple-overlay.css">
+
   <!-- Local -->
   <link rel="shortcut icon" href="icon/cfm-favicon-b.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/lines.css">
   <link rel="stylesheet" href="css/animation.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<!-- ====== Header ======  -->
+	<!-- ====== Header/Navigation ======  -->
 	<header>
-		<!-- ====== Navigation ======  -->
-		<nav class="navBar" id="navBar" >
+		<nav class="navBar" id="navBar">
+			
 			<div class="navLogo">
-				<p><a href="">
-						<span id="cfm">CFM</span>
-					</a>
-				</p>
+				<a href="#">CFM</a>
 			</div>
+			
 			<div class="navToggle">
-				<span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
+				<span class="iconBar"></span>
+		    <span class="iconBar"></span>
+		    <span class="iconBar"></span>
 			</div>
+			
 			<div class="navMenu">
 				<ul>
-					<li class="navList"><a href="#about">ABOUT</a>
+					<li class="navList"><a href="#about">About</a>
 						<ul class="navDropdown">
 							<li><a href="#mission">Our Mission</a></li>
 							<li><a href="#">Testimonials</a></li>
 						</ul>
 					</li>
-					<li class="navList"><a href="#ucb">UC BERKELEY</a>
+					<li class="navList"><a href="#ucb">UC Berkeley</a>
 						<ul class="navDropdown">
 							<li><a href="#">ATDP</a></li>
 							<li><a href="#">LSI</a></li>
@@ -50,173 +52,246 @@
 							<li><a href="#">WFCC</a></li>
 						</ul>
 					</li>
-					<li class="navList" id="svsd"><a href="#svsd">SILICON VALLEY SCHOOL DIST.</a>
+					<li class="navList" id="svsd"><a href="#svsd">Silicon Valley School Dist.</a>
 						<ul class="navDropdown">
 							<li><a href="#">Ohlone for Kids (OFK)</a></li>
 						</ul>
 					</li>
-					<li class="navList"><a href="#gallery">CONTACT US</a>
+					<li class="navList"><a href="#gallery">Contact Us</a>
 					</li>
+				
 				</ul>
 			</div>
-		</nav>    <!-- ====== End Navigation ======  -->
-	</header>    <!-- ====== End Header ======  -->
+		
+		</nav> 
+	</header>    <!-- ====== End Header/Navigation ======  -->
 
 
 	<!-- ====== Main Content ======  -->
 	<main>
 
-		<!-- ====== Top Banner ======  -->
+		<!-- ====== Image Banner ======  -->
 		<section>
-			<div class="anchor"></div>
-			<div class="bnrContainer" id="bnrBcg-1" 
-			      data-bottom-top="background-position: 50% 100%" 
-					  data-top-bottom="background-position: 50% 0%">
-				<div class="bnrOverlay-left"></div>
+			<div class="bnrContainer"
+					 id="bnrBcg-satherGate" 
+			     data-bottom-top="background-position: 50% 100%" 
+					 data-top-bottom="background-position: 50% 0%">
 				<div class="bnrOverlay-right"></div>
+				<div class="bnrOverlay-left"></div>
+				<div class="bnrOverlay-bottom"></div>
 				<div class="bnrContent-bl">
-					<h1>Today’s students.<br>
+					<h1 class="montserrat">Today’s students.<br>
 					Tomorrow’s leaders.</h1>
 				</div>
 			</div>
-		</section>		<!-- ====== End of Top Banner ======  -->
+		</section>		<!-- ====== End of Image Banner ======  -->
 		
-		<!-- ====== Quote ======  -->
-		<div class="flexContainer flexMiddle">
-			<div class="flexHalf flexText">
-				<div class="quoteContainer">
-		      <p class="quoteContent">Memories have been made, achievements have been broken. The best two weeks of my life were here at Berkeley! Go Bears!</p>
-		      <p class="quoteName">— Lester (G7), Walex 2019</p>
-		    </div>
-	    </div>
-	    <div class="flexHalf flexImg" id="mainBcg-1">
-	    </div>
-	  </div>		<!-- ====== End of Quote ======  -->
 
 		<!-- ====== Program Introduction ======  -->
 		<section>
-		  <div class="progHeader">
-		  	<h1>Academic Enrichment</h1>
-		  </div>
-			<div class="flexContainer satherBackground">
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/academic-talent-development-program.jpg" alt="Academic Talent Development Program"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">	
-							<h2>ATDP</h2>
-							<p>for students completing grades 8-11</p>
-						</div>
-					</a>
+		  <h2 class="sectionHeader montserrat">Embrace the Power of Education</h2>
+		  <div class="flexContainer satherBcg">
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="atdp">
+							<span>ATDP</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 Grades 9-12
+						</figcaption>
+						<img src="images/academic-talent-development-program.jpg" alt="Academic Talent Development Program"/>
+					</figure>
+					<div class="figureCaption">	
+						<h4><a href="">Academic Talent Development Program</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
 				</div>
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/lawrence-science-internship.jpg" alt="Lawrence Science Internship"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">
-							<h2>LSI</h2>
-							<p>for students completing grades 7-11</p>
-						</div>
-					</a>
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="lsi">
+							<span>LSI</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 Grades 8-11
+						</figcaption>
+						<img src="images/lawrence-science-internship.jpg" alt="Lawrence Science Internship"/>
+					</figure>
+					<div class="figureCaption">
+						<h4><a href="">Lawrence Science Internship</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
 				</div>
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/writing-fundation-for-college-&-career.jpg" alt="Writing Fundation for College & Career"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">
-							<h2>WFCC</h2>
-							<p>for students completing grades 8-12</p>
-						</div>
-					</a>
-				</div>				
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/ohlone-for-kids.jpg" alt="Ohlone for Kids & Teens"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">
-							<h2>OFK</h2>
-							<p>for students completing grades 3-8</p>
-						</div>
-					</a>
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="wfcc">
+							<span>WFCC</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 Grades 9-12
+							</figcaption>
+						<img src="images/writing-fundation-for-college-&-career.jpg" alt="Writing Fundation for College & Career"/>
+					</figure>
+					<div class="figureCaption">
+						<h4><a href="">Writing Fundation for College & Career</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
 				</div>
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/uc-berkeley-summer-sessions.jpg" alt="UC Berkeley Summer Sessions"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">
-							<h2>SSD</h2>
-							<p>for college students</p>
-						</div>
-					</a>
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="ofk">
+							<span>OFK</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 Grades 4-9
+						</figcaption>						
+						<img src="images/ohlone-for-kids.jpg" alt="Ohlone for Kids & Teens"/>
+					</figure>
+					<div class="figureCaption">
+						<h4><a href="">Ohlone for Kids and Teens</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
 				</div>
-				<div class="flexThird">
-					<a href="#">
-						<div>
-							<figure>
-								<img src="images/walex.jpg" alt="WALEX Talent Development Program"/>
-								<p class="learnMore">Learn more</p>
-							</figure>
-						</div>
-						<div class="figureCaption">
-							<h2>WALEX</h2>
-							<p>placeholder</p>
-						</div>
-					</a>
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="ssd">
+							<span>SSD</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 College students
+						</figcaption>						
+						<img src="images/uc-berkeley-summer-sessions.jpg" alt="UC Berkeley Summer Sessions"/>
+					</figure>
+					<div class="figureCaption">
+						<h4><a href="">UC Berkeley Summer Session D</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
+				</div>
+				<div class="flexThird progPreview">
+					<figure>
+						<figcaption class="walex">
+							<span>WALEX</span>
+							<i class="fa fa-caret-right" aria-hidden="true"></i>
+							 Grades 4-9
+						</figcaption>
+						<img src="images/walex.jpg" alt="WALEX Talent Development Program"/>
+					</figure>
+					<div class="figureCaption">
+						<h4><a href="">WALEX Talent Development Program</a></h4>
+						<p>Program description in a sentence</p>
+					  <a href="#" class="myBtn myBtn-learnMore">Learn More</a>
+					</div>
 				</div>
 			</div>
 		</section>		<!-- ====== End of Program Introduction ======  -->
 
+
 		<!-- ====== Banner Between ======  -->
 		<section>
 			<div class="flexContainer flexMiddle">
-		    <div class="flexHalf flexImg" id="mainBcg-2">
+		    <div class="flexHalf flexImg" id="mainBcg-ATDP">
 		    </div>
 				<div class="flexHalf flexText">
-					<div class="taglineContainer">
-			      <p class="taglineContent">Develop your academic talents and pursue a life-changing experience</p>
+					<div class="textContainer">
+			      <span>WHY CFM</span>
+			      <h2 class="montserrat">Developing Your Academic Talents</h2>
+			      <p>Founded in 1991 in the Silicon Valley, CFM has accumulated extensive experience in providing credible international education and reliable student services.</p>
+			      <a href="#">Learn more about CFM >></a>
 			    </div>
 		    </div>
 		  </div>
-			<div class="anchor"></div>
+		</section>   <!-- ====== End of Banner Between ======  -->
+
+
+		<!-- ====== Quote ======  -->
+		<div class="flexContainer flexMiddle">
+			<div class="flexHalf flexText">
+				<div class="quoteContainer">
+		      <p class="quoteContent quotation">Memories have been made, achievements have been broken. The best two weeks of my life were here at Berkeley! Go Bears!</p>
+		      <p class="quoteName">— Lester (G7), Walex 2019</p>
+		      <a href="#">Visit video gallery >></a>
+		    </div>
+	    </div>
+	    <div class="flexHalf flexImg" id="mainBcg-WALEX">
+	    </div>
+	  </div>		<!-- ====== End of Quote ======  -->
+
+
+		<!-- ====== Video Gallery ======  -->
+		<section>
+		  <div class="video-gallery">
+
+		    <div class="gallery-item">
+		      <img src="images/ATDP-counselors.jpg" alt="ATDP counselors" />
+		      <div class="gallery-item-caption">
+				    <a href="https://www.youtube.com/watch?v=K6ZasGlsRf8" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/K6ZasGlsRf8' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
+		        <div>
+		          <h2 class="montserrat">ATDP</h2>
+		          <p>Placeholder placeholder</p>
+		        </div>
+		      </div>
+		    </div>
+
+
+		    <div class="gallery-item ">
+		      <img src="images/LSI-designing-structures-roller-coaster.jpg" alt="LSI Designing Structures Roller Coaster Presentation" />
+		      <div class="gallery-item-caption">
+				    <a href="https://www.youtube.com/watch?v=je1eBRX9hNA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/je1eBRX9hNA' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
+		        <div>
+		          <h2 class="montserrat">LSI</h2>
+		          <p>Placeholder placeholder</p>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="gallery-item">
+		      <img src="images/OFK-visiting-academy-of-sciences.jpg" alt="OFK students visiting Academy of Sciences" />
+		      <div class="gallery-item-caption">
+				    <a href="https://www.youtube.com/watch?v=5hnheViBD60" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/5hnheViBD60' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
+		        <div>
+		          <h2 class="montserrat">OFK</h2>
+		          <p>Placeholder placeholder</p>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="gallery-item">
+		      <img src="images/WALEX-coding-nanosatellites-class.jpg" alt="WALEX Coding Nanosatellites class" />
+		      <div class="gallery-item-caption">
+				    <a href="https://www.youtube.com/watch?v=dSPx_QuFOhQ" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/dSPx_QuFOhQ' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
+		        <div>
+		          <h2 class="montserrat">WALEX</h2>
+		          <p>Placeholder placeholder</p>
+		        </div>
+		      </div>
+		    </div>
+
+		  </div>
+		</section>   <!-- ====== End of Video Gallery ======  -->
+
+
+		<!-- ====== Video Banner ======  -->
+		<section>  
 			<div class="bnrContainer" >
 				<video autoplay muted loop>
 				  <source src="video/sunflower.m4v" type="video/mp4">
 				  Your browser does not support HTML5 video.
 				</video>
-				<div class="bnrOverlay-w-right"></div>
-				<div class="bnrOverlay-w-left"></div>
-				<div class="videoTitle">
-					<h1>All the flowers of tomorrow<br>are in the seeds of taday</h1>
+				<div class="bnrOverlay-right-w"></div>
+				<div class="bnrOverlay-left-w"></div>
+				<div class="videoTitle montserrat">
+					<h2>All the flowers of tomorrow<br>are in the seeds of taday</h2>
 				</div>
 			</div>
-		</section> 		<!-- ====== End of Banner Between ======  -->
+		</section> 		<!-- ====== End of Video Banner ======  -->
 
 
-	</main>   <!-- ====== End Main ======  -->
+	</main>   <!-- ====== End of Main ======  -->
 
+	<!-- ====== Footer ======  -->
 	<footer>
 		<div class="flexContainer">
 			<div class="flexHalf flexFooter">
+				
 				<div class="footerRow">
 				  <div class="coName">
 				  	<a href="#">
@@ -225,14 +300,14 @@
 					  </a>
 				 	</div>
 				  <div class="coMedia">
-					 	<a href="https://www.facebook.com/cfmeducation/"><img src="icon/facebook.png"/></a>
-					 	<a href="https://www.facebook.com/cfm.berkeley.atdp/"><img src="icon/facebook.png"/></a>
-					 	<a href="https://www.instagram.com/berkeley_summer/"><img src="icon/instagram.png"/></a>
-					 	<a href="https://www.youtube.com/user/cfmeducation"><img src="icon/youtube.png"/></a>
-					 	<a href="https://twitter.com/cfmeducation"><img src="icon/twitter.png"/></a>
+					 	<a href="https://www.facebook.com/cfmeducation/"><img src="icon/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.facebook.com/cfm.berkeley.atdp/"><img src="icon/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.instagram.com/berkeley_summer/"><img src="icon/instagram.png" alt="Instagram"/></a>
+					 	<a href="https://www.youtube.com/user/cfmeducation"><img src="icon/youtube.png" alt="YouTube"/></a>
+					 	<a href="https://twitter.com/cfmeducation"><img src="icon/twitter.png" alt="Twitter"/></a>
 				  </div>
 				</div>
-				
+
 				<div id="coAbout" class="footerRow">
 					<a href="#">ABOUT US</a>
 					<a href="#">TESTIMONIALS</a>
@@ -240,22 +315,11 @@
 				</div>
 				
 				<div id="coContact" class="footerRow">
-					<table>
-					  <tr>
-					    <td>Email:</td>
-					    <td><a href="mailto:cfm@cfmedu.com">cfm@cfmedu.com</a></td>
-					  </tr>
-					  <tr>
-					    <td>Phone:</td>
-					    <td><a href="tel:15104400254">+1 (510) 440-0254</a></td>
-					  </tr>
-					  <tr>
-					    <td>Address:</td>
-					    <td>831 San Marco Avenue, Fremont, CA 94539, USA</td>
-					  </tr>
-					</table>
-				</div>
-			</div>
+					<a href="mailto:cfm@cfmedu.com">cfm@cfmedu.com</a>
+					<a href="tel:15104400254">+1 (510) 440-0254</a>
+					<a href="">831 San Marco Avenue, Fremont, CA 94539, USA</a>
+		   	</div>
+		 	</div>
 			
 			<div class="flexHalf flexFooter footerBox">
 				<figure class="progBox">
@@ -308,22 +372,21 @@
 		</div>
 
 
-	</footer>
+	</footer>   <!-- ====== End of Footer ======  -->
 
 
 	<script src="js/main.js"></script>
-	<script src="js/skrollr.min.js"></script>
 	<script src="js/animation.js"></script>
+	<script src="js/vendor/skrollr.min.js"></script>
+	<script src="js/vendor/simple-overlay.js"></script>
+
+	<script>
+		$(".youtube-demo").simpleOverlay({
+		  "insertBy": "embed",
+		  "attribute": "data-youtube"
+		});
+	</script>
 
 
 </body>
 </html>
-
-
-
-
-<!-- 			<div class="flexContainer flexMiddle flexImg" id="mainBcg-2">
-				<div class="taglineContainer">
-			      <p class="taglineContent">Develop your academic talents and pursue a life-changing experience</p>
-		    </div>
-		  </div>	 -->	
