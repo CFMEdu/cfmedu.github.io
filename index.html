@@ -9,7 +9,7 @@
   <!-- Vendor -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" href="css/vendor/simple-overlay.css">
+	<link rel="stylesheet" href="css/vendor/youtube-overlay.css">
 
   <!-- Local -->
   <link rel="shortcut icon" href="icon/cfm-favicon-b.png">
@@ -216,20 +216,21 @@
 
 
 		<!-- ====== Video Gallery ======  -->
-		<section class="allGallery">
+		<section class="galleryContainer">
+		  <h2 class="sectionHeader montserrat">Pursue a Life-Changing Experience</h2>
 		  <div class="videoGallery">
 		    <div class="galleryItem">
-		      <img src="images/ATDP-counselors.jpg" alt="ATDP counselors" />
+		      <img id="atdp-video" src="images/ATDP-counselors.jpg" alt="ATDP counselors" />
 		      <div class="galleryItem-caption">
-				    <a href="https://www.youtube.com/watch?v=K6ZasGlsRf8" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/K6ZasGlsRf8' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
+	<!-- 			    <a href="https://www.youtube.com/watch?v=K6ZasGlsRf8" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/K6ZasGlsRf8' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a> -->
 		        <div>
 		          <h2 class="montserrat">ATDP</h2>
-							<i class="fa fa-youtube-play" aria-hidden="true"></i>	          
+							<i class="fa fa-youtube-play" aria-hidden="true"></i>
 		        </div>
 		      </div>
 		    </div>
-		    <div class="galleryItem ">
-		      <img src="images/LSI-designing-structures-roller-coaster.jpg" alt="LSI Designing Structures Roller Coaster Presentation" />
+		    <div class="galleryItem">
+		      <img id="lsi-video" src="images/LSI-designing-structures-roller-coaster.jpg" alt="LSI Designing Structures Roller Coaster Presentation" />
 		      <div class="galleryItem-caption">
 				    <a href="https://www.youtube.com/watch?v=je1eBRX9hNA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/je1eBRX9hNA' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
 		        <div>
@@ -239,7 +240,7 @@
 		      </div>
 		    </div>
 		    <div class="galleryItem">
-		      <img src="images/OFK-visiting-academy-of-sciences.jpg" alt="OFK students visiting Academy of Sciences" />
+		      <img id="ofk-video" src="images/OFK-visiting-academy-of-sciences.jpg" alt="OFK students visiting Academy of Sciences" />
 		      <div class="galleryItem-caption">
 				    <a href="https://www.youtube.com/watch?v=5hnheViBD60" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/5hnheViBD60' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
 		        <div>
@@ -249,7 +250,7 @@
 		      </div>
 		    </div>
 		    <div class="galleryItem">
-		      <img src="images/WALEX-coding-nanosatellites-class.jpg" alt="WALEX Coding Nanosatellites class" />
+		      <img id="walex-video" src="images/WALEX-coding-nanosatellites-class.jpg" alt="WALEX Coding Nanosatellites class" />
 		      <div class="galleryItem-caption">
 				    <a href="https://www.youtube.com/watch?v=dSPx_QuFOhQ" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/dSPx_QuFOhQ' frameborder='0' allowfullscreen></iframe>" class="youtube-demo"></a>
 		        <div>
@@ -258,7 +259,16 @@
 		        </div>
 		      </div>
 		    </div>
+	  	</div>
+			
+		  <div class="photoGallery">
+			  
+
+				
 		  </div>
+
+
+
 		</section>   <!-- ====== End of Video Gallery ======  -->
 
 
@@ -279,6 +289,9 @@
 
 
 	</main>   <!-- ====== End of Main ======  -->
+
+	<img id="demo" src="images/ATDP-counselors.jpg" />
+
 
 	<!-- ====== Footer ======  -->
 	<footer>
@@ -371,14 +384,23 @@
 	<script src="js/main.js"></script>
 	<script src="js/animation.js"></script>
 	<script src="js/vendor/skrollr.min.js"></script>
-	<script src="js/vendor/simple-overlay.js"></script>
-
+	<script src="js/vendor/youtube-overlay.js"></script>
 	<script>
+		var videoBuild = new YoutubeOverlayModule({
+		    sourceUrl: 'https://www.youtube.com/embed/1Q8fG0TtVAY',
+		    triggerElement: "#demo",
+		    progressCallback: function() {
+		      console.log("Callback Invoked.");
+		    }
+		});
+	</script>
+
+<!-- 	<script>
 		$(".youtube-demo").simpleOverlay({
 		  "insertBy": "embed",
 		  "attribute": "data-youtube"
 		});
-	</script>
+	</script> -->
 
 
 </body>
