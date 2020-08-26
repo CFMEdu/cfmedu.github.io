@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="fresco/dist/css/fresco.css"/>
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 
   <!-- Local -->
   <link rel="shortcut icon" href="icon/cfm-favicon-b.png">
@@ -17,7 +18,6 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/lines.css">
   <link rel="stylesheet" href="css/animation.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -78,9 +78,11 @@
 			     data-bottom-top="background-position: 50% 100%" 
 					 data-top-bottom="background-position: 50% 0%">
 				<div class="bnrOverlay-right"></div>
-				<div class="bnrOverlay-left"></div>
 				<div class="bnrOverlay-bottom"></div>
-				<div class="bnrContent-bl">
+				<div class="bnrOverlay-left"></div>
+				<div class="bnrContent-bl"
+						 data-200-top="opacity: 1"
+             data-top="opacity: 0">
 					<h1 class="montserrat">Today’s students.<br>
 					Tomorrow’s leaders.</h1>
 				</div>
@@ -100,7 +102,7 @@
 							 Grades 9-12
 						</figcaption>
 						<a href="#">
-							<img src="images/academic-talent-development-program.jpg" alt="Academic Talent Development Program"/>
+							<img src="images/academic-talent-development-program.jpg" alt="UC Berkeley ATDP"/>
 						</a>
 					</figure>
 					<div class="figureCaption">	
@@ -117,7 +119,7 @@
 							 Grades 8-11
 						</figcaption>
 						<a href="#">
-							<img src="images/lawrence-science-internship.jpg" alt="Lawrence Science Internship"/>
+							<img src="images/lawrence-science-internship.jpg" alt="UC Berkeley Lawrence Science Internship"/>
 						</a>
 					</figure>
 					<div class="figureCaption">
@@ -134,7 +136,7 @@
 							 Grades 9-12
 							</figcaption>
 						<a href="#">
-							<img src="images/writing-fundation-for-college-&-career.jpg" alt="Writing Fundation for College & Career"/>
+							<img src="images/writing-fundation-for-college-&-career.jpg" alt="UC Berkeley Writing Fundation for College & Career"/>
 						</a>
 					</figure>
 					<div class="figureCaption">
@@ -201,7 +203,7 @@
 		<!-- ====== Banner Between ======  -->
 		<section>
 			<div class="flexContainer flexMiddle">
-		    <div class="flexHalf flexImg" id="mainBcg-ATDP">
+		    <div  id="mainBcg-LSI" class="flexHalf flexImg">
 		    </div>
 				<div class="flexHalf flexText">
 					<div class="textContainer">
@@ -223,7 +225,7 @@
 		      <p class="quoteName">— Lester (G7), Walex 2019</p>
 		    </div>
 	    </div>
-	    <div class="flexHalf flexImg" id="mainBcg-WALEX">
+	    <div id="mainBcg-WALEX" class="flexHalf flexImg">
 	    </div>
 	  </div>		<!-- ====== End of Quote ======  -->
 
