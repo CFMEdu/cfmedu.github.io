@@ -641,6 +641,7 @@ main a.myBtn {
   background-color: #ffffff;
   margin: 1rem;
   box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  overflow: hidden;
 }
 .flexThird.progPreview:hover {
   box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
@@ -655,6 +656,10 @@ main a.myBtn {
 .flexThird img {
   width: 100%;
   object-fit: cover;
+  transition: opacity 0.3s;
+}
+.flexThird:hover img {
+  opacity: .8;
 }
 .figureCaption {
   display: flex;
