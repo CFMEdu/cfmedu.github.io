@@ -499,6 +499,7 @@ main a.myBtn {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  align-content: space-evenly;
   justify-content: space-evenly;
   position: relative;
 }
@@ -522,9 +523,6 @@ main a.myBtn {
   height: 50vh;
   max-height: 300px;
 }
-.flexHalf.alignSelf {
-  align-self: flex-end;
-}
 @media screen and (min-width: 768px) {
   .flexHalf {
     flex: 50%;
@@ -542,6 +540,24 @@ main a.myBtn {
   .flexHalf.flexImg {
     height: 65vh;
     max-height: 600px;
+  }
+}
+.flexHalf.flexOrder-1 {
+  -webkit-order: 2;
+  order: 2;
+}
+.flexHalf.flexOrder-2 {
+  -webkit-order: 1;
+  order: 1;
+}
+@media screen and (min-width: 768px) {
+  .flexHalf.flexOrder-1 {
+    -webkit-order: 1;
+    order: 1;
+  }
+  .flexHalf.flexOrder-2 {
+    -webkit-order: 2;
+    order: 2;
   }
 }
 
