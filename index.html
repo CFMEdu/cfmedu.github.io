@@ -9,7 +9,7 @@
   <!-- Vendor -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" href="css/vendor/simple-overlay.css">
+  <link rel="stylesheet" href="fresco/dist/css/fresco.css"/>
 
   <!-- Local -->
   <link rel="shortcut icon" href="icon/cfm-favicon-b.png">
@@ -20,6 +20,7 @@
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 	<!-- ====== Header/Navigation ======  -->
 	<header>
@@ -222,7 +223,7 @@
 		    <div class="videoGalleryItem">
 		      <img src="images/ATDP-counselors.jpg" alt="ATDP counselors" />
 		      <div class="videoGalleryItem-caption">
-				    <a href="https://www.youtube.com/watch?v=K6ZasGlsRf8" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/K6ZasGlsRf8' frameborder='0' allowfullscreen></iframe>" class="youtube"></a>
+				    <a href="https://www.youtube.com/watch?v=K6ZasGlsRf8" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/K6ZasGlsRf8' frameborder='0' allowfullscreen></iframe>" class="fresco" data-fresco-group="video-gallery"></a>
 		        <div>
 		          <h2 class="montserrat">ATDP</h2>
 							<i class="fa fa-youtube-play" aria-hidden="true"></i>
@@ -232,27 +233,27 @@
 		    <div class="videoGalleryItem">
 		      <img src="images/LSI-designing-structures-roller-coaster.jpg" alt="LSI Designing Structures Roller Coaster Presentation" />
 		      <div class="videoGalleryItem-caption">
-				    <a href="https://www.youtube.com/watch?v=je1eBRX9hNA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/je1eBRX9hNA' frameborder='0' allowfullscreen></iframe>" class="youtube"></a>
+				    <a href="https://www.youtube.com/watch?v=je1eBRX9hNA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/je1eBRX9hNA' frameborder='0' allowfullscreen></iframe>" class="fresco" data-fresco-group="video-gallery"></a>
 		        <div>
 		          <h2 class="montserrat">LSI</h2>
-		          <i class="fa fa-youtube-play" aria-hidden="true"></i>		          
+		          <i class="fa fa-youtube-play" aria-hidden="true"></i>         
 		        </div>
 		      </div>
 		    </div>
 		    <div class="videoGalleryItem">
 		      <img src="images/OFK-visiting-academy-of-sciences.jpg" alt="OFK students visiting Academy of Sciences" />
 		      <div class="videoGalleryItem-caption">
-				    <a href="https://www.youtube.com/watch?v=5hnheViBD60" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/5hnheViBD60' frameborder='0' allowfullscreen></iframe>" class="youtube"></a>
+				    <a href="https://www.youtube.com/watch?v=5hnheViBD60" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/5hnheViBD60' frameborder='0' allowfullscreen></iframe>" class="fresco" data-fresco-group="video-gallery"></a>
 		        <div>
 		          <h2 class="montserrat">OFK</h2>
 		          <i class="fa fa-youtube-play" aria-hidden="true"></i>
 		        </div>
 		      </div>
-		    </div>
+		    </div>		    
 		    <div class="videoGalleryItem">
 		      <img src="images/WALEX-coding-nanosatellites-class.jpg" alt="WALEX Coding Nanosatellites class" />
 		      <div class="videoGalleryItem-caption">
-				    <a href="https://www.youtube.com/watch?v=ACbmoReiecA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/ACbmoReiecA' frameborder='0' allowfullscreen></iframe>" class="youtube"></a>
+				    <a href="https://www.youtube.com/watch?v=ACbmoReiecA" data-youtube="<iframe width='560' height='315' src='https://www.youtube.com/embed/ACbmoReiecA' frameborder='0' allowfullscreen></iframe>" class="fresco" data-fresco-group="video-gallery"></a>
 		        <div>
 		          <h2 class="montserrat">WALEX</h2>
 		          <i class="fa fa-youtube-play" aria-hidden="true"></i>
@@ -403,17 +404,8 @@
 
 	<script src="js/main.js"></script>
 	<script src="js/animation.js"></script>
-	<script src="js/vendor/skrollr.min.js"></script>
-	<script src="js/vendor/simple-overlay.min.js"></script>
-
-	<script>
-		$(".youtube").simpleOverlay({
-		  "insertBy": "embed",
-		  "attribute": "data-youtube"
-		});
-	</script>
-
-
+	<script src="js/skrollr.min.js"></script>
+  <script src="fresco/dist/js/fresco.min.js"></script>
 
 
 </body>
