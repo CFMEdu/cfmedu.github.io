@@ -649,8 +649,8 @@
 }
 .fr-thumbnail .fr-thumbnail-image {
   position: absolute;
-  filter: alpha(opacity=85);
-  opacity: 0.85;
+  filter: alpha(opacity=35);
+  opacity: 0.35;
   max-width: none;
 }
 .fr-thumbnail:hover .fr-thumbnail-image,
@@ -660,8 +660,8 @@
 }
 .fr-thumbnail-active .fr-thumbnail-image,
 .fr-thumbnail-active:hover .fr-thumbnail-image {
-  filter: alpha(opacity=35);
-  opacity: 0.35;
+  filter: alpha(opacity=95);
+  opacity: 0.95;
 }
 .fr-thumbnail-active {
   cursor: default;
