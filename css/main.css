@@ -435,7 +435,7 @@ main a.myBtn {
   background-color: transparent; 
   background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
-.bnrContent-bl {
+.bnrContent-bl {     /*position content at bottom-left*/
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -467,7 +467,7 @@ main a.myBtn {
 .sectionHeader:before, .sectionHeader:after{
   content: "";
   flex: 1 1;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
   margin: auto;
 }
 .sectionHeader:before {
@@ -521,6 +521,9 @@ main a.myBtn {
   width: 100%;
   height: 50vh;
   max-height: 300px;
+}
+.flexHalf.alignSelf {
+  align-self: flex-end;
 }
 @media screen and (min-width: 768px) {
   .flexHalf {
@@ -595,6 +598,11 @@ main a.myBtn {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #fff;      /*lined paper background*/
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
 }
 .quoteContent {
   font-size: clamp(28px, 5vw, 30px);
@@ -637,28 +645,28 @@ main a.myBtn {
 /* =========================
 # Program Preview
 =========================*/
-.flexThird.progPreview {
+.progPreview {
   background-color: #ffffff;
   margin: 1rem;
   box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   overflow: hidden;
 }
-.flexThird.progPreview:hover {
+.progPreview:hover {
   box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
-.flexThird figcaption {
+.progPreview figcaption {
   padding: 1% 0;
 }
-.flexThird span {
+.progPreview span {
   font-weight: 600;
   padding: 0 5%; 
 }
-.flexThird img {
+.progPreview img {
   width: 100%;
   object-fit: cover;
   transition: opacity 0.3s;
 }
-.flexThird:hover img {
+.progPreview:hover img {
   opacity: .8;
 }
 .figureCaption {
@@ -712,14 +720,14 @@ main a.myBtn {
 #bnrBcg-satherGate {
   background-image: url("../images/uc-berkeley-sather-gate.jpg");
 }
-#mainBcg-ATDP {
+#mainBcg-LSI {
   background-image: url("../images/students-visiting-BAIR-Lab.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: 75% 50%;
 }
 @media screen and (min-width: 768px) {
-  #mainBcg-ATDP {
+  #mainBcg-LSI {
     background-position: 100% 50%;
   }
 }
@@ -983,7 +991,11 @@ footer {
 }
 .coMedia img {
   width: 30px;
+  border-radius: 50%;
   transform: translateY(25%);
+}
+.coMedia img:hover {
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.2),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 #coAbout.footerRow, #coContact.footerRow, #searchBar.footerRow {
   align-items: center;
@@ -1053,14 +1065,3 @@ footer {
   line-height: 15vh;
   margin-bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
