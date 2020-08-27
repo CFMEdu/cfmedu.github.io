@@ -755,7 +755,7 @@ main a.myBtn {
 }
 
 /* =========================
-# Video Gallery
+# Gallery
 =========================*/ 
 .galleryContainer {
   background-color: rgba(255,229,51,.7);
@@ -770,7 +770,10 @@ main a.myBtn {
     border-radius: 35% 0 35% 0;
   }
 }
-/* ===== Video Gallery ===== */
+
+/* =========================
+# Video Gallery
+=========================*/ 
 .videoGallery {       
   display: flex;
   flex-wrap: wrap;
@@ -783,10 +786,10 @@ main a.myBtn {
 }
 .videoGalleryItem {
   position: relative;
-  overflow: hidden;
   width: 45%;
   max-width: 45%;
   height: 40vh;
+  overflow: hidden;
   margin: 2%;
   background: #000000;
   cursor: pointer;
@@ -796,7 +799,7 @@ main a.myBtn {
   box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
 @media screen and (max-width: 600px) {
-  .videoGallery .videoGalleryItem {
+  .videoGalleryItem {
     width: 90%;
     max-width: 90%;
   }
@@ -811,27 +814,26 @@ main a.myBtn {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.videoGallery .videoGalleryItem:hover img {
+.videoGalleryItem:hover img {
   opacity: .4;
   transform: scale(1.05);
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption {
+.videoGalleryItem-caption {
   padding: 1.2em;
   color: #fff;
   text-transform: uppercase;
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption,
-.videoGallery .videoGalleryItem .videoGalleryItem-caption > a {
+.videoGalleryItem-caption, .videoGalleryItem-caption > a {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption > a {
+.videoGalleryItem-caption > a {
   z-index: 800;
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption h2 {
+.videoGalleryItem-caption h2 {
   position: relative;
   text-align: left;
   font-size: 1.6rem;
@@ -841,7 +843,7 @@ main a.myBtn {
   margin: 0;
   z-index: 10;
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption h2::after {
+.videoGalleryItem-caption h2::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -852,21 +854,25 @@ main a.myBtn {
   transition: transform 0.3s;
   transform: translate3d(-100%, 0, 0);
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption:hover h2::after {
+.videoGalleryItem-caption:hover h2::after {
   transform: translate3d(0, 0, 0);
 }
-.videoGallery .videoGalleryItem .videoGalleryItem-caption i {
+.videoGalleryItem-caption i {
   position: absolute;
   font-size: 3rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* ===== INstagram Gallery ===== */
+
+/* =========================
+# Photo Gallery
+=========================*/ 
 .photoGallery {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  align-content: space-around;
   justify-content: center;
   position: relative;
   margin: 0 auto;
@@ -884,6 +890,13 @@ main a.myBtn {
   cursor: pointer;
   box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
+@media screen and (min-width: 768px) {
+  .photoGalleryItem {
+    width: 20%;
+    max-width: 20%;
+    height: 30vh;
+  }
+}
 .photoGalleryItem:hover {
   box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
@@ -898,13 +911,6 @@ main a.myBtn {
 }
 .photoGalleryItem.rotate-2 {
   transform: rotate(-2deg);
-}
-@media screen and (min-width: 768px) {
-  .photoGalleryItem {
-    width: 20%;
-    max-width: 20%;
-    height: 30vh;
-  }
 }
 .photoGalleryItem img {
   position: relative;
@@ -921,11 +927,17 @@ main a.myBtn {
 .photoGalleryItem i {
   color: #fff;
   position: absolute;
-  font-size: 2.5rem;
-  top: 40%;
-  left: 50%;
+  font-size: 2rem;
+  top: 15%;
+  left: 15%;
   transform: translate(-50%, -40%);
 }
+@media screen and (min-width: 768px) {
+  .photoGalleryItem i {
+    font-size: 2.5rem;
+  }
+}
+
 /* =========================
 # Video Banner
 =========================*/ 
@@ -935,14 +947,10 @@ main a.myBtn {
   object-fit: cover;
 }
 .videoTitle {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   position: absolute;
   top: 0;
-  right: 0;
   left: 0; 
-  padding: 2% 0 0 5%;   /*add top left padding for text*/;
+  padding: 2% 0 0 5%;   /* add top left padding for text */
 }
 .videoTitle h2 {
   color: #ffffff;
@@ -961,8 +969,12 @@ main a.myBtn {
 # Footer
 ========================= */
 footer {
+  height: auto;
   background-color: #b9d3b6;
   box-shadow: 0px -10px 10px -10px #3e4444;
+}
+footer .flexContainer {
+  border-bottom: 1px solid #aaaaaa;
 }
 .flexFooter {
   display: flex;
@@ -970,7 +982,6 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0 3vw;
-  margin-bottom: 50px;
 }
 .footerRow {
   flex: 100%;
@@ -980,10 +991,12 @@ footer {
   align-items: flex-end;
   justify-content: space-between;
   padding-bottom: 10px;
-  border-bottom: 1px solid #003262;
+  border-bottom: 1px solid #aaaaaa;
 }
-.flexFooter .footerRow:last-child {
-  border-bottom: none;
+@media screen and (min-width: 768px) {
+  .flexFooter .footerRow:last-child {
+    border-bottom: none;
+  }
 }
 .coName a {
   text-decoration: none;
@@ -1053,6 +1066,12 @@ footer {
 }
 .footerBox {
   justify-content: center;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .footerBox {
+    margin-bottom: 0;
+  }
 }
 .progBox {
   flex: 30%;
