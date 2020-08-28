@@ -18,7 +18,7 @@ $(function() {
 $(function() {  
   $(window).scroll(function(){
     var position = $(window).scrollTop();
-    if(position > 100) {
+    if(position > 10) {
       $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .navList, .navDropdown").addClass("fixed");
     } else {
       $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .navList, .navDropdown").removeClass("fixed");
