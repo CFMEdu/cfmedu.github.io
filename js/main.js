@@ -15,7 +15,7 @@ $(function() {
 // --------------------------------------------------
 $(function() {  
   $(window).scroll(function(){
-    var position = $(window).scrollTop();
+    var position = $(this).scrollTop();
     if(position > 10) {
       $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .iconBar, .navList, .navDropdown").addClass("fixed");
     } else {
