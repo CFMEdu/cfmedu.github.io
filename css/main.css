@@ -241,7 +241,6 @@ main a.myBtn {
   background-repeat: no-repeat;
   background-size: 140px 84px;
   background-position: 98% 98%;
-  
   transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
@@ -271,7 +270,7 @@ main a.myBtn {
   }
   .navMenu > ul > li > a {
     color: #ffffff;
-    transition: all .5s ease-out;
+    transition: all .3s ease;
   }
   .navMenu > ul > li > a.fixed {
     color: #003262;
@@ -307,7 +306,7 @@ main a.myBtn {
     line-height: 80px;
     padding: 0 1.5vw;
     margin-top: 0;
-    transition: all .5s ease-out;
+    transition: all .3s ease;
   }
   .navList:hover {
     color: #c4ba81;
