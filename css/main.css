@@ -388,20 +388,27 @@ main a.myBtn {
   background-size: cover;
   background-position: 50%;
   margin-top: 50px;
-  height: 60vh;
+  height: 50vh;
   overflow: hidden;  /* for skrollr */
 }
 #bnrBcg-satherGate.bnrContainer {
+  height: 60vh;
   margin-top: 0px;
 }
 @media screen and (min-width: 768px) {
   .bnrContainer {
+    height: 60vh;
+  }
+  #bnrBcg-satherGate.bnrContainer {
     height: 70vh;
   }
 }
 @media screen and (min-width: 992px) {
   .bnrContainer {
-    height: 90vh;
+    height: 70vh;
+  }
+  #bnrBcg-satherGate.bnrContainer {
+    height: 85vh;
   }
 }
 .bnrOverlay-top {
