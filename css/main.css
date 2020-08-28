@@ -120,24 +120,21 @@ main a.myBtn {
 .navBar {
   display: flex;
   position: fixed;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  top: 0;
   width: 100%;
   height: 80px;
   padding: 0 2vw;
   background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,0));
-  box-shadow: none;
   z-index: 999;
   transition: all .5s ease-out;
 }
 .navBar.fixed {
   height: 50px;
   background: #ffffff;
-  box-shadow: 0px 5px 10px -10px #3e4444;
 }
 .navLogo {
-  z-index: 998;
+  /*z-index: 998;*/
 }
 .navLogo a {
   display: block;
@@ -148,14 +145,23 @@ main a.myBtn {
   height: 50px;
 }
 .navLogo img {
-  height: 65px;
-  padding: 3px;
-  margin: 5px auto;
-  background-image: linear-gradient(to bottom left, rgba(0,0,0,.5), rgba(0,0,0,.7), rgba(0,0,0,.5));
+  height: 70px;
+  padding: 3px 5px;
+  margin: 5px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.8));
+  box-shadow: 3px 3px rgba(238,238,238,.5);
   transition: all .5s ease-out;
 }
+@media screen and (min-width: 768px) {
+  .navLogo img {
+    height: 80px;
+    margin: 10px;
+  }
+}
 .navLogo img.fixed {
-  height: 40px;
+  height: 44px;
+  margin: 3px auto;
+  box-shadow: none;
 }
 
 /* =========================
@@ -180,7 +186,7 @@ main a.myBtn {
   position: absolute;
   right: 1.5vw;
   width: 26px;
-  height: 2px;
+  height: 3px;
   background-color: #ffffff;
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
@@ -189,18 +195,19 @@ main a.myBtn {
 }
 .iconBar:nth-child(1) {
   top: 17px;
-  background-color: #ff3300;
 }
 .iconBar:nth-child(2) {
   top: 25px;
-  background-color: #ffc000;
 }
 .iconBar:nth-child(3) {
   top: 33px;
-  background-color: #00b0da;
+}
+.iconBar.fixed {
+  background-color: #3e4444;
 }
 .navToggle.active .iconBar:nth-child(1) {
   top: 24px;
+  background-color: #3e4444;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -212,6 +219,7 @@ main a.myBtn {
 }
 .navToggle.active .iconBar:nth-child(3) {
   top: 24px;
+  background-color: #3e4444;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -223,37 +231,32 @@ main a.myBtn {
 # Navigation Menu
 =========================*/ 
 .navMenu {
-  align-self: flex-end;
-  display: block;
   position: fixed;
-  height: 0;
+  width: 0;
   top: 0;
   right: 0;
-  left: 0;
+  bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #b9d3b6;
+  background-image: url("../icon/cfm-logo.png");
+  background-repeat: no-repeat;
+  background-size: 140px 84px;
+  background-position: 98% 98%;
+  
   transition: all 0.3s ease-in-out;
-  background-color: rgba(255,255,255,.95);
-  background-image: linear-gradient(to bottom left, rgba(255,255,255,.95), rgba(0,165,152,1));
-}
-.navMenu.active {
-  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .navMenu {
     position: relative;
-    height: auto;
+    width: auto;
     overflow-y: hidden;
     background-color: transparent;
     background-image: none;
   }
-  .navMenu > ul > li > a {
-    color: #ffffff;
-    transition: all .5s ease-out;
-  }
-  .navMenu > ul > li > a.fixed {
-    color: #003262;
-  }
+}
+.navMenu.active {
+  width: 100%;
 }
 .navMenu > ul {
   display: flex;
@@ -268,12 +271,29 @@ main a.myBtn {
     justify-content: space-between;
     margin: 0;
   }
+  .navMenu > ul > li > a {
+    color: #ffffff;
+    transition: all .5s ease-out;
+  }
+  .navMenu > ul > li > a.fixed {
+    color: #003262;
+  }
 }
 .navList {
   display: block;
   position: relative;
   font-size: clamp(1.25rem, 3.5vw, 1.35rem);
   margin-top: 5vh;
+}
+.navList:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(
+    90deg, rgba(238,238,238,1), rgba(238,238,238,0));
+  margin: 1% 0;
 }
 .navList:hover:after, .navDropdown a:hover:after {
   content: "\f0c1";
@@ -283,16 +303,6 @@ main a.myBtn {
   padding: 0 15px;
   transition: all 0.2s ease;
 }
-.navList:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 80%;
-  height: 2px;
-  background-image: linear-gradient(
-    90deg, rgba(238,238,238,1), rgba(238,238,238,0));
-  margin: 1% 0;
-}
 @media screen and (min-width: 768px) {
   .navList {
     font-size: clamp(1.125rem, 2.5vw, 1.25rem);
@@ -301,12 +311,15 @@ main a.myBtn {
     margin-top: 0;
     transition: all .5s ease-out;
   }
+  .navList:hover {
+    color: #c4ba81;
+    text-decoration: none;
+  }
   .navList.fixed {
     line-height: 50px;
   }
-  .navList:hover {
+  .navList.fixed:hover {
     color: #ed4e33;
-    text-decoration: none;
   }
   .navList:before {
     content: "";
@@ -377,7 +390,7 @@ main a.myBtn {
   background-size: cover;
   background-position: 50%;
   margin-top: 50px;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;  /* for skrollr */
 }
 #bnrBcg-satherGate.bnrContainer {
@@ -385,12 +398,12 @@ main a.myBtn {
 }
 @media screen and (min-width: 768px) {
   .bnrContainer {
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media screen and (min-width: 992px) {
   .bnrContainer {
-    height: 80vh;
+    height: 90vh;
   }
 }
 .bnrOverlay-top {
