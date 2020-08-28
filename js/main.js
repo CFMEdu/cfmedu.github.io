@@ -3,12 +3,10 @@
 // --------------------------------------------------
 $(function() {
   $(".navToggle").click(function() {
-    $(".navToggle").toggleClass("active");
-    $(".navMenu").toggleClass("active");
+    $(".navToggle, .navMenu").toggleClass("active");
   })
   $(".navMenu a").click(function() {
-    $(".navToggle").removeClass("active");
-    $(".navMenu").removeClass("active");
+    $(".navToggle, .navMenu").removeClass("active");
   });
 });
 
@@ -19,9 +17,9 @@ $(function() {
   $(window).scroll(function(){
     var position = $(window).scrollTop();
     if(position > 10) {
-      $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .navList, .navDropdown").addClass("fixed");
+      $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .iconBar, .navList, .navDropdown").addClass("fixed");
     } else {
-      $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .navList, .navDropdown").removeClass("fixed");
+      $(".navBar, .navLogo a, .navLogo img, .navMenu > ul > li > a, .iconBar, .navList, .navDropdown").removeClass("fixed");
     }
   });
 });
