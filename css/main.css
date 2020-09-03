@@ -3,7 +3,7 @@
 ========================= */
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  line-height: 1.5;
 }
 body {
   margin: 0;
@@ -56,6 +56,7 @@ h6 {
 p {
   font-size: 1rem;
   font-size: clamp(.875rem, 2vw, 1rem);
+  line-height: 1.75;
 }
 nav a:link, nav a:visited {
   color: #3e4444;
@@ -64,16 +65,20 @@ nav a:link, nav a:visited {
 nav a.selected {
   color: #6a929e;
 }
-nav a:hover, nav a:active, nav a.selected:hover, nav a.selected:active {
+nav a:hover, nav a:active, 
+nav a.selected:hover, 
+nav a.selected:active {
   color: #6a929e;
   text-decoration: underline;
 }
-main a:link, main a:visited {
-  color: #68a16c;
+main a:link,
+main a:visited {
+  color: #0091ae;
   text-decoration: none;
 }
-main a:hover, main a:active {
-  color: #aa9d88;
+main a:hover,
+main a:active {
+  color: #007a8c;
   text-decoration: underline;
 }
 main a.myBtn {
@@ -81,11 +86,6 @@ main a.myBtn {
 }
 ::selection {
   background: #ffe533;
-}
-.padding {
-  display: block;
-  padding-top: 100px;
-  margin-top: -100px;
 }
 .montserrat {
   font-family: "Montserrat", sans-serif;
@@ -115,6 +115,14 @@ main a.myBtn {
 }
 .walex {
   background-color: rgba(255,51,0,.4);
+}
+#cfmSummerUCB {
+  font-weight: 700;
+  background-color: rgba(98,124,131,.2);
+  border-radius: 15px;
+}
+.anchor {
+  margin-top: 50px;
 }
 
 /* =========================
@@ -276,7 +284,8 @@ main a.myBtn {
   margin-top: 5vh;
 }
 @media screen and (min-width: 768px) {
-  .navMenu > ul > li > a:link, .navMenu > ul > li > a:visited {
+  .navMenu > ul > li > a:link, 
+  .navMenu > ul > li > a:visited {
     color: #ffffff;
     font-size: clamp(1.125rem, 2.5vw, 1.25rem);
     line-height: 80px;
@@ -288,10 +297,13 @@ main a.myBtn {
     color: #3e4444;
     line-height: 50px;
   }
+  .navMenu > ul > li > a:hover,
   .navMenu > ul > li > a.selected {
-    color: #6a929e;
+    color: #85b5c4;
+    text-decoration: none;
   }
-  .navMenu > ul > li > a:hover, .navMenu > ul > li > a.shrink:hover {
+  .navMenu > ul > li > a.shrink:hover,
+  .navMenu > ul > li > a.shrink.selected {
     color: #6a929e;
     text-decoration: none;
   }
@@ -336,7 +348,7 @@ main a.myBtn {
     top: 80px;
     width: clamp(60px, 20vw, 160px);
     background: #ffffff;
-    box-shadow: 1px 10px 10px -10px #3e4444;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.2);
     transition: all .5s ease-out;
   }
   .navMenu li:hover > .navDropdown.shrink {
@@ -352,7 +364,8 @@ main a.myBtn {
     padding: 1vh 1.5vw; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .navDropdown a:hover, .navDropdown a.selected:hover {
+  .navDropdown a:hover,
+  .navDropdown a.selected:hover {
     color: #ffffff;
     text-decoration: none;
     background-color: #6a929e;
@@ -360,6 +373,42 @@ main a.myBtn {
   .navDropdown > li:last-child > a {
     border-bottom: none;
   }
+}
+
+/* =========================
+# Sub Navigation
+========================= */
+.subNavigation {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  color: #3e4444;
+  padding: 0 3vw;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px -10px #6a929e;
+}
+.subNavigation.stickyDiv {
+  position: fixed;
+  top: 50px;
+  z-index: 500;
+}
+.subNavigation a {
+  color: #3e4444 !important;
+  display: inline-block;
+  position: relative;
+  line-height: 35px;
+  text-decoration: none;
+  padding: 0 1vw;
+}
+.subNavigation a:hover,
+.subNavigation a.active {
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #6a929e;
 }
 
 /* =========================
@@ -468,12 +517,11 @@ main a.myBtn {
   background-color: transparent; 
   background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
-/*position content at bottom-left*/
 .bnrContent-bl {   
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 0 2% 5%;  /*add bottom left padding for text*/
+  padding: 0 0 2% 5%;  /*add bottom left padding*/
 }
 .bnrContent-bl h1 {
   display: inline-block;
@@ -494,42 +542,6 @@ main a.myBtn {
 }
 
 /* =========================
-# Sub Navigation
-========================= */
-.subNavigation {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: flex-end;
-  color: #3e4444;
-  padding: 0 3vw;
-  border-bottom: 1px solid #eeeeee;
-  background-color: #ffffff;
-  box-shadow: 0px 5px 10px -10px #6a929e;
-}
-.subNavigation.stickyDiv {
-  position: fixed;
-  top: 50px;
-  z-index: 500;
-}
-.subNavigation a {
-  color: #3e4444 !important;
-  display: inline-block;
-  position: relative;
-  font-weight: 500;
-  line-height: 35px;
-  text-decoration: none;
-  padding: 0 1.5vw;
-}
-.subNavigation a:hover, .subNavigation a.active {
-  color: #ffffff !important;
-  text-decoration: none;
-  background-color: #6a929e;
-}
-
-/* =========================
 # Section Header
 ========================= */
 .sectionHeader {
@@ -538,7 +550,8 @@ main a.myBtn {
   font-size: clamp(26px, 5vw, 30px);
   font-weight: 700;
 }
-.sectionHeader:before, .sectionHeader:after{
+.sectionHeader:before,
+.sectionHeader:after {
   content: "";
   flex: 1 1;
   border-bottom: 1px solid #cccccc;
@@ -567,6 +580,15 @@ main a.myBtn {
 }
 
 /* =========================
+# Div Header
+=========================*/
+.divHeader {
+  color: #627c83;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================
 # Flex Container
 =========================*/ 
 .flexContainer {
@@ -589,10 +611,10 @@ main a.myBtn {
   max-width: 100%;
   margin-top: 50px;
 }
-.flexHalf.flexText {
+.flexText {
   padding: 0% 10%;
 }
-.flexHalf.flexImg {
+.flexImg {
   width: 100%;
   height: 50vh;
   max-height: 300px;
@@ -602,34 +624,34 @@ main a.myBtn {
     flex: 50%;
     max-width: 50%;
   }
-  .flexHalf.flexText {
+  .flexText {
     padding: 0% 6%;
   }
-  .flexHalf.flexImg {
+  .flexImg {
     height: 60vh;
     max-height: 550px;
   }
 }
 @media screen and (min-width: 992px) {
-  .flexHalf.flexImg {
+  .flexImg {
     height: 65vh;
     max-height: 600px;
   }
 }
-.flexHalf.flexOrder-1 {
+.flexOrder-1 {
   -webkit-order: 2;
   order: 2;
 }
-.flexHalf.flexOrder-2 {
+.flexOrder-2 {
   -webkit-order: 1;
   order: 1;
 }
 @media screen and (min-width: 768px) {
-  .flexHalf.flexOrder-1 {
+  .flexOrder-1 {
     -webkit-order: 1;
     order: 1;
   }
-  .flexHalf.flexOrder-2 {
+  .flexOrder-2 {
     -webkit-order: 2;
     order: 2;
   }
@@ -650,14 +672,38 @@ main a.myBtn {
 }
 @media screen and (min-width: 992px) {
   .flexThird {
-    flex-basis: 30%;
+    flex: 30%;
     max-width: 30%;
   }
 }
 @media screen and (min-width: 1200px) {
   .flexThird {
-    flex-basis: 25%;
+    flex: 25%;
     max-width: 25%;
+  }
+}
+
+/* =========================
+# Flex 1/3 & 2/3
+=========================*/
+.flexOneThird {
+  flex: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+.flexTwoThird {
+  flex: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .flexOneThird {
+    flex: 30%;
+    max-width: 30%;
+  }
+  .flexTwoThird {
+    flex: 70%;
+    max-width: 70%;
   }
 }
 
@@ -665,33 +711,44 @@ main a.myBtn {
 # Text Container
 =========================*/ 
 .textContainer {
+  margin: 50px auto 0;
+  padding: 1rem 2rem;
+  max-width: 1000px;
+}
+
+
+/* =========================
+# Text Container
+=========================*/ 
+.textWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
-.textContainer h2:after {
+.textWrapper h2:after {
   content: "";
   display: block;
   background-color: #ffa500;
-  height: 5px;
+  height: 6px;
   width: 100px;
   margin: 3% 0;
+  border-radius: 4px;
 }
 
 /* =========================
 #   Quote Container
 =========================*/ 
-.quoteContainer {
+.quoteWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #fff;      /*lined paper background*/
+  background-color: #fff;   /*lined paper background*/
   background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
+  linear-gradient(90deg, transparent 79px, rgba(171,206,212,.5) 79px, rgba(171,206,212,.5) 81px, transparent 81px),
+  linear-gradient(rgba(238,238,238,.9) .1em, transparent .1em);
   background-size: 100% 1.2em;
 }
 .quoteContent {
@@ -754,6 +811,7 @@ main a.myBtn {
 .progPreview img {
   width: 100%;
   object-fit: cover;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 .progPreview:hover img {
@@ -790,7 +848,7 @@ main a.myBtn {
   clip-path: polygon(0 0, 100% 0, 100% 70%, 80% 100%, 0 100%);
 }
 .myBtn-learnMore:hover { 
-  background-color: rgba(237,78,51,1);
+  background-image: linear-gradient(to bottom right, rgba(237,78,51,0), rgba(237,78,51,1));
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
 }
@@ -823,7 +881,7 @@ main a.myBtn {
 }
 #mainBg-WALEX {
   background: #00a598 url("../images/index/bg-walex-visiting-lawrence-hall-of-science.jpg");
-  background-size: coverf;
+  background-size: cover;
   background-position: 50%;
 }
 #bnrBg-about {
@@ -831,7 +889,11 @@ main a.myBtn {
   background-size: cover; 
   background-position: 50% 60%;
 }
-
+#bnrBg-atdp {
+  background-image: url("../images/atdp/bg-atdp.jpg");
+  background-size: cover; 
+  background-position: 50%;
+}
 /* =========================
 # Gallery
 =========================*/ 
@@ -901,7 +963,8 @@ main a.myBtn {
   color: #fff;
   text-transform: uppercase;
 }
-.videoGalleryItem-caption, .videoGalleryItem-caption > a {
+.videoGalleryItem-caption,
+.videoGalleryItem-caption > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -1049,7 +1112,6 @@ main a.myBtn {
 footer {
   height: auto;
   background-color: #b9d3b6;
-  box-shadow: 0px -10px 10px -10px #3e4444;
 }
 footer a {
   text-decoration: none;
@@ -1090,7 +1152,8 @@ footer .flexContainer {
 #coName.footerRow {
   align-items: flex-end;
 }
-.coName a, .coName a:hover {
+.coName a,
+.coName a:hover {
   text-decoration: none;
 }
 .coName h3 {
@@ -1131,9 +1194,9 @@ footer .flexContainer {
   color: #e9832e;
 }
 #coAbout.footerRow a:hover {
-  color: #68a16c;
+  color: #007a8c;
 }
-#coContact.footerRow a {
+#coContact.footerRow ul li, #coContact.footerRow ul li a {
   color: #4c5f66;
   text-decoration: none;
   font-size: 16px;
@@ -1142,7 +1205,8 @@ footer .flexContainer {
   padding: 10px 20px 0 0;
 }
 #coContact.footerRow a:hover {
-  color: #68a16c;
+  color: #007a8c;
+  text-decoration: underline;
 }
 #searchBar.footerRow div {
   flex: 1;
@@ -1170,7 +1234,7 @@ footer .flexContainer {
   padding: 10px;
 }
 .progBox a:hover {
-  color: #68a16c;
+  color: #007a8c;
 }
 .progBox li a {
   font-size: 18px;
@@ -1182,3 +1246,8 @@ footer .flexContainer {
   line-height: 15vh;
   margin-bottom: 0;
 }
+
+
+
+
+
