@@ -82,13 +82,13 @@ $(function() {
 // Toggle Subnavigation Menu Active Class on Scroll
 // --------------------------------------------------
 function onScroll() {
-  var scrollPos = $(document).scrollTop() + $('.navBar').height() + $('.subNavigation').height();
+  var scrollPos = $(document).scrollTop() + $('.subNavigation').height();
 
   $('.subNavigation a').each(function () {
     var currLink = $(this);
     var refElement = $(currLink.attr("href"));
     
-    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+    if (refElement.position().top + -25 <= scrollPos && refElement.position().top + refElement.height() + 25 > scrollPos) {
       $('.subNavigation a').removeClass("active");
       currLink.addClass("active");
     } else {
@@ -96,3 +96,45 @@ function onScroll() {
     }
   });
 };
+
+
+
+// $(function() {
+//   var url = window.location.toString();
+//   var id = url.split("#")[1];
+
+//   $('.anchorLink').click(function() {
+//      ＄(window).location = $(url) + $(id);
+//   });
+// });
+
+
+// --------------------------------------------------
+// Testimonials Slidshow
+// --------------------------------------------------
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("testimonialSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
