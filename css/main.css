@@ -93,6 +93,18 @@ main a.myBtn {
 .IMFellGreatPrimer {
   font-family: "IM Fell Great Primer", sans-serif;
 }
+/*.cutOut {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: auto;
+  padding: 0 5vw;
+  mix-blend-mode: multiply;
+  border: 20px solid #000000;
+}*/
 .satherBg {
   background-color: #b9d3b6;
   padding: 5vh 0;
@@ -118,13 +130,21 @@ main a.myBtn {
 }
 #cfmSummerUCB {
   font-weight: 700;
-  background-color: rgba(98,124,131,.2);
-  border-radius: 15px;
+/*  background-color: rgba(98,124,131,.2);
+  border-radius: 15px;*/
 }
 .anchor {
   margin-top: 50px;
 }
-
+.leftAlign {
+  text-align: left !important;
+}
+.rightAlign {
+  text-align: right !important;
+}
+.centerAlign {
+  text-align: center !important;
+}
 /* =========================
 # Navigation Bar & Logo
 ========================= */
@@ -280,14 +300,14 @@ main a.myBtn {
 .navMenu > ul > li > a {
   display: block;
   position: relative;
-  font-size: clamp(1.25rem, 3.5vw, 1.35rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.25rem);
   margin-top: 5vh;
 }
 @media screen and (min-width: 768px) {
   .navMenu > ul > li > a:link, 
   .navMenu > ul > li > a:visited {
     color: #ffffff;
-    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+    font-size: clamp(1.125rem, 2.3vw, 1.2rem);
     line-height: 80px;
     padding: 0 1.5vw;
     margin-top: 0;
@@ -520,8 +540,16 @@ main a.myBtn {
 .bnrContent-bl {   
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   padding: 0 0 2% 5%;  /*add bottom left padding*/
+}
+.bnrContent-tr {   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2% 5% 0 0;  /*add bottom left padding*/
 }
 .bnrContent-bl h1 {
   display: inline-block;
@@ -584,7 +612,7 @@ main a.myBtn {
 =========================*/
 .divHeader {
   color: #627c83;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -610,6 +638,7 @@ main a.myBtn {
   flex: 100%;
   max-width: 100%;
   margin-top: 50px;
+  position: relative;
 }
 .flexText {
   padding: 0% 10%;
@@ -745,6 +774,8 @@ main a.myBtn {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.quoteWrapper.quotation {
   background-color: #fff;   /*lined paper background*/
   background-image:
   linear-gradient(90deg, transparent 79px, rgba(171,206,212,.5) 79px, rgba(171,206,212,.5) 81px, transparent 81px),
@@ -761,11 +792,11 @@ main a.myBtn {
   font-family: "FontAwesome";
   font-size: clamp(46px, 8vw, 50px);
 }
-.quoteContent.quotation:before {
+.quotation > .quoteContent:before {
   content: "\f10d";   /*Quotation Icon*/
   color: #ed4e33;
 }
-.quoteContent.bookmark:before {
+.bookmark > .quoteContent:before {
   content: "\f02e";   /*Bookmark Icon*/
   color: #00b0da;
 }
@@ -781,11 +812,6 @@ main a.myBtn {
   }
   .quoteName {
     font-size: clamp(16px, 2.5vw, 18px);
-  }
-}
-@media screen and (min-width: 992px) {
-  .quoteContent {
-    font-size: clamp(26px, 3.6vw, 32px);
   }
 }
 
@@ -885,12 +911,17 @@ main a.myBtn {
   background-position: 50%;
 }
 #bnrBg-about {
-  background-image: url("../images/about/bg-about-cfm.jpg");
+  background-image: url("../images/about/bg-cfm.jpg");
   background-size: cover; 
   background-position: 50% 60%;
 }
 #bnrBg-atdp {
   background-image: url("../images/atdp/bg-atdp.jpg");
+  background-size: cover; 
+  background-position: 50%;
+}
+#aboutBg-mission {
+  background-image: url("../images/about/bg-mission.jpg");
   background-size: cover; 
   background-position: 50%;
 }
@@ -1248,6 +1279,198 @@ footer .flexContainer {
 }
 
 
+/* =========================
+# Glass Overlay
+========================= */
+.glassOverlayWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+.glassOverlayWrapper > * {
+  z-index: 3;
+}
+.glassOverlayWrapper,
+.glassOverlayWindow:before {
+  background-size: cover;
+  background-attachment: fixed;
+}
+#mission .glassOverlayWrapper,
+#mission .glassOverlayWindow:before {
+  background-image: url(../images/about/bg-ucb-library.jpg);
+  background-position: 50%;
+}
+.glassOverlayWindow {
+  border-top: 1px solid rgba(0,0,0,.2);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayWindow {
+    border-top: none;
+    border-right: 1px solid rgba(0,0,0,.2);
+  }
+}
+.glassOverlayWindow,
+.glassOverlayWindow:before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayWindow,
+  .glassOverlayWindow:before {
+    width: 50%;
+    height: 60vh;
+  }
+}
+.glassOverlayWindow:before {
+  content: "";
+  display: block;
+  width: 100%;
+  filter: blur(1rem);
+}
+.glassOverlayText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+  color: #161818;
+  text-align: center;
+  padding: 3% 5%;
+  background-image: linear-gradient(to top right, rgba(255,255,255,.9), rgba(255,255,255,.7), transparent);
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayText {
+    width: 50%;
+    height: 60vh;
+  }
+}
+#mission h2 {
+  font-weight: 700;
+}
+
+/* =========================
+# Text Between Lines
+========================= */
+.textBetweenLine {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.textBetweenLine:before, .textBetweenLine:after {
+  content: "";
+  flex: 1;
+  height: 6px;
+  width: 20vw;
+  border-top: 1px solid #161818;
+  border-bottom: 1px solid #161818;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .textBetweenLine:before, .textBetweenLine:after {
+    width: 10vw;
+  }
+}
+.textBetweenLine:before {
+  margin-right: 5%;
+}
+.textBetweenLine:after {
+  margin-left: 5%;
+}
 
 
-
+/* =========================
+# Testimonials
+========================= */
+.slideshowContainer {
+  position: relative;
+}
+.testimonialSlides {
+  display: none;
+  padding: 2vw 5vw; 
+  margin: 30px 12vw 0 12vw;
+  max-width: 1200px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #aaaaaa;
+}
+.whatTheySay:before, .whatTheySay:after {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  color: #007a8c;
+}
+.whatTheySay:before {
+  content: "\f10d";
+  padding-right: 12px;
+}
+.whatTheySay:after {
+  content: "\f10e";
+  padding-left: 12px;
+}
+.author {
+  padding-top: 10px;
+  font-style: italic; 
+}
+.prev, .next {
+  color: #888;
+  font-size: 35px;
+  font-weight: 900;
+  top: 10px;
+  cursor: pointer;
+  position: absolute;
+  padding: 16px;
+  user-select: none;
+}
+.prev {
+  left: 3vw;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 3vw;
+  border-radius: 3px 0 0 3px;
+}
+@media screen and (min-width: 768px) {
+  .prev {
+    left: 5vw;
+  }
+.next {
+    right: 5vw;
+  }
+}
+.prev:hover, .next:hover {
+  color: #ffffff;
+  background-color: #6a929e;
+  text-decoration: none;
+}
+.dotContainer {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
