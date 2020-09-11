@@ -42,9 +42,9 @@ $(window).scroll(function() {
   var windowTop = $(window).scrollTop() + 50; 
   var divTop = $("#checkDiv").offset().top;
   if (windowTop >= divTop) {
-    $(".subNavigation").addClass("stickyDiv");
+    $(".subNavigation, .progressContainer").addClass("stickyDiv");
   } else {
-    $(".subNavigation").removeClass("stickyDiv");
+    $(".subNavigation, .progressContainer").removeClass("stickyDiv");
   }
 });
 
@@ -110,7 +110,7 @@ function onScroll() {
 
 
 // --------------------------------------------------
-// Testimonials Slidshow
+// Testimonials Slideshow
 // --------------------------------------------------
   var slideIndex = 1;
   showSlides(slideIndex);
@@ -138,3 +138,5 @@ function onScroll() {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
   }
+
+
