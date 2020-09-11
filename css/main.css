@@ -431,6 +431,28 @@ main a.myBtn {
   background-color: #6a929e;
 }
 
+
+/* =========================
+# Scroll Indicator
+========================= */
+.progressContainer {
+  width: 100%;
+  height: 10px;
+  background: #eeeeee;
+}
+.progressContainer.stickyDiv {
+  position: fixed;
+  top: 50px;
+  z-index: 500;
+}
+.progressBar {
+  height: 10px;
+  background: #0091ae;
+  width: 0%;
+}
+
+
+
 /* =========================
 # Image Banner 
 ========================= */
@@ -915,6 +937,11 @@ main a.myBtn {
   background-size: cover; 
   background-position: 50% 60%;
 }
+#bnrBg-uc-berkeley {
+  background-image: url("../images/ucberkeley/bg-ucb.jpg");
+  background-size: cover; 
+  background-position: 50% 35%;
+}
 #bnrBg-atdp {
   background-image: url("../images/atdp/bg-atdp.jpg");
   background-size: cover; 
@@ -1345,7 +1372,7 @@ footer .flexContainer {
   left: 0;
   width: 100%;
   height: 25vh;
-  color: #161818;
+  color: #0f2228;
   text-align: center;
   padding: 3% 5%;
   background-image: linear-gradient(to top right, rgba(255,255,255,.9), rgba(255,255,255,.7), transparent);
@@ -1401,19 +1428,19 @@ footer .flexContainer {
 }
 .testimonialSlides {
   display: none;
+  position: relative;
   padding: 2vw 5vw; 
   margin: 30px 12vw 0 12vw;
   max-width: 1200px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #fafafa;
   border-radius: 10px;
   box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
               0 1px 4px rgba(0,0,0,0.07),
-              0 2px 4px rgba(0,0,0,0.07), 
+              0 2px 6px rgba(0,0,0,0.07), 
               0 4px 8px rgba(0,0,0,0.07), 
               0 8px 16px rgba(0,0,0,0.07),
-              0 16px 32px rgba(0,0,0,0.07), 
-              0 32px 64px rgba(0,0,0,0.07);
+              0 16px 32px rgba(0,0,0,0.07);
 }
 .whatTheySay:before, .whatTheySay:after {
   content: "";
@@ -1433,11 +1460,11 @@ footer .flexContainer {
   color: #007a8c;
   font-weight: 600;
   font-style: italic; 
-  padding-top: 10px;
+  padding-top: 1rem;
 }
 .prev, .next {
   color: #888;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 900;
   top: 10px;
   cursor: pointer;
@@ -1446,40 +1473,61 @@ footer .flexContainer {
   user-select: none;
 }
 .prev {
-  left: 3vw;
-  border-radius: 0 3px 3px 0;
+  left: 2vw;
+  border-radius: 10px 0 0 10px;
 }
 .next {
-  right: 3vw;
-  border-radius: 3px 0 0 3px;
+  right: 2vw;
+  border-radius: 0 10px 10px 0;
 }
 @media screen and (min-width: 768px) {
   .prev {
     left: 5vw;
+    font-size: 50px;
   }
 .next {
     right: 5vw;
+    font-size: 50px;
   }
 }
 .prev:hover, .next:hover {
   color: #ffffff;
-  background-color: #6a929e;
+  background-color: rgba(106,146,158,.5);
   text-decoration: none;
 }
 .dotContainer {
   text-align: center;
-  margin: 20px auto 50px;
+  margin: 30px auto 50px;
 }
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #cccccc;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .dot.active, .dot:hover {
   background-color: #717171;
+}
+
+
+
+ul.firstTier li:before {
+  content: "\2022";
+  color: red;
+  font-weight: 900;
+  display: inline-block; 
+  width: 1rem;
+  padding-right: 2%;
+}
+ul.secondTier li:before {
+  content: "\2022";
+  color: green;
+  font-weight: 900;
+  display: inline-block; 
+  width: 1rem;
+  padding-left: 5%;
 }
