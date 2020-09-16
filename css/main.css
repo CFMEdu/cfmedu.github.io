@@ -47,16 +47,22 @@ h4 {
 }
 h5 { 
   font-size: 1.25rem;
-  font-size: clamp(.875rem, 2.5vw, 1.25rem);
+  font-size: clamp(.938rem, 2.5vw, 1.25rem);
 }
 h6 { 
   font-size: 1rem;
-  font-size: clamp(.875rem, 2vw, 1rem);
+  font-size: clamp(.938rem, 2vw, 1rem);
 }
 p {
   font-size: 1rem;
-  font-size: clamp(.875rem, 2vw, 1rem);
+  font-size: clamp(.938rem, 2vw, 1rem);
   line-height: 1.75;
+}
+i {
+  font-style: italic;
+}
+strong {
+  font-weight: 600;
 }
 nav a:link, nav a:visited {
   color: #3e4444;
@@ -93,22 +99,13 @@ main a.myBtn {
 .IMFellGreatPrimer {
   font-family: "IM Fell Great Primer", sans-serif;
 }
-/*.cutOut {
-  background-color: #000000;
-  color: #ffffff;
-  font-weight: 700;
-  position: absolute;
-  top: 5%;
-  right: 0;
-  width: auto;
-  padding: 0 5vw;
-  mix-blend-mode: multiply;
-  border: 20px solid #000000;
-}*/
 .satherBg {
   background-color: #b9d3b6;
   padding: 5vh 0;
   margin: 0;
+}
+.bondiBlue {
+  color: #0091ae;
 }
 .atdp {
   background-color: rgba(0,176,218,.4);
@@ -130,11 +127,6 @@ main a.myBtn {
 }
 #cfmSummerUCB {
   font-weight: 700;
-/*  background-color: rgba(98,124,131,.2);
-  border-radius: 15px;*/
-}
-.anchor {
-  margin-top: 50px;
 }
 .leftAlign {
   text-align: left !important;
@@ -145,6 +137,51 @@ main a.myBtn {
 .centerAlign {
   text-align: center !important;
 }
+ul.firstTier li {
+  line-height: 1.75;
+  margin: .5rem;
+}
+ul.firstTier li:before {
+  content: "\2022";
+  color: red;
+  font-weight: 900;
+  display: inline-block; 
+  width: 1rem;
+  margin-left: -1rem;
+}
+ul.secondTier li:before {
+  content: "\2022";
+  color: green;
+  font-weight: 900;
+  display: inline-block; 
+  width: 1rem;
+  margin-left: 1rem;
+}
+.marginTop {
+  margin-top: 50px;
+}
+.marginBottom {
+  margin-bottom: 50px;
+}
+.marginBottom-50 {
+  margin-bottom: -50px;
+}
+.padding-0-2 {
+  padding: 0 2rem; 
+}
+.padding-2-2 {
+  padding: 2%; 
+}
+.textAlignCenter {
+  text-align: center;
+}
+.iconTitle {
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
 /* =========================
 # Navigation Bar & Logo
 ========================= */
@@ -268,7 +305,7 @@ main a.myBtn {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #ffffff;
-  background-image: url("../icon/cfm-logo.png");
+  background-image: url("../icon/logo/cfm-logo.png");
   background-repeat: no-repeat;
   background-size: 140px 84px;
   background-position: 98% 98%;
@@ -428,9 +465,8 @@ main a.myBtn {
 .subNavigation a.active {
   color: #ffffff !important;
   text-decoration: none;
-  background-color: #6a929e;
+  background-color: #0091ae;
 }
-
 
 /* =========================
 # Scroll Indicator
@@ -451,8 +487,190 @@ main a.myBtn {
   width: 0%;
 }
 
+/* =========================
+# Overlay
+========================= */
+.gradientOverlay-top,
+.gradientOverlay-bottom,
+.gradientOverlay-left,
+.gradientOverlay-right,
+.gradientOverlay-top-w,
+.gradientOverlay-bottom-w,
+.gradientOverlay-left-w,
+.gradientOverlay-right-w {
+  position: absolute;
+}
+.gradientOverlay-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  background-image: linear-gradient(to left, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-top-w {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.001), transparent);
+}
+.gradientOverlay-bottom-w {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background-image: linear-gradient(to top, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
+}
+.gradientOverlay-left-w {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
+}
+.gradientOverlay-right-w {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  background-image: linear-gradient(to left, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
+}
 
+/* =========================
+# Glass Overlay
+========================= */
+.glassOverlayWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+.glassOverlayWrapper > * {
+  z-index: 3;
+}
+.glassOverlayWrapper,
+.glassOverlayWindow:before {
+  background-size: cover;
+  background-attachment: fixed;
+}
+#mission .glassOverlayWrapper,
+#mission .glassOverlayWindow:before {
+  background-image: url(../images/about/bg-ucb-library.jpg);
+  background-position: 50%;
+}
+.glassOverlayWindow {
+  border-top: 1px solid rgba(0,0,0,.2);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayWindow {
+    border-top: none;
+    border-right: 1px solid rgba(0,0,0,.2);
+  }
+}
+.glassOverlayWindow,
+.glassOverlayWindow:before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayWindow,
+  .glassOverlayWindow:before {
+    width: 50%;
+    height: 60vh;
+  }
+}
+.glassOverlayWindow:before {
+  content: "";
+  display: block;
+  width: 100%;
+  filter: blur(1rem);
+}
+.glassOverlayText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+  color: #0f2228;
+  text-align: center;
+  padding: 3% 5%;
+  background-image: linear-gradient(to bottom right, rgba(255,255,255,.9), rgba(255,255,255,.7), transparent);
+}
+@media screen and (min-width: 768px) {
+  .glassOverlayText {
+    width: 50%;
+    height: 60vh;
+  }
+}
+#mission h2 {
+  font-weight: 700;
+}
 
+/* =========================
+# Semi-transparent Overlay
+========================= */
+.semiOverlay-left-w, 
+.semiOverlay-right-w {
+  display: block;
+  position: absolute;
+  width: 90%;
+  top: 5%;
+  bottom: 5%;
+  left: 5%;
+  bottom: 5%;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .semiOverlay-left-w,
+  .semiOverlay-right-w {
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,.9);
+    border-radius: 0;
+  }
+  .semiOverlay-left-w {
+    left: 0;
+    right: auto;
+  }
+  .semiOverlay-right-w {
+    left: auto;
+    right: 0;
+  }
+}
 /* =========================
 # Image Banner 
 ========================= */
@@ -460,16 +678,11 @@ main a.myBtn {
   position: relative;
   background-size: cover;
   background-position: 50%;
-  margin-top: 50px;
   height: 50vh;
   overflow: hidden;  /* for skrollr */
 }
 .mainBnrBg.bnrContainer {
   height: 60vh;
-  margin-top: 0px;
-}
-.topBanner.bnrContainer {
-  margin-top: 0px;
 }
 @media screen and (min-width: 768px) {
   .bnrContainer {
@@ -486,78 +699,6 @@ main a.myBtn {
   .mainBnrBg.bnrContainer {
     height: 85vh;
   }
-}
-.bnrOverlay-top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.bnrOverlay-top-w {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.001), transparent);
-}
-.bnrOverlay-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to left, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.bnrOverlay-right-w {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to left, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
-}
-.bnrOverlay-bottom {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.bnrOverlay-bottom-w {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 30%;
-  background-color: transparent;   
-  background-image: linear-gradient(to top, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
-}
-.bnrOverlay-left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 30%;
-  background-color: transparent; 
-  background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.bnrOverlay-left-w {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 50%;
-  background-color: transparent; 
-  background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
 .bnrContent-bl {   
   position: absolute;
@@ -643,14 +784,29 @@ main a.myBtn {
 =========================*/ 
 .flexContainer {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: space-evenly;
   justify-content: space-evenly;
-  position: relative;
 }
-.flexMiddle {
+.flexColumn {
+  flex-direction: column;
+}
+.alignItemsCenter {
   align-items: center;
+}
+.alignSelfCenter {
+  align-self: center;
+}
+.justifyContentCenter {
+  justify-content: center;
+}
+.justifyContentEnd {
+  justify-content: flex-end;
+}
+.flexIcon {
+  height: 80px;
 }
 
 /* =========================
@@ -659,7 +815,6 @@ main a.myBtn {
 .flexHalf {
   flex: 100%;
   max-width: 100%;
-  margin-top: 50px;
   position: relative;
 }
 .flexText {
@@ -669,6 +824,9 @@ main a.myBtn {
   width: 100%;
   height: 50vh;
   max-height: 300px;
+}
+.marginBottom {
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .flexHalf {
@@ -733,19 +891,38 @@ main a.myBtn {
     max-width: 25%;
   }
 }
+.flex20 {
+  flex: 20%;
+  max-width: 20%;
+}
+.flex50 {
+  flex: 50%;
+  max-width: 50%;
+}
+.flex80 {
+  flex: 80%;
+  max-width: 80%;
+}
+.flex100 {
+  flex: 100%;
+  max-width: 100%;
+  border: 1px solid white; 
+}
 
 /* =========================
-# Flex 1/3 & 2/3
+# Flex 1/3, 2/3, 1/4
 =========================*/
 .flexOneThird {
   flex: 100%;
   max-width: 100%;
-  margin-top: 50px;
 }
 .flexTwoThird {
   flex: 100%;
   max-width: 100%;
-  margin-top: 50px;
+}
+.flexQuarter {
+  flex: 50%;
+  max-width: 50%;
 }
 @media screen and (min-width: 768px) {
   .flexOneThird {
@@ -756,17 +933,29 @@ main a.myBtn {
     flex: 70%;
     max-width: 70%;
   }
+  .flexQuarter {
+    flex: 33%;
+    max-width: 33%;
+  }
 }
+@media screen and (min-width: 992px) {
+  .flexQuarter {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+
+
 
 /* =========================
 # Text Container
 =========================*/ 
 .textContainer {
-  margin: 50px auto 0;
+  margin: 0 auto;
   padding: 1rem 2rem;
   max-width: 1000px;
 }
-
 
 /* =========================
 # Text Container
@@ -911,7 +1100,7 @@ main a.myBtn {
 }
 
 /* =========================
-# Main - Background Image
+# Background Image
 ========================= */
 #bnrBg-satherGate {
   background-image: url("../images/index/uc-berkeley-sather-gate.jpg");
@@ -940,25 +1129,53 @@ main a.myBtn {
 #bnrBg-uc-berkeley {
   background-image: url("../images/ucberkeley/bg-ucb.jpg");
   background-size: cover; 
-  background-position: 50% 35%;
+  background-position: 50% 32%;
 }
 #bnrBg-atdp {
   background-image: url("../images/atdp/bg-atdp.jpg");
   background-size: cover; 
-  background-position: 50%;
+  background-position: 50% 80%;
 }
 #aboutBg-mission {
   background-image: url("../images/about/bg-mission.jpg");
   background-size: cover; 
   background-position: 50%;
 }
+#gse {
+  background-image: url(../images/ucberkeley/bg-ucb-campus.jpg);
+  background-size: cover;
+  background-position: 50% 80%;
+}
+#atdp .flexImg {
+  background-image: url(../images/ucberkeley/bg-atdp.jpg);
+  background-size: cover;
+  background-position: 50%;
+}
+#bawp .flexImg {
+  background-image: url(../images/ucberkeley/bg-bawp.jpg);
+  background-size: cover;
+  background-position: 50%;
+}
+@media screen and (min-width: 768px) {
+  #wfcc .flexImg {
+    display: block;
+    background-image: url(../images/ucberkeley/bg-bawp.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+}
+#lhs {
+  background-image: url(../images/ucberkeley/bg-lhs.jpg);
+  background-size: cover;
+  background-position: 50% 80%;
+}
+
+
 /* =========================
 # Gallery
 =========================*/ 
 .galleryContainer {
   background-color: #E4EEED;
-  margin-top: 50px;
-  margin-bottom: -50px; 
   padding-bottom: 1%;
   text-align: center;
   border-radius: 0 200px 200px 0;
@@ -1305,88 +1522,6 @@ footer .flexContainer {
   margin-bottom: 0;
 }
 
-
-/* =========================
-# Glass Overlay
-========================= */
-.glassOverlayWrapper {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
-}
-.glassOverlayWrapper > * {
-  z-index: 3;
-}
-.glassOverlayWrapper,
-.glassOverlayWindow:before {
-  background-size: cover;
-  background-attachment: fixed;
-}
-#mission .glassOverlayWrapper,
-#mission .glassOverlayWindow:before {
-  background-image: url(../images/about/bg-ucb-library.jpg);
-  background-position: 50%;
-}
-.glassOverlayWindow {
-  border-top: 1px solid rgba(0,0,0,.2);
-  overflow: hidden;
-}
-@media screen and (min-width: 768px) {
-  .glassOverlayWindow {
-    border-top: none;
-    border-right: 1px solid rgba(0,0,0,.2);
-  }
-}
-.glassOverlayWindow,
-.glassOverlayWindow:before {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 25vh;
-}
-@media screen and (min-width: 768px) {
-  .glassOverlayWindow,
-  .glassOverlayWindow:before {
-    width: 50%;
-    height: 60vh;
-  }
-}
-.glassOverlayWindow:before {
-  content: "";
-  display: block;
-  width: 100%;
-  filter: blur(1rem);
-}
-.glassOverlayText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 25vh;
-  color: #0f2228;
-  text-align: center;
-  padding: 3% 5%;
-  background-image: linear-gradient(to top right, rgba(255,255,255,.9), rgba(255,255,255,.7), transparent);
-}
-@media screen and (min-width: 768px) {
-  .glassOverlayText {
-    width: 50%;
-    height: 60vh;
-  }
-}
-#mission h2 {
-  font-weight: 700;
-}
-
 /* =========================
 # Text Between Lines
 ========================= */
@@ -1418,7 +1553,6 @@ footer .flexContainer {
 .textBetweenLine:after {
   margin-left: 5%;
 }
-
 
 /* =========================
 # Testimonials
@@ -1515,19 +1649,3 @@ footer .flexContainer {
 
 
 
-ul.firstTier li:before {
-  content: "\2022";
-  color: red;
-  font-weight: 900;
-  display: inline-block; 
-  width: 1rem;
-  padding-right: 2%;
-}
-ul.secondTier li:before {
-  content: "\2022";
-  color: green;
-  font-weight: 900;
-  display: inline-block; 
-  width: 1rem;
-  padding-left: 5%;
-}
