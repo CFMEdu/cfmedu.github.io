@@ -130,11 +130,8 @@ ul.trophy li:before {
   padding: 5vh 0;
   margin: 0;
 }
-.bondiBlue {
-  color: #0091ae;
-}
-.oliveDrab {
-  color: #599e2a;
+.kashmirBlue {
+  color: #426b90;
 }
 .atdp {
   background-color: rgba(0,176,218,.4);
@@ -192,9 +189,7 @@ ul.trophy li:before {
   font-weight: 500;
   text-transform: uppercase;
 }
-li.trophy {
 
-}
 /* =========================
 # Creative Commons
 ========================= */
