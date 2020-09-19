@@ -35,11 +35,11 @@ h1 {
 }
 h2 { 
   font-size: 2rem;
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2rem);
 }
 h3 { 
   font-size: 1.75rem;
-  font-size: clamp(1.17rem, 3vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 h4 { 
   font-size: 1.5rem;
@@ -90,25 +90,26 @@ main a:active {
 main a.myBtn {
   color: #ffffff;
 }
-ul.firstTier li {
+ul.firstTier {
   line-height: 1.75;
-  margin: .5rem;
+  padding-left: 1rem;
+  margin: 1rem 0; 
+}
+ul.firstTier li {
+  padding-left: .5rem;
 }
 ul.firstTier li:before {
-  content: "\2022";
-  color: red;
-  font-weight: 900;
+  content: "";
+  font-family: "FontAwesome";
   display: inline-block; 
-  width: 1rem;
-  margin-left: -1rem;
+  width: 1.5rem;
+  margin-left: -1.5rem;
 }
-ul.secondTier li:before {
-  content: "\2022";
-  color: green;
-  font-weight: 900;
-  display: inline-block; 
-  width: 1rem;
-  margin-left: 1rem;
+ul.star li:before {
+  content: "\f005";
+}
+ul.trophy li:before {
+  content: "\f091";
 }
 ::selection {
   background: #ffe533;
@@ -178,10 +179,10 @@ ul.secondTier li:before {
   margin-bottom: -50px;
 }
 .padding-0-2 {
-  padding: 0 2rem; 
+  padding: 0 2vw; 
 }
 .padding-2-2 {
-  padding: 2%; 
+  padding: 2vw; 
 }
 .textAlignCenter {
   text-align: center;
@@ -191,10 +192,9 @@ ul.secondTier li:before {
   font-weight: 500;
   text-transform: uppercase;
 }
-#cfmSummerUCB {
-  font-weight: 700;
-}
+li.trophy {
 
+}
 /* =========================
 # Creative Commons
 ========================= */
@@ -204,11 +204,11 @@ ul.secondTier li:before {
   left: .5%;
   background-color: rgba(0,0,0,.2);
 }
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
   .ccAttribution {
     margin-left: 50px;
   }
-}
+}*/
 .ccAttribution img {
   width: 20px;
 }
@@ -774,23 +774,9 @@ ul.secondTier li:before {
 # Section Header
 ========================= */
 .sectionHeader {
-  display: flex;
   margin: 50px 0 0 0;
   font-size: clamp(26px, 5vw, 30px);
-  font-weight: 700;
-}
-.sectionHeader:before,
-.sectionHeader:after {
-  content: "";
-  flex: 1 1;
-  border-bottom: 1px solid #cccccc;
-  margin: auto;
-}
-.sectionHeader:before {
-  margin-right: 1.5%;
-}
-.sectionHeader:after {
-  margin-left: 1.5%;
+  font-weight: 600;
 }
 @media screen and (max-width: 450px) {
   .sectionHeader {
@@ -812,7 +798,8 @@ ul.secondTier li:before {
 # Div Header
 =========================*/
 .divHeader {
-  color: #627c83;
+  color: #3e4444;
+  font-family: "Crimson Text", serif;
   font-weight: 500;
   text-align: center;
 }
@@ -876,7 +863,7 @@ ul.secondTier li:before {
     max-width: 50%;
   }
   .flexText {
-    padding: 0% 6%;
+    padding: 0% 5%;
   }
   .flexImg {
     height: 60vh;
@@ -1002,19 +989,19 @@ ul.secondTier li:before {
 =========================*/ 
 .textContainer {
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   max-width: 1000px;
 }
 
 /* =========================
 # Text Container
 =========================*/ 
-/*.textWrapper {
+.textWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-}*/
+}
 .textWrapper h2:after {
   content: "";
   display: block;
@@ -1195,10 +1182,8 @@ ul.secondTier li:before {
   background-size: cover; 
   background-position: 50%;
 }
-#highlights {
-  padding: 2.5% 0; 
-}
-#highlights .flexQuarter:hover {
+#highlights .flexQuarter:hover,
+#msjhs .flexQuarter:hover {
   transform: scale(1.01);
   -webkit-box-shadow: 3px 3px 20px 5px #ccc;
   -moz-box-shadow: 3px 3px 20px 5px #ccc;
@@ -1207,21 +1192,21 @@ ul.secondTier li:before {
   background-color: rgba(255,255,255,.2);
   transition: all .5s ease;
 }
-#atdp .flexImg {
+/*#atdp .flexImg {
   background-image: url(../images/ucberkeley/bg-atdp.jpg);
   background-size: cover;
   background-position: 50%;
-}
-#bawp .flexImg {
+}*/
+/*#bawp .flexImg {
   background-image: url(../images/ucberkeley/bg-bawp.jpg);
   background-size: cover;
   background-position: 50%;
-}
-#lsi .flexImg {
+}*/
+/*#lsi .flexImg {
   background-image: url(../images/ucberkeley/bg-lsi.jpg);
   background-size: cover;
   background-position: 50%;
-}
+}*/
 @media screen and (min-width: 768px) {
   #ohlone .flexImg {
     height: 75vh;
@@ -1582,7 +1567,8 @@ footer .flexContainer {
 /* =========================
 # Text Between Lines
 ========================= */
-.textBetweenLine {
+.textBetweenLine,
+.textBetweenDoubleLine {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1590,24 +1576,38 @@ footer .flexContainer {
   align-items: center;
   white-space: nowrap;
 }
-.textBetweenLine:before, .textBetweenLine:after {
+.textBetweenLine:before,
+.textBetweenLine:after {
   content: "";
-  flex: 1;
+  flex: 1 1;
+  border-bottom: 1px solid #cccccc;
+}
+.textBetweenLine:before {
+  margin-right: 1.5%;
+}
+.textBetweenLine:after {
+  margin-left: 1.5%;
+}
+.textBetweenDoubleLine:before,
+.textBetweenDoubleLine:after {
+  content: "";
+  flex: 1 0;
   height: 6px;
   width: 20vw;
   border-top: 1px solid #161818;
   border-bottom: 1px solid #161818;
-  margin: auto;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
-  .textBetweenLine:before, .textBetweenLine:after {
+  .textBetweenDoubleLine:before,
+  .textBetweenDoubleLine:after {
     width: 10vw;
   }
 }
-.textBetweenLine:before {
+.textBetweenDoubleLine:before {
   margin-right: 5%;
 }
-.textBetweenLine:after {
+.textBetweenDoubleLine:after {
   margin-left: 5%;
 }
 
