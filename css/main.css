@@ -1137,6 +1137,7 @@ main a.myBtn {
 /* --- index --- */
 #bnrBg-satherGate {
   background-image: url("../images/index/uc-berkeley-sather-gate.jpg");
+  background-size: cover;
 }
 #mainBg-LSI {
   background-image: url("../images/index/bg-lsi-visiting-bair-lab.jpg");
