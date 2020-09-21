@@ -61,14 +61,12 @@ p {
 i {
   font-style: italic;
 }
+img,
+video {
+  object-fit: cover;
+}
 strong {
   font-weight: 600;
-}
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-.IMFellGreatPrimer {
-  font-family: "IM Fell Great Primer", sans-serif;
 }
 ul.firstTier {
   line-height: 1.75;
@@ -94,6 +92,15 @@ ul.trophy li:before {
 .iconTitle {
   font-size: 36px;
   font-weight: 500;
+}
+.upperCase {
+  text-transform: uppercase;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.IMFellGreatPrimer {
+  font-family: "IM Fell Great Primer", sans-serif;
 }
 .textAlignCenter {
   text-align: center !important;
@@ -157,7 +164,8 @@ main a.myBtn {
 }
 ::selection {
   background: #ffe533;
-}.satherBg {
+}
+.satherBg {
   background-color: #b9d3b6;
   padding: 5vh 0;
   margin: 0;
@@ -197,11 +205,6 @@ main a.myBtn {
   left: .5%;
   background-color: rgba(0,0,0,.2);
 }
-/*@media screen and (min-width: 768px) {
-  .ccAttribution {
-    margin-left: 50px;
-  }
-}*/
 .ccAttribution img {
   width: 20px;
 }
@@ -523,69 +526,65 @@ main a.myBtn {
 # Overlay
 ========================= */
 .gradientOverlay-top,
-.gradientOverlay-bottom,
-.gradientOverlay-left,
-.gradientOverlay-right,
 .gradientOverlay-top-w,
+.gradientOverlay-bottom,
 .gradientOverlay-bottom-w,
+.gradientOverlay-left,
 .gradientOverlay-left-w,
+.gradientOverlay-right,
 .gradientOverlay-right-w {
   position: absolute;
 }
-.gradientOverlay-top {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.gradientOverlay-bottom {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.gradientOverlay-left {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 30%;
-  background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
-.gradientOverlay-right {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 30%;
-  background-image: linear-gradient(to left, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
-}
+.gradientOverlay-top,
 .gradientOverlay-top-w {
   top: 0;
   left: 0;
   right: 0;
   height: 30%;
+}
+.gradientOverlay-top {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-top-w {
   background-image: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.001), transparent);
 }
+.gradientOverlay-bottom,
 .gradientOverlay-bottom-w {
   bottom: 0;
   left: 0;
   right: 0;
   height: 30%;
+}
+.gradientOverlay-bottom {
+  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-bottom-w {
   background-image: linear-gradient(to top, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
+.gradientOverlay-left,
 .gradientOverlay-left-w {
   top: 0;
   bottom: 0;
   left: 0;
   width: 30%;
+}
+.gradientOverlay-left {
+  background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-left-w {
   background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
+.gradientOverlay-right,
 .gradientOverlay-right-w {
   top: 0;
   bottom: 0;
   right: 0;
   width: 30%;
+}
+.gradientOverlay-right {
+  background-image: linear-gradient(to left, rgba(0,0,0,.7), rgba(0,0,0,.01), transparent);
+}
+.gradientOverlay-right-w {
   background-image: linear-gradient(to left, rgba(255,255,255,.5), rgba(255,255,255,.01), transparent);
 }
 
@@ -673,7 +672,7 @@ main a.myBtn {
 /* =========================
 # Semi-transparent Overlay
 ========================= */
-.semiOverlay-left-w, 
+/*.semiOverlay-left-w, 
 .semiOverlay-right-w {
   display: block;
   position: absolute;
@@ -681,7 +680,7 @@ main a.myBtn {
   top: 5%;
   bottom: 5%;
   left: 5%;
-  bottom: 5%;
+  right: 5%;
   background-color: rgba(255,255,255,.9);
   border-radius: 10px;
 }
@@ -702,7 +701,8 @@ main a.myBtn {
     left: auto;
     right: 0;
   }
-}
+}*/
+
 /* =========================
 # Image Banner 
 ========================= */
@@ -737,14 +737,14 @@ main a.myBtn {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0 0 2% 5%;  /*add bottom left padding*/
+  padding: 0 0 2% 5%;  /*bottom left padding*/
 }
 .bnrContent-tr {   
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2% 5% 0 0;  /*add bottom left padding*/
+  padding: 2% 5% 0 0;  /*top right padding*/
 }
 .bnrTitle {
   display: inline-block;
@@ -752,9 +752,6 @@ main a.myBtn {
   font-size: clamp(30px, 5vw, 36px); 
   text-shadow: 4px 4px 3px rgba(0,0,0,0.5), 4px 8px 13px rgba(0,0,0,0.1), 4px 18px 23px rgba(0,0,0,0.1);
   font-weight: 600;
-}
-.upperCase {
-  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .bnrContent-bl h1 {
@@ -767,7 +764,6 @@ main a.myBtn {
 # Section Header
 ========================= */
 .sectionHeader {
-  margin: 50px 0 0 0;
   font-size: clamp(26px, 5vw, 30px);
   font-weight: 600;
 }
@@ -798,7 +794,7 @@ main a.myBtn {
 }
 
 /* =========================
-# Flex Container
+# Flex Container - Parent
 =========================*/ 
 .flexContainer {
   display: flex;
@@ -808,9 +804,6 @@ main a.myBtn {
   align-content: space-evenly;
   justify-content: space-evenly;
 }
-.flexContainer img {
-  object-fit: cover;
-}
 .flexColumn {
   display: flex;
   flex-direction: column;
@@ -818,11 +811,20 @@ main a.myBtn {
 .alignItemsCenter {
   align-items: center;
 }
+.alignItemsStart {
+  align-items: flex-start;
+}
+.alignItemsEnd {
+  align-items: flex-end;
+}
 .alignSelfCenter {
   align-self: center;
 }
 .justifyContentCenter {
   justify-content: center;
+}
+.justifyContentStart {
+  justify-content: flex-start;
 }
 .justifyContentEnd {
   justify-content: flex-end;
@@ -832,19 +834,8 @@ main a.myBtn {
 }
 
 /* =========================
-# Flex Container - Half
+# Flex Container - Text/Image
 =========================*/ 
-.flexHalf {
-  flex: 100%;
-  max-width: 100%;
-  position: relative;
-}
-@media screen and (min-width: 768px) {
-  .flexHalf {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 .flexText {
   padding: 0 1.5rem;
 }
@@ -890,8 +881,19 @@ main a.myBtn {
 }
 
 /* =========================
-# Flex Container - Third
-=========================*/
+# Flex Container - Children - Width
+=========================*/ 
+.flexHalf {
+  position: relative;
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexHalf {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
 .flexThird {
   flex: 40%;
   max-width: 40%;
@@ -914,6 +916,48 @@ main a.myBtn {
     max-width: 25%;
   }
 }
+.flexOneThird {
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexOneThird {
+    flex: 30%;
+    max-width: 30%;
+  }
+}
+.flexTwoThird {
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexTwoThird {
+    flex: 70%;
+    max-width: 70%;
+  }
+}
+.flexQuarter {
+  flex: 50%;
+  max-width: 50%;
+}
+@media screen and (max-width: 400px) {
+  .flexQuarter {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flexQuarter {
+    flex: 33%;
+    max-width: 33%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flexQuarter {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
 .flex20 {
   flex: 20%;
   max-width: 20%;
@@ -929,51 +973,8 @@ main a.myBtn {
 .flex100 {
   flex: 100%;
   max-width: 100%;
-  border: 1px solid white; 
 }
 
-/* =========================
-# Flex 1/3, 2/3, 1/4
-=========================*/
-.flexOneThird {
-  flex: 100%;
-  max-width: 100%;
-  /*margin: 0 3rem; */
-}
-.flexTwoThird {
-  flex: 100%;
-  max-width: 100%;
-}
-.flexQuarter {
-  flex: 50%;
-  max-width: 50%;
-}
-@media screen and (max-width: 400px) {
-  .flexQuarter {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .flexOneThird {
-    flex: 30%;
-    max-width: 30%;
-  }
-  .flexTwoThird {
-    flex: 70%;
-    max-width: 70%;
-  }
-  .flexQuarter {
-    flex: 33%;
-    max-width: 33%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .flexQuarter {
-    flex: 25%;
-    max-width: 25%;
-  }
-}
 
 /* =========================
 # Text Container
@@ -990,7 +991,7 @@ main a.myBtn {
 }
 
 /* =========================
-# Text Container
+# Text Wrapper
 =========================*/ 
 .textWrapper {
   display: flex;
@@ -998,7 +999,7 @@ main a.myBtn {
   align-items: flex-start;
   justify-content: space-between;
 }
-.textWrapper h2:after {
+.headerUnderline:after {
   content: "";
   display: block;
   background-color: #ffa500;
@@ -1009,7 +1010,7 @@ main a.myBtn {
 }
 
 /* =========================
-#   Quote Container
+# Quote Container
 =========================*/ 
 .quoteWrapper {
   display: flex;
@@ -1079,7 +1080,6 @@ main a.myBtn {
 }
 .progPreview img {
   width: 100%;
-  object-fit: cover;
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -1132,8 +1132,9 @@ main a.myBtn {
 }
 
 /* =========================
-# Background Image
+# Background Images
 ========================= */
+/* --- index --- */
 #bnrBg-satherGate {
   background-image: url("../images/index/uc-berkeley-sather-gate.jpg");
 }
@@ -1153,23 +1154,9 @@ main a.myBtn {
   background-size: cover;
   background-position: 50%;
 }
+/* --- about --- */
 #bnrBg-about {
   background-image: url("../images/about/bg-cfm.jpg");
-  background-size: cover; 
-  background-position: 50% 60%;
-}
-#bnrBg-uc-berkeley {
-  background-image: url("../images/ucberkeley/bg-ucb.jpg");
-  background-size: cover; 
-  background-position: 50% 32%;
-}
-#bnrBg-atdp {
-  background-image: url("../images/atdp/bg-atdp.jpg");
-  background-size: cover; 
-  background-position: 50% 80%;
-}
-#bnrBg-svsd {
-  background-image: url("../images/svsd/bg-svsd.jpg");
   background-size: cover; 
   background-position: 50% 60%;
 }
@@ -1177,6 +1164,24 @@ main a.myBtn {
   background-image: url("../images/about/bg-mission.jpg");
   background-size: cover; 
   background-position: 50%;
+}
+/* --- berkeley --- */
+#bnrBg-uc-berkeley {
+  background-image: url("../images/ucberkeley/bg-ucb.jpg");
+  background-size: cover; 
+  background-position: 50% 32%;
+}
+/* --- atdp --- */
+#bnrBg-atdp {
+  background-image: url("../images/atdp/bg-atdp.jpg");
+  background-size: cover; 
+  background-position: 50% 80%;
+}
+/* --- svsd --- */
+#bnrBg-svsd {
+  background-image: url("../images/svsd/bg-svsd.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
 }
 #highlights .flexQuarter:hover,
 #msjhs .flexQuarter:hover {
@@ -1188,21 +1193,6 @@ main a.myBtn {
   background-color: rgba(255,255,255,.2);
   transition: all .5s ease;
 }
-/*#atdp .flexImg {
-  background-image: url(../images/ucberkeley/bg-atdp.jpg);
-  background-size: cover;
-  background-position: 50%;
-}*/
-/*#bawp .flexImg {
-  background-image: url(../images/ucberkeley/bg-bawp.jpg);
-  background-size: cover;
-  background-position: 50%;
-}*/
-/*#lsi .flexImg {
-  background-image: url(../images/ucberkeley/bg-lsi.jpg);
-  background-size: cover;
-  background-position: 50%;
-}*/
 @media screen and (min-width: 768px) {
   #ohlone .flexImg {
     height: 75vh;
@@ -1262,7 +1252,6 @@ main a.myBtn {
   opacity: .7;
   width: 105%;
   height: 300px;
-  object-fit: cover;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -1371,7 +1360,6 @@ main a.myBtn {
   width: 100%;
   height: 100%;
   padding: 10px 10px 30px 10px;
-  object-fit: cover;
   transition: opacity 0.35s, transform 0.35s;
 }
 .photoGalleryItem img:hover {
@@ -1398,7 +1386,6 @@ main a.myBtn {
 .bnrContainer video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .videoTitle {
   position: absolute;
