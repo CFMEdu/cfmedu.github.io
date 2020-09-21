@@ -134,6 +134,17 @@ ul.trophy li:before {
 .marginBottom-50 {
   margin-bottom: -50px;
 }
+.dotLine {
+  text-align: center;
+}
+.dotLineDot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 /* =========================
 # Colors
@@ -1689,3 +1700,7 @@ footer .flexContainer {
 .dot.active, .dot:hover {
   background-color: #717171;
 }
+
+
+
+
