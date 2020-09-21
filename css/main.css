@@ -64,6 +64,72 @@ i {
 strong {
   font-weight: 600;
 }
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.IMFellGreatPrimer {
+  font-family: "IM Fell Great Primer", sans-serif;
+}
+ul.firstTier {
+  line-height: 1.75;
+  padding-left: 1rem;
+  margin: 1rem 0; 
+}
+ul.firstTier li {
+  padding-left: .5rem;
+}
+ul.firstTier li:before {
+  content: "";
+  font-family: "FontAwesome";
+  display: inline-block; 
+  width: 1.5rem;
+  margin-left: -1.5rem;
+}
+ul.star li:before {
+  content: "\f005";
+}
+ul.trophy li:before {
+  content: "\f091";
+}
+.iconTitle {
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.textAlignCenter {
+  text-align: center !important;
+}
+.textAlignLeft {
+  text-align: left !important;
+}
+.textAlignRight {
+  text-align: right !important;
+}
+.padding-0-2 {
+  padding: 0 2vw; 
+}
+.padding-2-2 {
+  padding: 2vw; 
+}
+.marginTop,
+.marginTop-50-0 {
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .marginTop-50-0 {
+    margin-top: 0px;
+  }
+}
+.marginBottom {
+  margin-bottom: 50px;
+}
+.marginBottom-50 {
+  margin-bottom: -50px;
+}
+
+/* =========================
+# Colors
+========================= */
 nav a:link, nav a:visited {
   color: #3e4444;
   text-decoration: none;
@@ -90,37 +156,9 @@ main a:active {
 main a.myBtn {
   color: #ffffff;
 }
-ul.firstTier {
-  line-height: 1.75;
-  padding-left: 1rem;
-  margin: 1rem 0; 
-}
-ul.firstTier li {
-  padding-left: .5rem;
-}
-ul.firstTier li:before {
-  content: "";
-  font-family: "FontAwesome";
-  display: inline-block; 
-  width: 1.5rem;
-  margin-left: -1.5rem;
-}
-ul.star li:before {
-  content: "\f005";
-}
-ul.trophy li:before {
-  content: "\f091";
-}
 ::selection {
   background: #ffe533;
-}
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-.IMFellGreatPrimer {
-  font-family: "IM Fell Great Primer", sans-serif;
-}
-.satherBg {
+}.satherBg {
   background-color: #b9d3b6;
   padding: 5vh 0;
   margin: 0;
@@ -128,7 +166,6 @@ ul.trophy li:before {
 .mistic {
   background-color: #e4eeed;
   padding: 5vh 0;
-  margin: 0;
 }
 .kashmirBlue {
   color: #426b90;
@@ -150,44 +187,6 @@ ul.trophy li:before {
 }
 .walex {
   background-color: rgba(255,51,0,.4);
-}
-.centerAlign {
-  text-align: center !important;
-}
-.leftAlign {
-  text-align: left !important;
-}
-.rightAlign {
-  text-align: right !important;
-}
-.marginTop,
-.marginTop-50-0 {
-  margin-top: 50px;
-}
-@media screen and (min-width: 768px) {
-  .marginTop-50-0 {
-    margin-top: 0px;
-  }
-}
-.marginBottom {
-  margin-bottom: 50px;
-}
-.marginBottom-50 {
-  margin-bottom: -50px;
-}
-.padding-0-2 {
-  padding: 0 2vw; 
-}
-.padding-2-2 {
-  padding: 2vw; 
-}
-.textAlignCenter {
-  text-align: center;
-}
-.iconTitle {
-  font-size: 36px;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 /* =========================
@@ -841,31 +840,29 @@ ul.trophy li:before {
   max-width: 100%;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .flexHalf {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
 .flexText {
-  padding: 0% 10%;
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .flexText {
+    padding: 0 3.5rem;
+  }
 }
 .flexImg {
   width: 100%;
   height: 50vh;
   max-height: 300px;
 }
-.marginBottom {
-  margin-bottom: 50px;
-}
 @media screen and (min-width: 768px) {
-  .flexHalf {
-    flex: 50%;
-    max-width: 50%;
-  }
-  .flexText {
-    padding: 0% 5%;
-  }
   .flexImg {
     height: 60vh;
     max-height: 550px;
-  }
-  .flexImg.paddingLeft-50 {
-    padding-left: 50px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -984,8 +981,13 @@ ul.trophy li:before {
 =========================*/ 
 .textContainer {
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   max-width: 1000px;
+}
+@media screen and (min-width: 768px) {
+  .textContainer {
+    padding: 1rem 3rem;
+  }
 }
 
 /* =========================
@@ -1698,11 +1700,3 @@ footer .flexContainer {
 .dot.active, .dot:hover {
   background-color: #717171;
 }
-
-
-
-
-
-
-
-
