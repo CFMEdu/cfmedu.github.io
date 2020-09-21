@@ -57,7 +57,7 @@
 }
 @font-face {
   font-family: "Noto Sans";
-  src: url("../fonts/Lato-Italic.ttf") format("truetype");
+  src: url("../fonts/NotoSans-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
@@ -68,4 +68,24 @@
   font-style: normal;
 }
 
-
+/***************************************************
+# Crimson Text
+***************************************************/
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
