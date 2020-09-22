@@ -1,91 +1,309 @@
 /***************************************************
-# Bebas Neue
+# Noto Sans
 ***************************************************/
+/*
+NotoSans-Regular.ttf: Copyright 2012 Google Inc. All Rights Reserved.
+NotoSans-Italic.ttf: Copyright 2012 Google Inc. All Rights Reserved.
+NotoSans-Bold.ttf: Copyright 2012 Google Inc. All Rights Reserved.
+NotoSans-BoldItalic.ttf: Copyright 2012 Google Inc. All Rights Reserved.
+*/
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'Noto Sans';
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NotoSans-Regular.eot');
+  src: local('Noto Sans'), local('NotoSans'),
+       url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+       url('../fonts/NotoSans-Regular.woff') format('woff'),
+       url('../fonts/NotoSans-Regular.ttf') format('truetype'),
+       url('../fonts/NotoSans-Regular.svg#NotoSans') format('svg');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/NotoSans-Italic.eot');
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+       url('../fonts/NotoSans-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-Italic.woff2') format('woff2'),
+       url('../fonts/NotoSans-Italic.woff') format('woff'),
+       url('../fonts/NotoSans-Italic.ttf') format('truetype'),
+       url('../fonts/NotoSans-Italic.svg#NotoSans') format('svg');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/NotoSans-Bold.eot');
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+       url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+       url('../fonts/NotoSans-Bold.woff') format('woff'),
+       url('../fonts/NotoSans-Bold.ttf') format('truetype'),
+       url('../fonts/NotoSans-Bold.svg#NotoSans') format('svg');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/NotoSans-BoldItalic.eot');
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+       url('../fonts/NotoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-BoldItalic.woff2') format('woff2'),
+       url('../fonts/NotoSans-BoldItalic.woff') format('woff'),
+       url('../fonts/NotoSans-BoldItalic.ttf') format('truetype'),
+       url('../fonts/NotoSans-BoldItalic.svg#NotoSans') format('svg');
 }
 
 /***************************************************
 # IM Fell Great Primer
 ***************************************************/
+/*
+IMFeGPrm28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Roman
+IMFeGPit28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Italic
+*/
 @font-face {
-  font-family: "IM Fell Great Primer";
-  src: url("../fonts/IMFellGreatPrimer-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'IM Fell Great Primer';
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/im-fell-great-primer-v10-latin-regular.eot');
+  src: local('IM FELL Great Primer Roman'), local('IM_FELL_Great_Primer_Roman'),
+       url('../fonts/IMFellGreatPrimer-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IMFellGreatPrimer-Regular.woff2') format('woff2'),
+       url('../fonts/IMFellGreatPrimer-Regular.woff') format('woff'),
+       url('../fonts/IMFellGreatPrimer-Regular.ttf') format('truetype'),
+       url('../fonts/IMFellGreatPrimer-Regular.svg#IMFellGreatPrimer') format('svg');
 }
 @font-face {
-  font-family: "IM Fell Great Primer";
-  src: url("../fonts/IMFellGreatPrimer-Italic.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'IM Fell Great Primer';
   font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/IMFellGreatPrimer-Italic.eot');
+  src: local('IM FELL Great Primer Italic'), local('IM_FELL_Great_Primer_Italic'),
+       url('../fonts/IMFellGreatPrimer-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IMFellGreatPrimer-Italic.woff2') format('woff2'),
+       url('../fonts/IMFellGreatPrimer-Italic.woff') format('woff'),
+       url('../fonts/IMFellGreatPrimer-Italic.ttf') format('truetype'),
+       url('../fonts/IMFellGreatPrimer-Italic.svg#IMFellGreatPrimer') format('svg');
 }
 
 /***************************************************
 # Montserrat
 ***************************************************/
+/*
+Montserrat-Regular.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-Italic.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-Medium.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-MediumItalic.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-SemiBold.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-SemiBoldItalic.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-Bold.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-BoldItalic.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-Black.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+Montserrat-BlackItalic.ttf: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+*/
 @font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/Montserrat-Regular.svg#Montserrat') format('svg');
 }
 @font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-/***************************************************
-# Noto Sans
-***************************************************/
-@font-face {
-  font-family: "Noto Sans";
-  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans";
-  src: url("../fonts/NotoSans-Italic.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'Montserrat';
   font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Montserrat-Italic.eot');
+  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+       url('../fonts/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Italic.woff2') format('woff2'),
+       url('../fonts/Montserrat-Italic.woff') format('woff'),
+       url('../fonts/Montserrat-Italic.ttf') format('truetype'),
+       url('../fonts/Montserrat-Italic.svg#Montserrat') format('svg');
 }
 @font-face {
-  font-family: "Noto Sans";
-  src: url("../fonts/NotoSans-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: 'Montserrat';
   font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Montserrat-Medium.eot');
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+       url('../fonts/Montserrat-Medium.woff') format('woff'),
+       url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+       url('../fonts/Montserrat-Medium.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/Montserrat-MediumItalic.eot');
+  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
+       url('../fonts/Montserrat-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+       url('../fonts/Montserrat-MediumItalic.woff') format('woff'),
+       url('../fonts/Montserrat-MediumItalic.ttf') format('truetype'), 
+       url('../fonts/Montserrat-MediumItalic.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Montserrat-SemiBold.eot');
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+       url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+       url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+       url('../fonts/Montserrat-SemiBold.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/Montserrat-SemiBoldItalic.eot');
+  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
+       url('../fonts/Montserrat-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+       url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff'),
+       url('../fonts/Montserrat-SemiBoldItalic.ttf') format('truetype'),
+       url('../fonts/Montserrat-SemiBoldItalic.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-Bold.eot');
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+       url('../fonts/Montserrat-Bold.woff') format('woff'),
+       url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+       url('../fonts/Montserrat-Bold.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-BoldItalic.eot');
+  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
+       url('../fonts/Montserrat-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+       url('../fonts/Montserrat-BoldItalic.woff') format('woff'),
+       url('../fonts/Montserrat-BoldItalic.ttf') format('truetype'),
+       url('../fonts/Montserrat-BoldItalic.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Montserrat-Black.eot');
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+       url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Black.woff2') format('woff2'),
+       url('../fonts/Montserrat-Black.woff') format('woff'),
+       url('../fonts/Montserrat-Black.ttf') format('truetype'),
+       url('../fonts/Montserrat-Black.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/Montserrat-BlackItalic.eot');
+  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
+       url('../fonts/Montserrat-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-BlackItalic.woff2') format('woff2'),
+       url('../fonts/Montserrat-BlackItalic.woff') format('woff'),
+       url('../fonts/Montserrat-BlackItalic.ttf') format('truetype'),
+       url('../fonts/Montserrat-BlackItalic.svg#Montserrat') format('svg');
 }
 
 /***************************************************
 # Crimson Text
 ***************************************************/
+/*
+CrimsonText-Regular.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+CrimsonText-Italic.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+CrimsonText-SemiBold.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+CrimsonText-SemiBoldItalic.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+CrimsonText-Bold.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+CrimsonText-BoldItalic.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldusleaf.org), with Reserved Font Name "Crimson".
+*/
 @font-face {
-  font-family: "Crimson Text";
-  src: url("../fonts/CrimsonText-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'Crimson Text';
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/CrimsonText-Regular.eot');
+  src: local('Crimson Text Regular'), local('CrimsonText-Regular'),
+       url('../fonts/CrimsonText-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-Regular.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Regular.woff') format('woff'),
+       url('../fonts/CrimsonText-Regular.ttf') format('truetype'),
+       url('../fonts/CrimsonText-Regular.svg#CrimsonText') format('svg');
 }
 @font-face {
-  font-family: "Crimson Text";
-  src: url("../fonts/CrimsonText-Italic.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'Crimson Text';
   font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/CrimsonText-Italic.eot');
+  src: local('Crimson Text Italic'), local('CrimsonText-Italic'),
+       url('../fonts/CrimsonText-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-Italic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Italic.woff') format('woff'),
+       url('../fonts/CrimsonText-Italic.ttf') format('truetype'),
+       url('../fonts/CrimsonText-Italic.svg#CrimsonText') format('svg');
 }
 @font-face {
-  font-family: "Crimson Text";
-  src: url("../fonts/CrimsonText-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: 'Crimson Text';
   font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/CrimsonText-SemiBold.eot');
+  src: local('Crimson Text SemiBold'), local('CrimsonText-SemiBold'),
+       url('../fonts/CrimsonText-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-SemiBold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBold.woff') format('woff'),
+       url('../fonts/CrimsonText-SemiBold.ttf') format('truetype'),
+       url('../fonts/CrimsonText-SemiBold.svg#CrimsonText') format('svg');
+}
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/CrimsonText-SemiBoldItalic.eot');
+  src: local('Crimson Text SemiBold Italic'), local('CrimsonText-SemiBoldItalic'),
+       url('../fonts/CrimsonText-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-SemiBoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBoldItalic.woff') format('woff'),
+       url('../fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype'),
+       url('../fonts/CrimsonText-SemiBoldItalic.svg#CrimsonText') format('svg');
+}
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/CrimsonText-Bold.eot');
+  src: local('Crimson Text Bold'), local('CrimsonText-Bold'),
+       url('../fonts/CrimsonText-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-Bold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Bold.woff') format('woff'),
+       url('../fonts/CrimsonText-Bold.ttf') format('truetype'),
+       url('../fonts/CrimsonText-Bold.svg#CrimsonText') format('svg');
+}
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/CrimsonText-BoldItalic.eot');
+  src: local('Crimson Text Bold Italic'), local('CrimsonText-BoldItalic'),
+       url('../fonts/CrimsonText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CrimsonText-BoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-BoldItalic.woff') format('woff'),
+       url('../fonts/CrimsonText-BoldItalic.ttf') format('truetype'),
+       url('../fonts/CrimsonText-BoldItalic.svg#CrimsonText') format('svg');
 }
