@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/bg-images.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -100,15 +102,15 @@
 		</section>
 
 		<section id="ohlone">
-			<div class="flexContainer marginTop alignItemsCenter mistic">
+			<div class="flexContainer marginTop mistic">
 				<figure class="flexHalf">
 					<img class="flexImg" src="images/svsd/ohlone-college.jpg" alt="Aerial view of Ohlone College"/>
 					<figcation class="ccAttribution">
-						<img src="icons/cc/cc_icon_white_x2.png" alt="" />
-						<img src="icons/cc/attribution_icon_white_x2.png" alt=""/>
-						<img src="icons/cc/sa_white_x2.png" alt=""/>
+						<img src="icons/cc/cc.png" alt="" />
+						<img src="icons/cc/by.png" alt="" />
+						<img src="icons/cc/sa.png" alt="" />
 						<p>
-							<a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Ohlone_College,_September_2019.JPG" target="_blank">Photo</a> by <a href="https://commons.wikimedia.org/wiki/User:Pi.1415926535" target="_blank">Pi.1415926535</a> | Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank">CC BY-SA</a>
+							<a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Ohlone_College,_September_2019.JPG" target="_blank">Photo</a> by <a href="https://commons.wikimedia.org/wiki/User:Pi.1415926535" target="_blank">Pi.1415926535</a> | Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank">CC BY-SA 3.0</a>
 						</p>
 					</figcation>
 				</figure>
@@ -133,7 +135,7 @@
 				<h2 class="divHeader textBetweenLine marginTop">
 					College Highlights
 				</h2>
-				<div class="flexContainer justifyContentCenter padding-0-2 textAlignCenter">
+				<div class="flexContainer justifyCenter padding-0-2 textCenter">
 					<div class="flexQuarter padding-2-2">
 						<div>
 							<img class="flexIcon" src="icons/svsd/badge-star.png" alt="" />
@@ -249,7 +251,7 @@
 
 			<section id="msjhs">
 				<div class="flexContainer marginTop padding-0-2">
-					<article class="flexTwoThird flexText">
+					<article class="flexTwoThird flexText marginTop-50-0 flexOrder-2-1">
 						<h2 class="divHeader">
 							Mission San Jose High School
 						</h2>
@@ -273,7 +275,7 @@
 				      <a href="mission-fusd-ca.schoolloop.com" target="_blank">Learn more about MSJHS <i class="fa fa-external-link" aria-hidden="true"></i></a>
 				    </p>
 					</article>
-					<figure class="flexOneThird marginTop-50-0">
+					<figure class="flexOneThird flexOrder-1-2">
 						<img class="flexImg" src="images/svsd/msjhs.jpg" alt="Mission San Jose High School" />
 					</figure>
 				</div>
@@ -282,7 +284,7 @@
 					<h3 class="divHeader textBetweenLine">
 						School Highlights
 					</h3>
-					<div class="flexContainer justifyContentCenter padding-0-2">
+					<div class="flexContainer justifyCenter padding-0-2">
 						<div class="flexQuarter padding-2-2">
 							<div class="iconTitle montserrat kashmirBlue">
 								Top 1%
@@ -456,17 +458,6 @@
 	<script src="js/skrollr.min.js"></script>
 	<script src="js/animation.js"></script>
 	<script src="js/main.js"></script>
-
-	<script>
-		window.onscroll = function() {myFunction()};
-
-		function myFunction() {
-		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		  var scrolled = (winScroll / height) * 100;
-		  document.getElementById("progressBar").style.width = scrolled + "%";
-		}
-	</script>
 
 </body>
 </html>

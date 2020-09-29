@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/bg-images.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -37,10 +40,6 @@
 			<div class="navMenu">
 				<ul>
 					<li><a href="about.html" class="navDeco">About</a>
-<!-- 						<ul class="navDropdown">
-							<li><a href="about.html#mission">Our Mission</a></li>
-							<li><a href="about.html#testimonials">Testimonials</a></li>
-						</ul> -->
 					</li>
 					<li><a href="berkeley.html" class="navDeco selected">UC Berkeley</a>
 						<ul class="navDropdown">
@@ -70,10 +69,10 @@
 
 		<!-- ====== Image Banner ======  -->
 		<section>
-			<div id="bnrBg-atdp" class="bnrContainer topBanner">
-				<div class="bnrOverlay-right"></div>
-				<div class="bnrOverlay-bottom"></div>
-				<div class="bnrOverlay-left"></div>
+			<div id="bnrBg-atdp" class="bnrContainer">
+				<div class="gradientOverlay-right"></div>
+				<div class="gradientOverlay-bottom"></div>
+				<div class="gradientOverlay-left"></div>
 				<div class="bnrContent-bl">
 					<h1 class="bnrTitle montserrat">
 						ATDP
@@ -81,11 +80,10 @@
 				</div>
 			</div>
 		</section>		<!-- ====== End of Image Banner ======  -->
-		
 	
 
 		<!-- ====== Subnavigation ======  -->
-		<section class="subBar">
+		<section>
       <div id="checkDiv"></div>
 		  <div class="subNavigation">
 		    <a href="#intro">Introduction</a>
@@ -100,18 +98,86 @@
 
 
 		<!-- ====== Main Content ======  -->
-		<section>
-			<div id="intro" class="anchor">
-			<div>
-				<h2>Introduction</h2>
+		<section id="intro" class="marginTop">
+			<div class="textContainer">
+				<div class="divHeader textLeft margin-0-2">
+					<span>UC Berkeley, Graduate School of Education</span>
+					<h1>Academic Talent Development Program</h1>
+					<h2>Global Programs</h2>
+				</div>				
+				<div id="atdp-icon" class="margin-0-2">
+					<img class="displayBlock" src="icons/logo/ATDPGlobalLogo.png" alt="atdp gp icon"/>
+					<img class="displayBlock" src="icons/logo/cfm-summer.svg" alt="cfm summer icon"/>
+				</div>
+			</div>
+	
+			<div id="bnrBg-atdp-intro" class="marginTop marginBottom"
+					 data-bottom-top="background-position: 50% 0%"
+					 data-top-bottom="background-position: 50% 50%">
+				<div class="bottom-top">
+					<h3 class="divHeader textRight">
+						<span class="cutout-w speechBobble-up">
+							What are you doing this summer?
+						</span>
+						<br>
+						<span class="cutout-w">
+							Staying at home? Travelling?
+						</span>
+						<br>
+						<span class="cutout-w speechBobble-down">
+							Come to UC Berkeley instead!
+						</span>
+					</h3>
+				</div>
+			</div>
+
+			<div class="marginTop">
+			 	<h3 class="divHeader underLineCenter">Here’s what we're thinking</h3>
+			 	<div class="marginTop">
+					<ul class="flexContainer justifyCenter textCenter">
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-performing-art.png"/>
+							</div>
+							<div class="montserrat padding-2-2">
+								<h3>Enhance</h3>
+								<p>your knowledge and skills via comprehensive cultural immersion</p>
+							</div>
+						</li>
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-couselors-at-dorm.png"/>
+							</div>
+							<div class="montserrat padding-2-2">
+								<h3>Improve</h3>
+								<p>your communication skills by interacting with new types of people - from all over the world!</p>
+							</div>
+						</li>
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-community-service.png"/>
+							</div>
+							<div class="montserrat padding-2-2">
+								<h3>Give back</h3>
+								<p>through unique community service and outreach opportunities, all while building upon your resume</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="textContainer marginTop">
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
+					How you spend your summers is something top-tier American universities will be interested in when you apply for college. Universities like to hear about meaningful, well-planned, self-motivated, and challenging life experiences, demonstrating a persistent drive to challenge oneself to accomplish goals.
+				</p>				
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					The UC Berkeley Graduate School of Education Academic Talent Development Program (ATDP) is designed to do just that - to challenge you and sharpen your academic profile for your future educational pursuits. This experience provides valuable exposure to American education at a world-renowned university, allowing for international students to develop independent critical thinking skills, get a taste of American campus life, and participate in exciting cultural events and tours.
+				</p>				
+				<p>
+					This is more than a recreational summer camp or an elite college campus tour; ATDP is an academic enrichment program that promotes learning and academic exploration, giving motivated students a priceless learning opportunity.
 				</p>				
 			</div>
-		</div>
+		</section>
 
 			<div id="overview" class="anchor">
 				<div>
@@ -188,7 +254,7 @@
 			</div>
 		</div>
 
-		</section>
+
 
 
 
@@ -304,6 +370,8 @@
 	<script src="js/skrollr.min.js"></script>
 	<script src="js/animation.js"></script>
 	<script src="js/main.js"></script>
+
+
 
 
 </body>
