@@ -1,0 +1,94 @@
+/* =========================
+# Index
+========================= */
+#bnrBg-satherGate {
+  background-image: url("../images/index/uc-berkeley-sather-gate.jpg");
+  background-size: cover;
+}
+#mainBg-LSI {
+  background-image: url("../images/index/bg-lsi-visiting-bair-lab.jpg");
+  background-size: cover;
+  background-position: 75% 50%;
+}
+@media screen and (min-width: 768px) {
+  #mainBg-LSI {
+    background-attachment: fixed;
+    background-position: 100% 50%;
+  }
+}
+#mainBg-WALEX {
+  background: #00a598 url("../images/index/bg-walex-visiting-lawrence-hall-of-science.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+/* =========================
+# About
+========================= */
+#bnrBg-about {
+  background-image: url("../images/about/bg-cfm.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+}
+#aboutBg-mission {
+  background-image: url("../images/about/bg-mission.jpg");
+  background-size: cover; 
+  background-position: 50%;
+}
+
+/* =========================
+# Berkeley
+========================= */
+#bnrBg-uc-berkeley {
+  background-image: url("../images/ucberkeley/bg-ucb.jpg");
+  background-size: cover; 
+  background-position: 50% 32%;
+}
+
+/* =========================
+# ATDP
+========================= */
+#bnrBg-atdp {
+  background-image: url("../images/atdp/bg-atdp.jpg");
+  background-size: cover; 
+  background-position: 50% 80%;
+}
+#atdp-icon img {
+  height: 60px;
+  width: auto;
+}
+#bnrBg-atdp-intro {
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0, .3)), url("../images/atdp/atdp-counselors-at-campanile.jpg");
+  background-size: cover; 
+  background-position: 50% 80%;
+  height: 60vh;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  #bnrBg-atdp-intro {
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .3), transparent), url("../images/atdp/atdp-counselors-at-campanile.jpg");
+  }
+}
+/* =========================
+# SVSD
+========================= */
+#bnrBg-svsd {
+  background-image: url("../images/svsd/bg-svsd.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+}
+#highlights .flexQuarter:hover,
+#msjhs .flexQuarter:hover {
+  transform: scale(1.01);
+  -webkit-box-shadow: 3px 3px 20px 5px #ccc;
+  -moz-box-shadow: 3px 3px 20px 5px #ccc;
+  box-shadow: 3px 3px 20px 5px #ccc;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.2);
+  transition: all .5s ease;
+}
+@media screen and (min-width: 768px) {
+  #ohlone .flexImg {
+    height: 75vh;
+  }
+}

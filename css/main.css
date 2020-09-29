@@ -3,7 +3,6 @@
 ========================= */
 html {
   font-family: sans-serif;
-  line-height: 1.15;
 }
 body {
   margin: 0;
@@ -23,7 +22,7 @@ main {
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -91,9 +90,29 @@ ul.star li:before {
 ul.trophy li:before {
   content: "\f091";
 }
+.dotLine {
+  text-align: center;
+}
+.dotLineDot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  display: inline-block;
+}
 .iconTitle {
   font-size: 36px;
   font-weight: 500;
+}
+.subTitle {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 .upperCase {
   text-transform: uppercase;
@@ -104,20 +123,100 @@ ul.trophy li:before {
 .IMFellGreatPrimer {
   font-family: "IM Fell Great Primer", sans-serif;
 }
-.textAlignCenter {
-  text-align: center !important;
+
+/* =========================
+# Speech Bobbles
+========================= */
+.cutout-b {
+  background: #000;
+  color: #fff;
+  font-weight: 600 !important;
+  margin: 0 auto;
+  padding: 1%;
+  mix-blend-mode: multiply; 
 }
-.textAlignLeft {
-  text-align: left !important;
+.cutout-w {
+  background: rgba(255,255,255,.95);
+  color: #000;
+  font-weight: 600 !important;
+  padding: 0 1%;
+  margin: auto;
+  mix-blend-mode: screen; 
 }
-.textAlignRight {
-  text-align: right !important;
+.speechBobble-up, 
+.speechBobble-down {
+  position: relative;
+}
+.speechBobble-up:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid rgba(255,255,255,.95);
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid rgba(255,255,255,.95);
+  right: 10%;
+  top: -19px;
+}
+@media screen and (min-width: 768px) {
+  .speechBobble-up:before {
+    display: none;
+  }
+}
+.speechBobble-down:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  right: 30%;
+  bottom: -19px;
+}
+@media screen and (min-width: 768px) {
+  .speechBobble-down:before {
+    border-left: 10px solid rgba(255,255,255,.95);
+    border-top: 10px solid rgba(255,255,255,.95);
+  }
+}
+
+/* =========================
+# Layout
+========================= */
+.bottom-top {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  width: 100%;
+}  
+@media screen and (min-width: 768px) {
+  .bottom-top {
+    position: absolute;
+    bottom: auto; 
+    top: 5%;
+    right: 2%;
+  }  
 }
 .padding-0-2 {
   padding: 0 2vw; 
 }
 .padding-2-2 {
   padding: 2vw; 
+}
+.padding-5-0 {
+  padding: 5vh 0;
+}
+.padding-0-5 {
+  padding: 0 5vw;
+}
+.margin-0-2 {
+  margin: 0 2vw; 
+}
+.margin-2-2 {
+  margin: 2vw; 
 }
 .marginTop,
 .marginTop-50-0 {
@@ -134,16 +233,37 @@ ul.trophy li:before {
 .marginBottom-50 {
   margin-bottom: -50px;
 }
-.dotLine {
-  text-align: center;
+.width100 {
+  width: 100%;
 }
-.dotLineDot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #cccccc;
-  border-radius: 50%;
-  display: inline-block;
+.displayBlock {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .border-0-right {
+    border-right: 1px solid;
+  }
+}
+
+/* =========================
+# Text Layout
+========================= */
+.textCenter {
+  text-align: center !important;
+}
+.textLeft {
+  text-align: left !important;
+}
+.textRight {
+  text-align: right !important;
+}
+.textLeftRight {
+  text-align: left !important;
+}
+@media screen and (min-width: 768px) {
+  .textLeftRight {
+    text-align: right !important;
+  }
 }
 
 /* =========================
@@ -208,6 +328,25 @@ main a.myBtn {
 .walex {
   background-color: rgba(255,51,0,.4);
 }
+.whiteFont {
+  color: #ffffff;
+}
+
+/* =========================
+# Images
+========================= */
+.roundImage {
+  margin: 0 auto;
+  max-width: 320px;
+}
+.roundImage img {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    min-height: 1px;
+}
 
 /* =========================
 # Creative Commons
@@ -216,7 +355,8 @@ main a.myBtn {
   position: absolute;
   bottom: 1.5%;
   left: .5%;
-  background-color: rgba(0,0,0,.2);
+  padding: 0 1%;
+  background-image: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.25) 90%, transparent);
 }
 .ccAttribution img {
   width: 20px;
@@ -682,39 +822,6 @@ main a.myBtn {
   font-weight: 700;
 }
 
-/* =========================
-# Semi-transparent Overlay
-========================= */
-/*.semiOverlay-left-w, 
-.semiOverlay-right-w {
-  display: block;
-  position: absolute;
-  width: 90%;
-  top: 5%;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-  background-color: rgba(255,255,255,.9);
-  border-radius: 10px;
-}
-@media screen and (min-width: 768px) {
-  .semiOverlay-left-w,
-  .semiOverlay-right-w {
-    width: 50%;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(255,255,255,.9);
-    border-radius: 0;
-  }
-  .semiOverlay-left-w {
-    left: 0;
-    right: auto;
-  }
-  .semiOverlay-right-w {
-    left: auto;
-    right: 0;
-  }
-}*/
 
 /* =========================
 # Image Banner 
@@ -745,19 +852,33 @@ main a.myBtn {
     height: 85vh;
   }
 }
-.bnrContent-bl {   
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0 0 2% 5%;  /*bottom left padding*/
-}
-.bnrContent-tr {   
+.bnrContent-tl {   
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2% 5% 0 0;  /*top right padding*/
+  padding: 2% 0 0 5%;
+}
+.bnrContent-bl {   
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  padding: 0 0 2% 5%;
+}
+.bnrContent-tr {   
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 2% 5% 0 0;
+}
+.bnrContent-br {   
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 0 5% 2% 0;
 }
 .bnrTitle {
   display: inline-block;
@@ -780,7 +901,7 @@ main a.myBtn {
   font-size: clamp(26px, 5vw, 30px);
   font-weight: 600;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 575px) {
   .sectionHeader {
     font-size: clamp(20px, 5.5vw, 26px); 
   }
@@ -800,47 +921,58 @@ main a.myBtn {
 # Div Header
 =========================*/
 .divHeader {
-  color: #3e4444;
   font-family: "Crimson Text", serif;
   font-weight: 500;
   text-align: center;
+}
+.underLineCenter:after {
+  content: "";
+  display: block;
+  background-color: #ffa500;
+  height: 6px;
+  width: 100px;
+  margin: 1% auto;
+  border-radius: 4px;
 }
 
 /* =========================
 # Flex Container - Parent
 =========================*/ 
 .flexContainer {
-  display: flex;
   position: relative;
+  display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: space-evenly;
-  justify-content: space-evenly;
 }
 .flexColumn {
   display: flex;
   flex-direction: column;
 }
-.alignItemsCenter {
+.alignCenter {
   align-items: center;
 }
-.alignItemsStart {
+.alignStart {
   align-items: flex-start;
 }
-.alignItemsEnd {
+.alignEnd {
   align-items: flex-end;
 }
 .alignSelfCenter {
   align-self: center;
 }
-.justifyContentCenter {
+.justifyAround {
+  justify-content: space-around;
+}
+.justifyBetween {
+  justify-content: space-between;
+}
+.justifyCenter {
   justify-content: center;
 }
-.justifyContentStart {
-  justify-content: flex-start;
-}
-.justifyContentEnd {
+.justifyEnd {
   justify-content: flex-end;
+}
+.justifyEvenly {
+  justify-content: space-evenly;
 }
 .flexIcon {
   height: 80px;
@@ -874,22 +1006,48 @@ main a.myBtn {
     max-height: 600px;
   }
 }
-.flexOrder-1 {
+.flexOrder-2-1 {
   -webkit-order: 2;
   order: 2;
 }
-.flexOrder-2 {
+.flexOrder-1-2 {
   -webkit-order: 1;
   order: 1;
 }
 @media screen and (min-width: 768px) {
-  .flexOrder-1 {
+  .flexOrder-2-1 {
     -webkit-order: 1;
     order: 1;
   }
-  .flexOrder-2 {
+  .flexOrder-1-2 {
     -webkit-order: 2;
     order: 2;
+  }
+}
+.flexOrder-1-2-of-3 {
+  -webkit-order: 1;
+  order: 1;
+}
+.flexOrder-2-1-of-3 {
+  -webkit-order: 2;
+  order: 2;
+}
+.flexOrder-3-3-of-3 {
+  -webkit-order: 3;
+  order: 3;
+}
+@media screen and (min-width: 768px) {
+  .flexOrder-1-2-of-3 {
+    -webkit-order: 2;
+    order: 2;
+  }
+  .flexOrder-2-1-of-3 {
+    -webkit-order: 1;
+    order: 1;
+  }
+  .flexOrder-3-3-of-3 {
+    -webkit-order: 3;
+    order: 3;
   }
 }
 
@@ -911,7 +1069,7 @@ main a.myBtn {
   flex: 40%;
   max-width: 40%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 575px) {
   .flexThird {
     flex: 80%;
     max-width: 80%;
@@ -953,7 +1111,7 @@ main a.myBtn {
   flex: 50%;
   max-width: 50%;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 575px) {
   .flexQuarter {
     flex: 100%;
     max-width: 100%;
@@ -971,13 +1129,37 @@ main a.myBtn {
     max-width: 25%;
   }
 }
+.flex-30-15 {
+  flex: 25%;
+  max-width: 25%;
+}
+@media screen and (max-width: 575px) {
+  .flex-30-15 {
+    flex: 30%;
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex-30-15 {
+    flex: 15%;
+    max-width: 15%;
+  }
+}
 .flex20 {
   flex: 20%;
   max-width: 20%;
 }
+.flex25 {
+  flex: 25%;
+  max-width: 25%;
+}
 .flex50 {
   flex: 50%;
   max-width: 50%;
+}
+.flex75 {
+  flex: 75%;
+  max-width: 75%;
 }
 .flex80 {
   flex: 80%;
@@ -1002,6 +1184,9 @@ main a.myBtn {
     padding: 1rem 3rem;
   }
 }
+.textHolder {
+
+}
 
 /* =========================
 # Text Wrapper
@@ -1012,7 +1197,7 @@ main a.myBtn {
   align-items: flex-start;
   justify-content: space-between;
 }
-.headerUnderline:after {
+.underLineLeft:after {
   content: "";
   display: block;
   background-color: #ffa500;
@@ -1077,7 +1262,7 @@ main a.myBtn {
 =========================*/
 .progPreview {
   background-color: #ffffff;
-  margin: 1rem;
+  margin: 1rem 1.5rem;
   box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   overflow: hidden;
 }
@@ -1145,75 +1330,6 @@ main a.myBtn {
 }
 
 /* =========================
-# Background Images
-========================= */
-/* --- index --- */
-#bnrBg-satherGate {
-  background-image: url("../images/index/uc-berkeley-sather-gate.jpg");
-  background-size: cover;
-}
-#mainBg-LSI {
-  background-image: url("../images/index/bg-lsi-visiting-bair-lab.jpg");
-  background-size: cover;
-  background-position: 75% 50%;
-}
-@media screen and (min-width: 768px) {
-  #mainBg-LSI {
-    background-attachment: fixed;
-    background-position: 100% 50%;
-  }
-}
-#mainBg-WALEX {
-  background: #00a598 url("../images/index/bg-walex-visiting-lawrence-hall-of-science.jpg");
-  background-size: cover;
-  background-position: 50%;
-}
-/* --- about --- */
-#bnrBg-about {
-  background-image: url("../images/about/bg-cfm.jpg");
-  background-size: cover; 
-  background-position: 50% 60%;
-}
-#aboutBg-mission {
-  background-image: url("../images/about/bg-mission.jpg");
-  background-size: cover; 
-  background-position: 50%;
-}
-/* --- berkeley --- */
-#bnrBg-uc-berkeley {
-  background-image: url("../images/ucberkeley/bg-ucb.jpg");
-  background-size: cover; 
-  background-position: 50% 32%;
-}
-/* --- atdp --- */
-#bnrBg-atdp {
-  background-image: url("../images/atdp/bg-atdp.jpg");
-  background-size: cover; 
-  background-position: 50% 80%;
-}
-/* --- svsd --- */
-#bnrBg-svsd {
-  background-image: url("../images/svsd/bg-svsd.jpg");
-  background-size: cover; 
-  background-position: 50% 60%;
-}
-#highlights .flexQuarter:hover,
-#msjhs .flexQuarter:hover {
-  transform: scale(1.01);
-  -webkit-box-shadow: 3px 3px 20px 5px #ccc;
-  -moz-box-shadow: 3px 3px 20px 5px #ccc;
-  box-shadow: 3px 3px 20px 5px #ccc;
-  border-radius: 20px;
-  background-color: rgba(255,255,255,.2);
-  transition: all .5s ease;
-}
-@media screen and (min-width: 768px) {
-  #ohlone .flexImg {
-    height: 75vh;
-  }
-}
-
-/* =========================
 # Gallery
 =========================*/ 
 .galleryContainer {
@@ -1255,7 +1371,7 @@ main a.myBtn {
 .videoGalleryItem:hover {
   box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 575px) {
   .videoGalleryItem {
     width: 90%;
     max-width: 90%;
@@ -1576,7 +1692,7 @@ footer .flexContainer {
 .textBetweenLine:before,
 .textBetweenLine:after {
   content: "";
-  flex: 1 1;
+  flex: 1;
   border-bottom: 1px solid #cccccc;
 }
 .textBetweenLine:before {
@@ -1588,24 +1704,23 @@ footer .flexContainer {
 .textBetweenDoubleLine:before,
 .textBetweenDoubleLine:after {
   content: "";
-  flex: 1 0;
-  height: 6px;
+  height: 5px;
   width: 20vw;
-  border-top: 1px solid #161818;
-  border-bottom: 1px solid #161818;
+  border-top: 1px solid #3e4444;
+  border-bottom: 1px solid #3e4444;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
   .textBetweenDoubleLine:before,
   .textBetweenDoubleLine:after {
-    width: 10vw;
+    width: 12vw;
   }
 }
 .textBetweenDoubleLine:before {
-  margin-right: 5%;
+  margin-right: 15px;
 }
 .textBetweenDoubleLine:after {
-  margin-left: 5%;
+  margin-left: 15px;
 }
 
 /* =========================
@@ -1620,6 +1735,7 @@ footer .flexContainer {
   padding: 2vw 5vw; 
   margin: 30px 12vw 0 12vw;
   max-width: 1200px;
+  min-height: 35vh;
   text-align: left;
   background-color: #fafafa;
   border-radius: 10px;
@@ -1703,4 +1819,17 @@ footer .flexContainer {
 
 
 
+.logoContainer {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10vw;
+}
+.logoContainer img {
+  width: 100%;
+  padding: 0 5%;
+}
 

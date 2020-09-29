@@ -57,38 +57,6 @@ NotoSans-BoldItalic.ttf: Copyright 2012 Google Inc. All Rights Reserved.
 }
 
 /***************************************************
-# IM Fell Great Primer
-***************************************************/
-/*
-IMFeGPrm28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Roman
-IMFeGPit28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Italic
-*/
-@font-face {
-  font-family: 'IM Fell Great Primer';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/im-fell-great-primer-v10-latin-regular.eot');
-  src: local('IM FELL Great Primer Roman'), local('IM_FELL_Great_Primer_Roman'),
-       url('../fonts/IMFellGreatPrimer-Regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/IMFellGreatPrimer-Regular.woff2') format('woff2'),
-       url('../fonts/IMFellGreatPrimer-Regular.woff') format('woff'),
-       url('../fonts/IMFellGreatPrimer-Regular.ttf') format('truetype'),
-       url('../fonts/IMFellGreatPrimer-Regular.svg#IMFellGreatPrimer') format('svg');
-}
-@font-face {
-  font-family: 'IM Fell Great Primer';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/IMFellGreatPrimer-Italic.eot');
-  src: local('IM FELL Great Primer Italic'), local('IM_FELL_Great_Primer_Italic'),
-       url('../fonts/IMFellGreatPrimer-Italic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/IMFellGreatPrimer-Italic.woff2') format('woff2'),
-       url('../fonts/IMFellGreatPrimer-Italic.woff') format('woff'),
-       url('../fonts/IMFellGreatPrimer-Italic.ttf') format('truetype'),
-       url('../fonts/IMFellGreatPrimer-Italic.svg#IMFellGreatPrimer') format('svg');
-}
-
-/***************************************************
 # Montserrat
 ***************************************************/
 /*
@@ -306,4 +274,36 @@ CrimsonText-BoldItalic.ttf: Copyright (c) 2010, Sebastian Kosch (sebastian@aldus
        url('../fonts/CrimsonText-BoldItalic.woff') format('woff'),
        url('../fonts/CrimsonText-BoldItalic.ttf') format('truetype'),
        url('../fonts/CrimsonText-BoldItalic.svg#CrimsonText') format('svg');
+}
+
+/***************************************************
+# IM Fell Great Primer
+***************************************************/
+/*
+IMFeGPrm28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Roman
+IMFeGPit28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font Name IM FELL Great Primer Italic
+*/
+@font-face {
+  font-family: 'IM Fell Great Primer';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/im-fell-great-primer-v10-latin-regular.eot');
+  src: local('IM FELL Great Primer Roman'), local('IM_FELL_Great_Primer_Roman'),
+       url('../fonts/IMFellGreatPrimer-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IMFellGreatPrimer-Regular.woff2') format('woff2'),
+       url('../fonts/IMFellGreatPrimer-Regular.woff') format('woff'),
+       url('../fonts/IMFellGreatPrimer-Regular.ttf') format('truetype'),
+       url('../fonts/IMFellGreatPrimer-Regular.svg#IMFellGreatPrimer') format('svg');
+}
+@font-face {
+  font-family: 'IM Fell Great Primer';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/IMFellGreatPrimer-Italic.eot');
+  src: local('IM FELL Great Primer Italic'), local('IM_FELL_Great_Primer_Italic'),
+       url('../fonts/IMFellGreatPrimer-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IMFellGreatPrimer-Italic.woff2') format('woff2'),
+       url('../fonts/IMFellGreatPrimer-Italic.woff') format('woff'),
+       url('../fonts/IMFellGreatPrimer-Italic.ttf') format('truetype'),
+       url('../fonts/IMFellGreatPrimer-Italic.svg#IMFellGreatPrimer') format('svg');
 }
