@@ -32,6 +32,12 @@
     max-width: 1140px;
   }
 }
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 .col,
 .col-auto,
 .col-1,
@@ -104,8 +110,6 @@
 .col-xl-12 {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .col {
   -ms-flex-preferred-size: 0;

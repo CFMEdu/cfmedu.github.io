@@ -58,7 +58,7 @@
   width: auto;
 }
 #bnrBg-atdp-intro {
-  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0, .3)), url("../images/atdp/atdp-counselors-at-campanile.jpg");
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.3)), url("../images/atdp/atdp-counselors-at-campanile.jpg");
   background-size: cover; 
   background-position: 50% 80%;
   height: 60vh;
@@ -66,9 +66,18 @@
 }
 @media screen and (min-width: 768px) {
   #bnrBg-atdp-intro {
-    background-image: linear-gradient(to bottom, rgba(0,0,0, .3), transparent), url("../images/atdp/atdp-counselors-at-campanile.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), transparent), url("../images/atdp/atdp-counselors-at-campanile.jpg");
   }
 }
+#eligibility img {
+  height: 40vh;
+}
+@media screen and (min-width: 1200px) {
+  #eligibility img {
+    height: 35vh;
+  }
+}
+
 /* =========================
 # SVSD
 ========================= */
@@ -92,3 +101,4 @@
     height: 75vh;
   }
 }
+

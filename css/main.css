@@ -72,7 +72,7 @@ strong {
 ul.firstTier {
   line-height: 1.75;
   padding-left: 1rem;
-  margin: 1rem 0; 
+  margin: 2vh auto; 
 }
 ul.firstTier li {
   padding-left: .5rem;
@@ -83,6 +83,13 @@ ul.firstTier li:before {
   display: inline-block; 
   width: 1.5rem;
   margin-left: -1.5rem;
+}
+ul.circle li:before {
+  content: "\f111";
+  font-size: .5rem;
+  vertical-align: middle;
+  width: 1rem;
+  margin-left: -1rem;
 }
 ul.star li:before {
   content: "\f005";
@@ -101,21 +108,26 @@ ul.trophy li:before {
   border-radius: 50%;
   display: inline-block;
 }
-.iconTitle {
-  font-size: 36px;
-  font-weight: 500;
+.dotLineStar:after {
+  content: "\f005";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #cccccc;
+  margin: 0 5px;
+  display: inline-block;
 }
-.subTitle {
-  display: block;
+.iconTitle {
+  font-size: 32px;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
+  font-variant: small-caps;
+  line-height: 1;
+  padding: 2vh 0; 
 }
 .upperCase {
   text-transform: uppercase;
+}
+.smallCaps {
+  font-variant: small-caps;
 }
 .montserrat {
   font-family: "Montserrat", sans-serif;
@@ -186,25 +198,40 @@ ul.trophy li:before {
 /* =========================
 # Layout
 ========================= */
-.bottom-top {
+.bottomUp {
   position: absolute;
   bottom: 3%;
   right: 2%;
   width: 100%;
 }  
 @media screen and (min-width: 768px) {
-  .bottom-top {
+  .bottomUp {
     position: absolute;
     bottom: auto; 
     top: 5%;
     right: 2%;
   }  
 }
+.displayBlock {
+  display: block;
+}
+.width100 {
+  width: 100%;
+}
+.padding-0-1 {
+  padding: 0 1vw; 
+}
+.padding-1-0 {
+  padding: 1vh 0; 
+}
 .padding-0-2 {
   padding: 0 2vw; 
 }
+.padding-2-0 {
+  padding: 2vh 0; 
+}
 .padding-2-2 {
-  padding: 2vw; 
+  padding: 2vh 2vw; 
 }
 .padding-5-0 {
   padding: 5vh 0;
@@ -212,11 +239,29 @@ ul.trophy li:before {
 .padding-0-5 {
   padding: 0 5vw;
 }
+.padding-5-5 {
+  padding: 5%;
+}
+.margin-left-2 {
+  margin-left: 2vw;
+}
 .margin-0-2 {
   margin: 0 2vw; 
 }
+.margin-2-0 {
+  margin: 2vh 0; 
+}
 .margin-2-2 {
-  margin: 2vw; 
+  margin: 2vh 2vw; 
+}
+.margin-3-2 {
+  margin: 3vh 2vw; 
+}
+.margin-5-0 {
+  margin: 5vh 0;
+}
+.margin-0-5 {
+  margin: 0 5vw;
 }
 .marginTop,
 .marginTop-50-0 {
@@ -233,16 +278,56 @@ ul.trophy li:before {
 .marginBottom-50 {
   margin-bottom: -50px;
 }
-.width100 {
-  width: 100%;
+.pushDown {
+  padding-bottom: 150px;
 }
-.displayBlock {
-  display: block;
+.pushUp {
+  margin-top: -150px;
+}
+.pushUp-sm {
+  margin-top: -25px;
+}
+@media screen and (min-width: 576px) {
+  .pushUp-sm {
+    margin-top: -50px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .border-0-right {
-    border-right: 1px solid;
+  .pushUp-sm {
+    margin-top: 0px;
   }
+}
+.trapezoidHolder {
+  position: relative;
+  overflow: hidden;
+}
+.trapezoid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top left;
+}
+.trapezoid.bottom25 {
+  transform: perspective(1px) skewY(-2.5deg);
+}
+.trapezoid.bottom30 {
+  transform: perspective(1px) skewY(-3.0deg);
+}
+.trapezoid.bottom35 {
+  transform: perspective(1px) skewY(-3.5deg);
+}
+.trapezoid.top25 {
+  transform: perspective(1px) skewY(2.5deg);
+}
+.trapezoid.top30 {
+  transform: perspective(1px) skewY(3.0deg);
+}
+.trapezoid.top35 {
+  transform: perspective(1px) skewY(3.5deg);
 }
 
 /* =========================
@@ -274,12 +359,12 @@ nav a:link, nav a:visited {
   text-decoration: none;
 }
 nav a.selected {
-  color: #6a929e;
+  color: #557a95;
 }
 nav a:hover, nav a:active, 
 nav a.selected:hover, 
 nav a.selected:active {
-  color: #6a929e;
+  color: #557a95;
   text-decoration: underline;
 }
 main a:link,
@@ -298,17 +383,54 @@ main a.myBtn {
 ::selection {
   background: #ffe533;
 }
-.satherBg {
-  background-color: #b9d3b6;
-  padding: 5vh 0;
-  margin: 0;
+.boxShadow {
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
+              0 1px 4px rgba(0,0,0,0.07),
+              0 2px 6px rgba(0,0,0,0.07), 
+              0 4px 8px rgba(0,0,0,0.07), 
+              0 8px 16px rgba(0,0,0,0.07),
+              0 16px 32px rgba(0,0,0,0.07);
 }
-.mistic {
+.boxShadow-up {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+              0 -1px 4px rgba(0,0,0,0.07),
+              0 -2px 6px rgba(0,0,0,0.07), 
+              0 -4px 8px rgba(0,0,0,0.07), 
+              0 -8px 16px rgba(0,0,0,0.07),
+              0 -16px 32px rgba(0,0,0,0.07);
+}
+.boxShadow-2 {
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.boxShadow-2:hover {
+  box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
+}
+.jellyBean {
+  color: #218099;
+}
+.mystic {
   background-color: #e4eeed;
-  padding: 5vh 0;
 }
-.kashmirBlue {
-  color: #426b90;
+.satherGate {
+  background-color: #b9d3b6;
+}
+.satherGate-fade {
+  background-image: linear-gradient(to bottom right, rgba(185,211,182,1), transparent);
+}
+.school {
+  background-image: url("../images/bg/school.png");
+}
+.school-light {
+  background-image: url("../images/bg/school-light.png");
+}
+.whiteBg {
+  background-color: #ffffff;
+}
+.whiteBg-trans {
+  background-color: rgba(255,255,255,.9);
+}
+.whiteFont {
+  color: #ffffff;
 }
 .atdp {
   background-color: rgba(0,176,218,.4);
@@ -328,9 +450,6 @@ main a.myBtn {
 .walex {
   background-color: rgba(255,51,0,.4);
 }
-.whiteFont {
-  color: #ffffff;
-}
 
 /* =========================
 # Images
@@ -338,6 +457,7 @@ main a.myBtn {
 .roundImage {
   margin: 0 auto;
   max-width: 320px;
+  border-radius: 50%;
 }
 .roundImage img {
     display: block;
@@ -346,6 +466,9 @@ main a.myBtn {
     max-width: 100%;
     height: auto;
     min-height: 1px;
+}
+.roundImage ~ div > p {
+  max-width: 50vw;
 }
 
 /* =========================
@@ -549,7 +672,7 @@ main a.myBtn {
   }
   .navMenu > ul > li > a.shrink:hover,
   .navMenu > ul > li > a.shrink.selected {
-    color: #6a929e;
+    color: #557a95;
     text-decoration: none;
   }
 }
@@ -570,7 +693,7 @@ main a.myBtn {
     width: 0;
     height: 3px;
     bottom: 0;
-    background-color: #6a929e;
+    background-color: #557a95;
     background-image: none;
     margin: 0;
     transition: all .3s ease-out;
@@ -613,7 +736,7 @@ main a.myBtn {
   .navDropdown a.selected:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: #6a929e;
+    background-color: #557a95;
   }
   .navDropdown > li:last-child > a {
     border-bottom: none;
@@ -634,7 +757,7 @@ main a.myBtn {
   padding: 0 3vw;
   border-bottom: 1px solid #eeeeee;
   background-color: #ffffff;
-  box-shadow: 0px 5px 10px -10px #6a929e;
+  box-shadow: 0px 5px 10px -10px #557a95;
 }
 .subNavigation.stickyDiv {
   position: fixed;
@@ -761,7 +884,7 @@ main a.myBtn {
 }
 #mission .glassOverlayWrapper,
 #mission .glassOverlayWindow:before {
-  background-image: url(../images/about/bg-ucb-library.jpg);
+  background-image: url("../images/about/bg-ucb-library.jpg");
   background-position: 50%;
 }
 .glassOverlayWindow {
@@ -821,7 +944,6 @@ main a.myBtn {
 #mission h2 {
   font-weight: 700;
 }
-
 
 /* =========================
 # Image Banner 
@@ -895,7 +1017,7 @@ main a.myBtn {
 }
 
 /* =========================
-# Section Header
+# Headers
 ========================= */
 .sectionHeader {
   font-size: clamp(26px, 5vw, 30px);
@@ -916,71 +1038,687 @@ main a.myBtn {
     font-size: clamp(32px, 4.2vw, 42px); 
   }
 }
-
-/* =========================
-# Div Header
-=========================*/
 .divHeader {
   font-family: "Crimson Text", serif;
   font-weight: 500;
   text-align: center;
 }
-.underLineCenter:after {
+
+/* =========================
+# Under Lines
+=========================*/
+.underLineCenter:after,
+.underLineLeft:after {
   content: "";
   display: block;
-  background-color: #ffa500;
-  height: 6px;
   width: 100px;
-  margin: 1% auto;
+  height: 6px;
+  background-color: #ffa500;
   border-radius: 4px;
+}
+.underLineCenter:after {
+  margin: 1% auto;
+}
+.underLineLeft:after {
+  margin: 3% 0;
+}
+.underLineThin:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: #0091ae;
+  margin: 5% auto;
 }
 
 /* =========================
-# Flex Container - Parent
-=========================*/ 
-.flexContainer {
-  position: relative;
+# Text Between Lines
+========================= */
+.textBetweenLine,
+.textBetweenDoubleLine {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.textBetweenLine:before,
+.textBetweenLine:after {
+  content: "";
+  width: 15%;
+  height: 1px;
+  background-image: linear-gradient(
+    90deg, rgba(62,68,68,0) 0, rgba(62,68,68,1) 50%, rgba(62,68,68,0) 100%);
+}
+.textBetweenLine:before {
+  margin-right: .5%;
+}
+.textBetweenLine:after {
+  margin-left: .5%;
+}
+.textBetweenDoubleLine:before,
+.textBetweenDoubleLine:after {
+  content: "";
+  height: 5px;
+  width: 20vw;
+  border-top: 1px solid #3e4444;
+  border-bottom: 1px solid #3e4444;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .textBetweenDoubleLine:before,
+  .textBetweenDoubleLine:after {
+    width: 12vw;
+  }
+}
+.textBetweenDoubleLine:before {
+  margin-right: 15px;
+}
+.textBetweenDoubleLine:after {
+  margin-left: 15px;
+}
+
+/* =========================
+# Flex - Parents
+=========================*/ 
+.flexRow {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .flexColumn {
+  position: relative;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
 }
-.alignCenter {
-  align-items: center;
-}
 .alignStart {
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 .alignEnd {
+  -ms-flex-align: end;
   align-items: flex-end;
 }
+.alignCenter {
+  -ms-flex-align: center;
+  align-items: center;
+}
 .alignSelfCenter {
+  -ms-flex-item-align: center;
   align-self: center;
 }
-.justifyAround {
-  justify-content: space-around;
-}
-.justifyBetween {
-  justify-content: space-between;
-}
-.justifyCenter {
-  justify-content: center;
+.justifyStart {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 .justifyEnd {
+  -ms-flex-pack: end;
   justify-content: flex-end;
+}
+.justifyCenter {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.justifyBetween {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.justifyAround {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 .justifyEvenly {
   justify-content: space-evenly;
 }
-.flexIcon {
-  height: 80px;
+
+/* =========================
+# Flex - Column
+=========================*/ 
+.flex {
+  flex: 1 1 auto;
+}
+/* 100-50 */
+.flexHalf {
+  position: relative;
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexHalf {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* 100-30 */
+.flexOneThird {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexOneThird {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+}
+/* 100-70 */
+.flexTwoThird {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flexTwoThird {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+  }
+}
+/* 100-50-33-25 */
+.flexQuarter {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+}
+@media screen and (max-width: 575px) {
+  .flexQuarter {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flexQuarter {
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 33%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flexQuarter {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+/* 00-sm-md-lg-xl */
+.flex10 {
+  -ms-flex: 10%;
+  flex: 10%;
+  max-width: 10%;
+}
+.flex15 {
+  -ms-flex: 15%;
+  flex: 15%;
+  max-width: 15%;
+}
+.flex20 {
+  -ms-flex: 20%;
+  flex: 20%;
+  max-width: 20%;
+}
+.flex25 {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+}
+.flex30 {
+  -ms-flex: 30%;
+  flex: 30%;
+  max-width: 30%;
+}
+.flex35 {
+  -ms-flex: 35%;
+  flex: 35%;
+  max-width: 35%;
+}
+.flex40 {
+  -ms-flex: 40%;
+  flex: 40%;
+  max-width: 40%;
+}
+.flex45 {
+  -ms-flex: 45%;
+  flex: 45%;
+  max-width: 45%;
+}
+.flex50 {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+}
+.flex55 {
+  -ms-flex: 55%;
+  flex: 55%;
+  max-width: 55%;
+}
+.flex60 {
+  -ms-flex: 60%;
+  flex: 60%;
+  max-width: 60%;
+}
+.flex65 {
+  -ms-flex: 65%;
+  flex: 65%;
+  max-width: 65%;
+}
+.flex70 {
+  -ms-flex: 70%;
+  flex: 70%;
+  max-width: 70%;
+}
+.flex75 {
+  -ms-flex: 75%;
+  flex: 75%;
+  max-width: 75%;
+}
+.flex80 {
+  -ms-flex: 80%;
+  flex: 80%;
+  max-width: 80%;
+}
+.flex85 {
+  -ms-flex: 85%;
+  flex: 85%;
+  max-width: 85%;
+}
+.flex90 {
+  -ms-flex: 90%;
+  flex: 90%;
+  max-width: 90%;
+}
+.flex100 {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .flex10-sm {
+    -ms-flex: 10%;
+    flex: 10%;
+    max-width: 10%;
+  }
+  .flex15-sm {
+    -ms-flex: 15%;
+    flex: 15%;
+    max-width: 15%;
+  }
+  .flex20-sm {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+  .flex25-sm {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .flex30-sm {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+  .flex35-sm {
+    -ms-flex: 35%;
+    flex: 35%;
+    max-width: 35%;
+  }
+  .flex40-sm {
+    -ms-flex: 40%;
+    flex: 40%;
+    max-width: 40%;
+  }
+  .flex45-sm {
+    -ms-flex: 45%;
+    flex: 45%;
+    max-width: 45%;
+  }
+  .flex50-sm {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .flex55-sm {
+    -ms-flex: 55%;
+    flex: 55%;
+    max-width: 55%;
+  }
+  .flex60-sm {
+    -ms-flex: 60%;
+    flex: 60%;
+    max-width: 60%;
+  }
+  .flex65-sm {
+    -ms-flex: 65%;
+    flex: 65%;
+    max-width: 65%;
+  }
+  .flex70-sm {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+  }
+  .flex75-sm {
+    -ms-flex: 75%;
+    flex: 75%;
+    max-width: 75%;
+  }
+  .flex80-sm {
+    -ms-flex: 80%;
+    flex: 80%;
+    max-width: 80%;
+  }
+  .flex85-sm {
+    -ms-flex: 85%;
+    flex: 85%;
+    max-width: 85%;
+  }
+  .flex90-sm {
+    -ms-flex: 90%;
+    flex: 90%;
+    max-width: 90%;
+  }
+  .flex100-sm {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex10-md {
+    -ms-flex: 10%;
+    flex: 10%;
+    max-width: 10%;
+  }
+  .flex15-md {
+    -ms-flex: 15%;
+    flex: 15%;
+    max-width: 15%;
+  }
+  .flex20-md {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+  .flex25-md {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .flex30-md {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+  .flex35-md {
+    -ms-flex: 35%;
+    flex: 35%;
+    max-width: 35%;
+  }
+  .flex40-md {
+    -ms-flex: 40%;
+    flex: 40%;
+    max-width: 40%;
+  }
+  .flex45-md {
+    -ms-flex: 45%;
+    flex: 45%;
+    max-width: 45%;
+  }
+  .flex50-md {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .flex55-md {
+    -ms-flex: 55%;
+    flex: 55%;
+    max-width: 55%;
+  }
+  .flex60-md {
+    -ms-flex: 60%;
+    flex: 60%;
+    max-width: 60%;
+  }
+  .flex65-md {
+    -ms-flex: 65%;
+    flex: 65%;
+    max-width: 65%;
+  }
+  .flex70-md {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+  }
+  .flex75-md {
+    -ms-flex: 75%;
+    flex: 75%;
+    max-width: 75%;
+  }
+  .flex80-md {
+    -ms-flex: 80%;
+    flex: 80%;
+    max-width: 80%;
+  }
+  .flex85-md {
+    -ms-flex: 85%;
+    flex: 85%;
+    max-width: 85%;
+  }
+  .flex90-md {
+    -ms-flex: 90%;
+    flex: 90%;
+    max-width: 90%;
+  }
+  .flex100-md {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flex10-lg {
+    -ms-flex: 10%;
+    flex: 10%;
+    max-width: 10%;
+  }
+  .flex15-lg {
+    -ms-flex: 15%;
+    flex: 15%;
+    max-width: 15%;
+  }
+  .flex20-lg {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+  .flex25-lg {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .flex28-lg {
+    -ms-flex: 28%;
+    flex: 28%;
+    max-width: 28%;
+  }
+  .flex30-lg {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+  .flex35-lg {
+    -ms-flex: 35%;
+    flex: 35%;
+    max-width: 35%;
+  }
+  .flex40-lg {
+    -ms-flex: 40%;
+    flex: 40%;
+    max-width: 40%;
+  }
+  .flex45-lg {
+    -ms-flex: 45%;
+    flex: 45%;
+    max-width: 45%;
+  }
+  .flex50-lg {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .flex55-lg {
+    -ms-flex: 55%;
+    flex: 55%;
+    max-width: 55%;
+  }
+  .flex60-lg {
+    -ms-flex: 60%;
+    flex: 60%;
+    max-width: 60%;
+  }
+  .flex65-lg {
+    -ms-flex: 65%;
+    flex: 65%;
+    max-width: 65%;
+  }
+  .flex70-lg {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+  }
+  .flex75-lg {
+    -ms-flex: 75%;
+    flex: 75%;
+    max-width: 75%;
+  }
+  .flex80-lg {
+    -ms-flex: 80%;
+    flex: 80%;
+    max-width: 80%;
+  }
+  .flex85-lg {
+    -ms-flex: 85%;
+    flex: 85%;
+    max-width: 85%;
+  }
+  .flex90-lg {
+    -ms-flex: 90%;
+    flex: 90%;
+    max-width: 90%;
+  }
+  .flex100-lg {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flex10-xl {
+    -ms-flex: 10%;
+    flex: 10%;
+    max-width: 10%;
+  }
+  .flex15-xl {
+    -ms-flex: 15%;
+    flex: 15%;
+    max-width: 15%;
+  }
+  .flex20-xl {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+  .flex25-xl {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .flex30-xl {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+  .flex35-xl {
+    -ms-flex: 35%;
+    flex: 35%;
+    max-width: 35%;
+  }
+  .flex40-xl {
+    -ms-flex: 40%;
+    flex: 40%;
+    max-width: 40%;
+  }
+  .flex45-xl {
+    -ms-flex: 45%;
+    flex: 45%;
+    max-width: 45%;
+  }
+  .flex50-xl {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .flex55-xl {
+    -ms-flex: 55%;
+    flex: 55%;
+    max-width: 55%;
+  }
+  .flex60-xl {
+    -ms-flex: 60%;
+    flex: 60%;
+    max-width: 60%;
+  }
+  .flex65-xl {
+    -ms-flex: 65%;
+    flex: 65%;
+    max-width: 65%;
+  }
+  .flex70-xl {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+  }
+  .flex75-xl {
+    -ms-flex: 75%;
+    flex: 75%;
+    max-width: 75%;
+  }
+  .flex80-xl {
+    -ms-flex: 80%;
+    flex: 80%;
+    max-width: 80%;
+  }
+  .flex85-xl {
+    -ms-flex: 85%;
+    flex: 85%;
+    max-width: 85%;
+  }
+  .flex90-xl {
+    -ms-flex: 90%;
+    flex: 90%;
+    max-width: 90%;
+  }
+  .flex100-xl {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 /* =========================
-# Flex Container - Text/Image
+# Flex - Text/Icon/Image
 =========================*/ 
+.flexIcon {
+  height: 80px;
+}
 .flexText {
   padding: 0 1.5rem;
 }
@@ -1006,6 +1744,10 @@ main a.myBtn {
     max-height: 600px;
   }
 }
+
+/* =========================
+# Flex - Orders
+=========================*/ 
 .flexOrder-2-1 {
   -webkit-order: 2;
   order: 2;
@@ -1052,159 +1794,18 @@ main a.myBtn {
 }
 
 /* =========================
-# Flex Container - Children - Width
-=========================*/ 
-.flexHalf {
-  position: relative;
-  flex: 100%;
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .flexHalf {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-.flexThird {
-  flex: 40%;
-  max-width: 40%;
-}
-@media screen and (max-width: 575px) {
-  .flexThird {
-    flex: 80%;
-    max-width: 80%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .flexThird {
-    flex: 30%;
-    max-width: 30%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .flexThird {
-    flex: 25%;
-    max-width: 25%;
-  }
-}
-.flexOneThird {
-  flex: 100%;
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .flexOneThird {
-    flex: 30%;
-    max-width: 30%;
-  }
-}
-.flexTwoThird {
-  flex: 100%;
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .flexTwoThird {
-    flex: 70%;
-    max-width: 70%;
-  }
-}
-.flexQuarter {
-  flex: 50%;
-  max-width: 50%;
-}
-@media screen and (max-width: 575px) {
-  .flexQuarter {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .flexQuarter {
-    flex: 33%;
-    max-width: 33%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .flexQuarter {
-    flex: 25%;
-    max-width: 25%;
-  }
-}
-.flex-30-15 {
-  flex: 25%;
-  max-width: 25%;
-}
-@media screen and (max-width: 575px) {
-  .flex-30-15 {
-    flex: 30%;
-    max-width: 30%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .flex-30-15 {
-    flex: 15%;
-    max-width: 15%;
-  }
-}
-.flex20 {
-  flex: 20%;
-  max-width: 20%;
-}
-.flex25 {
-  flex: 25%;
-  max-width: 25%;
-}
-.flex50 {
-  flex: 50%;
-  max-width: 50%;
-}
-.flex75 {
-  flex: 75%;
-  max-width: 75%;
-}
-.flex80 {
-  flex: 80%;
-  max-width: 80%;
-}
-.flex100 {
-  flex: 100%;
-  max-width: 100%;
-}
-
-
-/* =========================
 # Text Container
 =========================*/ 
 .textContainer {
+  position: relative;
   margin: 0 auto;
   padding: 1rem 1.5rem;
   max-width: 1000px;
 }
 @media screen and (min-width: 768px) {
   .textContainer {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
   }
-}
-.textHolder {
-
-}
-
-/* =========================
-# Text Wrapper
-=========================*/ 
-.textWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.underLineLeft:after {
-  content: "";
-  display: block;
-  background-color: #ffa500;
-  height: 6px;
-  width: 100px;
-  margin: 3% 0;
-  border-radius: 4px;
 }
 
 /* =========================
@@ -1260,15 +1861,6 @@ main a.myBtn {
 /* =========================
 # Program Preview
 =========================*/
-.progPreview {
-  background-color: #ffffff;
-  margin: 1rem 1.5rem;
-  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  overflow: hidden;
-}
-.progPreview:hover {
-  box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
-}
 .progPreview figcaption {
   padding: 1% 0;
 }
@@ -1290,6 +1882,7 @@ main a.myBtn {
   align-items: flex-start;
   justify-content: space-around;
   padding: 0 5%;
+  flex: 1;
 }
 .figureCaption h4:after {
   content: "";
@@ -1366,10 +1959,6 @@ main a.myBtn {
   margin: 2%;
   background: #000000;
   cursor: pointer;
-  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-.videoGalleryItem:hover {
-  box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
 @media screen and (max-width: 575px) {
   .videoGalleryItem {
@@ -1461,7 +2050,6 @@ main a.myBtn {
   margin: 2% -1%;
   background: #ffffff;
   cursor: pointer;
-  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 @media screen and (min-width: 768px) {
   .photoGalleryItem {
@@ -1469,9 +2057,6 @@ main a.myBtn {
     max-width: 20%;
     height: 30vh;
   }
-}
-.photoGalleryItem:hover {
-  box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.16),0 2px 10px 5px rgba(0,0,0,0.12);
 }
 .photoGalleryItem.rotate10 {
   transform: rotate(10deg);
@@ -1549,7 +2134,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-footer .flexContainer {
+footer .flexRow {
   border-bottom: 1px solid #aaaaaa;
 }
 .flexFooter {
@@ -1678,52 +2263,6 @@ footer .flexContainer {
 }
 
 /* =========================
-# Text Between Lines
-========================= */
-.textBetweenLine,
-.textBetweenDoubleLine {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-}
-.textBetweenLine:before,
-.textBetweenLine:after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid #cccccc;
-}
-.textBetweenLine:before {
-  margin-right: 1.5%;
-}
-.textBetweenLine:after {
-  margin-left: 1.5%;
-}
-.textBetweenDoubleLine:before,
-.textBetweenDoubleLine:after {
-  content: "";
-  height: 5px;
-  width: 20vw;
-  border-top: 1px solid #3e4444;
-  border-bottom: 1px solid #3e4444;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .textBetweenDoubleLine:before,
-  .textBetweenDoubleLine:after {
-    width: 12vw;
-  }
-}
-.textBetweenDoubleLine:before {
-  margin-right: 15px;
-}
-.textBetweenDoubleLine:after {
-  margin-left: 15px;
-}
-
-/* =========================
 # Testimonials
 ========================= */
 .slideshowContainer {
@@ -1735,16 +2274,10 @@ footer .flexContainer {
   padding: 2vw 5vw; 
   margin: 30px 12vw 0 12vw;
   max-width: 1200px;
-  min-height: 35vh;
+  min-height: 50vh;
   text-align: left;
   background-color: #fafafa;
   border-radius: 10px;
-  box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
-              0 1px 4px rgba(0,0,0,0.07),
-              0 2px 6px rgba(0,0,0,0.07), 
-              0 4px 8px rgba(0,0,0,0.07), 
-              0 8px 16px rgba(0,0,0,0.07),
-              0 16px 32px rgba(0,0,0,0.07);
 }
 .whatTheySay:before, .whatTheySay:after {
   content: "";
@@ -1770,7 +2303,8 @@ footer .flexContainer {
   color: #888;
   font-size: 36px;
   font-weight: 900;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
   position: absolute;
   padding: 16px;
@@ -1816,20 +2350,3 @@ footer .flexContainer {
 .dot.active, .dot:hover {
   background-color: #717171;
 }
-
-
-
-.logoContainer {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 10vw;
-}
-.logoContainer img {
-  width: 100%;
-  padding: 0 5%;
-}
-
