@@ -1,11 +1,15 @@
 /* =========================
 # General
 ========================= */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 html {
   font-family: sans-serif;
 }
 body {
-  margin: 0;
   font-family: "Noto Sans", "Montserrat", "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -15,7 +19,7 @@ body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  margin: 0;
 }
 main {
   flex: 1; 
@@ -2381,8 +2385,26 @@ footer .flexRow {
   background-color: #cccccc;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color .6s ease;
 }
-.dot.active, .dot:hover {
+.dot.active {
   background-color: #717171;
+}
+.dot:hover {
+  background-color: #ed4e33;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
 }
