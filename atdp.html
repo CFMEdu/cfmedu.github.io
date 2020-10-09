@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 	<title>ATDP | CFM Educational Services</title>
@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="fresco/dist/css/fresco.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <!-- Local -->
   <link rel="shortcut icon" href="icons/logo/cfm-favicon.svg">
@@ -114,7 +115,7 @@
 			</section>
 
 			<!-- ====== Banner ======  -->
-			<section id="bnrBg-atdp-intro" class="marginTop marginBottom"
+			<section id="bnrBg-atdp-intro" class="marginTop marginBottom margin-0-2"
 					 data-bottom-top="background-position: 50% 0%"
 					 data-top-bottom="background-position: 50% 50%">
 				<div class="bottomUp">
@@ -146,7 +147,7 @@
 					<ul class="flexRow justifyCenter textCenter">
 						<li class="flexOneThird flexColumn alignCenter padding-0-2">
 							<div class="roundImage">
-								<img src="images/atdp/atdp-performing-art.png"/>
+								<img src="images/atdp/atdp-performing-art.png"/ loading="lazy">
 							</div>
 							<div class="montserrat padding-2-2 flexColumn alignCenter">
 								<h3 class="smallCaps underLineThin">Enhance</h3>
@@ -155,7 +156,7 @@
 						</li>
 						<li class="flexOneThird flexColumn alignCenter padding-0-2">
 							<div class="roundImage">
-								<img src="images/atdp/atdp-group.png"/>
+								<img src="images/atdp/atdp-group.png" loading="lazy"/>
 							</div>
 							<div class="montserrat padding-2-2 flexColumn alignCenter">
 								<h3 class="smallCaps underLineThin">Improve</h3>
@@ -164,7 +165,7 @@
 						</li>
 						<li class="flexOneThird flexColumn alignCenter padding-0-2">
 							<div class="roundImage">
-								<img src="images/atdp/atdp-community-service.png"/>
+								<img src="images/atdp/atdp-community-service.png" loading="lazy"/>
 							</div>
 							<div class="montserrat padding-2-2 flexColumn alignCenter">
 								<h3 class="smallCaps underLineThin">Give back</h3>
@@ -183,7 +184,7 @@
 			<!-- ====== Introduction Article ======  -->
 			<article>
 				<div class="trapezoidHolder marginTop margin-0-2 pushDown">
-					<div class="trapezoid bottom35 satherGate-fade"></div>
+					<div class="trapezoid bottom35 satherGate"></div>
 					<div class="textContainer">
 						<p>
 							<strong>How you spend your summers</strong> is something top-tier American universities will be interested in when you apply for college. Universities like to hear about meaningful, well-planned, self-motivated, and challenging life experiences, demonstrating a persistent drive to challenge oneself to accomplish goals.
@@ -291,7 +292,7 @@
 
 
 		<!-- ====== Eligibility ======  -->
-		<section id="atdp-eligibility" class="marginTop school-light">
+		<section id="atdp-eligibility" class="school-light">
 			<div class="padding-5-0 margin-0-5">
 				<h2 class="divHeader">Application Eligibility</h2>
 				<div class="flexRow justifyAround">
@@ -327,7 +328,7 @@
 		<!-- ====== Admission ======  -->
 		<section id="atdp-admission" class="marginTop">
 			<div class="flexRow alignCenter">
-		    <div id="bnrBg-atdp-admission" class="flexHalf flexImg">
+		    <div id="bnrBg-atdp-admission" class="flexHalf flexImg marginMobile-0-2">
 		    </div>
 				<div class="flexHalf flexText marginTop-50-0">
 					<h2 class="divHeader">Admission Requirements</h2>
@@ -359,36 +360,127 @@
 						<strong class="persianGreen">Not including:</strong> Airfare, B-2 visa, Textbooks & class materials, Personal expenses
 					</p>
 		    </div>
-		    <div id="bnrBg-atdp-fee" class="flexHalf flexImg flexOrder-1-2">
+		    <div id="bnrBg-atdp-fee" class="flexHalf flexImg marginMobile-0-2 flexOrder-1-2">
 		    </div>
 		  </div>				
 		</section>		<!-- ====== End of Fee ======  -->
 
-			<div id="atdp-curriculum" class="marginTop">
-				<div>
-				<h2 class="divHeader">Curriculum</h2>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>				
+
+		<!-- ====== Curriculum ======  -->
+		<section id="atdp-curriculum" class="marginTop margin-0-2">
+
+			<div class="dotLine">
+			  <span class="dotLineStar"></span>
+			  <span class="dotLineStar"></span>
+			  <span class="dotLineStar"></span>
 			</div>
-		</div>
+			<h2 class="divHeader margin-2-0">Curriculum & Courses</h2>
 
-			<div id="atdp-gallery" class="marginTop">
-				<div>
-				<h2 class="divHeader">Gallery</h2>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>				
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+			  <div class="swiper-wrapper">
+			  	<!-- Slides -->
+			    <div id="bnrBg-atdp-curriculum-architecture" class="swiper-slide textCenter paddingTop-12vh">
+			    	<div class="whiteFont montserrat">
+		    			<h2>Architecture Track</h2>
+		    			<a href="#" class="myBtn myBtn-viewCourse">View Courses</a>
+		    		</div>
+			    </div>
+			    <div id="bnrBg-atdp-curriculum-business" class="swiper-slide textCenter paddingTop-12vh">
+			    	<div class="whiteFont montserrat">
+		    			<h2>Business Track</h2>
+		    			<a href="#" class="myBtn myBtn-viewCourse">View Courses</a>
+		    		</div>
+			    </div>
+			    <div id="bnrBg-atdp-curriculum-engineering" class="swiper-slide textCenter paddingTop-12vh">
+			    	<div class="whiteFont montserrat">
+		    			<h2>Engineering Track</h2>
+		    			<a href="#" class="myBtn myBtn-viewCourse">View Courses</a>
+		    		</div>
+			    </div>
+			    <div id="bnrBg-atdp-curriculum-science" class="swiper-slide textCenter paddingTop-12vh">
+			    	<div class="whiteFont montserrat">
+		    			<h2>Science Track</h2>
+		    			<a href="#" class="myBtn myBtn-viewCourse">View Courses</a>
+		    		</div>
+			    </div>
+			    <div id="bnrBg-atdp-curriculum-social-studies" class="swiper-slide textCenter paddingTop-12vh">
+			    	<div class="whiteFont montserrat">
+		    			<h2>Social Studies Track</h2>
+		    			<a href="#" class="myBtn myBtn-viewCourse">View Courses</a>
+		    		</div>
+			    </div>
+			  </div>
+			  <!-- Pagination -->
+			  <div class="swiper-pagination"></div>
+			  <!-- Navigation Arrows -->
+			  <div class="swiper-button-next whiteFont"></div>
+			  <div class="swiper-button-prev whiteFont"></div>
+			</div>   <!-- End of Slider container -->
+		</section>		<!-- ====== End of Curriculum ======  -->
+
+
+		<!-- ====== Gallery ======  -->
+		<section id="atdp-gallery" class="marginTop marginBottom">
+			<h2 class="divHeader margin-2-0 textBetweenLine">Photo Gallery</h2>
+
+			<!-- Swiper Coverflow -->
+			<div class="">
+				<div class="margin-0-2">
+					<div class="swiper-container">
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-1.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-2.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-3.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-4.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-5.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-6.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-7.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-8.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-9.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-10.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-11.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-12.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-13.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-14.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-15.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-16.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-17.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-18.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-19.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-20.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-21.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-22.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-23.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-24.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-25.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-26.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-27.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-28.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-29.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-30.jpg)"></div>
+					  </div>
+					  <!-- Add Pagination -->
+					  <div class="swiper-pagination"></div>
+					</div> 		<!-- End of Swiper Coverflow -->
+				</div>
 			</div>
-		</div>
+		</section> 		<!-- End of Gallery -->
 
-
+		<!-- ====== Image Banner ======  -->
+		<section>
+			<div id="bnrBg-berkeley" class="mainBnrBg bnrContainer">
+				<div class="gradientOverlay-top-w"></div>
+				<div class="textCenter">
+					<div class="bnrTitle absolute padding-5-0">
+						<span class="displayBlock gold crimsonText font-L"><i>All the flowers of tomorrow</i></span>
+						<span class="displayBlock gold crimsonText font-L"><i>are in the seeds of today</i></span>
+						<span class="displayBlock blue crimsonText font-XL"><i>Berkeley is my Dream School</i></span>
+					</div>
+				</div>
+			</div>
+		</section>		<!-- ====== End of Image Banner ======  -->
 
 	</main>   <!-- ====== End of Main ======  -->
 
@@ -488,21 +580,53 @@
 	</footer>   <!-- ====== End of Footer ======  -->
 
 
-  <script src="fresco/dist/js/fresco.min.js"></script>
-	<script src="js/skrollr.min.js"></script>
-	<script src="js/animation.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/animation.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+  <script src="fresco/dist/js/fresco.min.js"></script>
+	
+	<!-- Initialize Swiper -->
+	<script>
+	  var swiper = new Swiper('#atdp-curriculum .swiper-container', {
+	    slidesPerView: 1,
+	    spaceBetween: 30,
+	    keyboard: {
+	      enabled: true,
+	    },
+	    loop: true,
+	    pagination: {
+	      el: '.swiper-pagination',
+	      clickable: true,
+	    },
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	  });
+	</script>
 
-<!-- 	<script>
-		window.onscroll = function() {myFunction()};
+	<script>
+	  var swiper = new Swiper('#atdp-gallery .swiper-container', {
+	    effect: 'coverflow',
+	    grabCursor: true,
+	    centeredSlides: true,
+	    loop: true,
+	    slidesPerView: 'auto',
+	    coverflowEffect: {
+	      rotate: 50,
+	      stretch: 0,
+	      depth: 100,
+	      modifier: 1,
+	      slideShadows: true,
+	    },
+	    pagination: {
+	      el: '.swiper-pagination',
+	    },
+	  });
+	</script>
 
-		function myFunction() {
-		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		  var scrolled = (winScroll / height) * 100;
-		  document.getElementById("progressBar").style.width = scrolled + "%";
-		}
-	</script> -->
+
 
 </body>
 </html>
