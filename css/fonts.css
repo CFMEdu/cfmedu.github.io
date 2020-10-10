@@ -307,3 +307,35 @@ IMFeGPit28P.ttf: © 2007 Igino Marini (www.iginomarini.com) With Reserved Font N
        url('../fonts/IMFellGreatPrimer-Italic.ttf') format('truetype'),
        url('../fonts/IMFellGreatPrimer-Italic.svg#IMFellGreatPrimer') format('svg');
 }
+
+/***************************************************
+# Fondamento
+***************************************************/
+/*
+Fondamento-Regular.ttf: Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Name "Fondamento"
+Fondamento-Italic.ttf: Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Name "Fondamento Italic"
+*/
+@font-face {
+  font-family: 'Fondamento';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Fondamento-Regular.eot');
+  src: local('Fondamento Regular'), local('Fondamento-Regular'),
+       url('../fonts/Fondamento-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Fondamento-Regular.woff2') format('woff2'),
+       url('../fonts/Fondamento-Regular.woff') format('woff'),
+       url('../fonts/Fondamento-Regular.ttf') format('truetype'),
+       url('../fonts/Fondamento-Regular.svg#Fondamento') format('svg');
+}
+@font-face {
+  font-family: 'Fondamento';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Fondamento-Italic.eot');
+  src: local('Fondamento-Italic'),
+       url('../fonts/Fondamento-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Fondamento-Italic.woff2') format('woff2'),
+       url('../fonts/Fondamento-Italic.woff') format('woff'),
+       url('../fonts/Fondamento-Italic.ttf') format('truetype'),
+       url('../fonts/Fondamento-Italic.svg#Fondamento') format('svg');
+}
