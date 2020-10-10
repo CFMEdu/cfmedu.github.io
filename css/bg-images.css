@@ -48,6 +48,11 @@
   background-size: cover; 
   background-position: 50% 80%;
 }
+#bnrBg-berkeley {
+  background-image: url("../images/ucberkeley/bg-ucb-overlook.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+}
 #atdp-logo img {
   height: 60px;
   width: auto;
@@ -86,6 +91,43 @@
   height: 60vh;
   position: relative;
 }
+#bnrBg-atdp-curriculum-architecture {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-architecture.jpg");
+  background-size: cover; 
+  background-position: 50% 80%;
+  background-blend-mode: color;
+  position: relative;
+}
+#bnrBg-atdp-curriculum-business {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-business.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-atdp-curriculum-engineering {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-engineering.jpg");
+  background-size: cover; 
+  background-position: 50% 55%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-atdp-curriculum-science {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-science.jpg");
+  background-size: cover; 
+  background-position: 50% 55%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-atdp-curriculum-social-studies {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-social-studies.jpg");
+  background-size: cover; 
+  background-position: 50% 30%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+
+
 
 /* =========================
 # SVSD
