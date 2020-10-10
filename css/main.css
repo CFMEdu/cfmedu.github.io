@@ -164,6 +164,9 @@ ul.circle li:before {
 .crimsonText {
   font-family: "Crimson Text", serif;
 }
+.fondamento {
+  font-family: "Fondamento", cursive;
+}
 
 /* =========================
 # Speech Bobbles
@@ -1065,11 +1068,7 @@ main a.myBtn {
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 1px;
-  text-shadow: 1px -2px 2px #eeeeee,
-               0 -1px 1px rgba(255,255,255,.8),
-               0 1px 1px #ffffff,
-               0 2px 2px rgba(255,255,255,.8),
-               10px 10px 20px #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 }
 .bnrTitle .font-L {
   font-size: 3.5rem;
