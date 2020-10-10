@@ -56,7 +56,7 @@ $(window).scroll(function() {
 $(function() {
   $(document).on("scroll", onScroll);
 
-  $("a").on('click', function(e) {
+  $(".subNavigation a").on('click', function(e) {
     if (this.hash !== "") {
       e.preventDefault();
       $(document).off("scroll");
@@ -71,6 +71,7 @@ $(function() {
       $('html, body').animate({
         scrollTop: $(hash).offset().top - $('.navBar').height() - $('.subNavigation').height()
       }, 800, 'swing', function(){
+        // window.location.hash = hash;
         $(document).on("scroll", onScroll);
       });
     }
@@ -96,17 +97,6 @@ function onScroll() {
     }
   });
 };
-
-
-
-// $(function() {
-//   var url = window.location.toString();
-//   var id = url.split("#")[1];
-
-//   $('.anchorLink').click(function() {
-//      ＄(window).location = $(url) + $(id);
-//   });
-// });
 
 
 // --------------------------------------------------

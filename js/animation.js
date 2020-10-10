@@ -1,7 +1,7 @@
 // --------------------------------------------------
 // Animation Effect
 // --------------------------------------------------
-var $animation_elements = $(".animation-element");
+var $animation_elements = $(".animationElement");
 var $window = $(window);
 
 function check_if_in_view() {
@@ -26,6 +26,6 @@ $.each($animation_elements, function() {
 }
 
 $window.on("scroll resize", check_if_in_view);
-// $window.trigger("scroll");
+$window.trigger("scroll");
 
 
