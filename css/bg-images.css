@@ -62,8 +62,9 @@
   background-position: 50% 65%;
 }
 #atdp-logo img {
-  height: 60px;
+  height: 70px;
   width: auto;
+  padding-right: 20px;
 }
 #bnrBg-atdp-intro {
   background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.3)), url("../images/atdp/atdp-counselors-at-campanile.jpg");
@@ -85,14 +86,14 @@
     height: 35vh;
   }
 }
-#bnrBg-atdp-admission {
+#flexBg-atdp-admission {
   background-image: url("../images/atdp/atdp-go-bears.jpg");
   background-size: cover; 
   background-position: 50%;
   height: 60vh;
   position: relative;
 }
-#bnrBg-atdp-fee {
+#flexBg-atdp-fee {
   background-image: url("../images/atdp/atdp-counselors.jpg");
   background-size: cover; 
   background-position: 50%;
@@ -131,6 +132,101 @@
   background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/atdp/atdp-curriculum-social-studies.jpg");
   background-size: cover; 
   background-position: 50% 30%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+
+/* =========================
+# LSI
+========================= */
+#bnrBg-lsi {
+  background-image: url("../images/lsi/bg-lhs.jpg");
+  background-size: cover; 
+  background-position: 50% 70%;
+}
+#lsi-logo img {
+  height: 70px;
+  width: auto;
+  padding-right: 20px;
+}
+#bnrBg-lsi-intro {
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.2), transparent), url("../images/lsi/TechHive.jpg");
+  background-size: cover; 
+  background-position: 50% 55%;
+  height: 60vh;
+  position: relative;
+}
+#flexBg-lsi-nanosatellite {
+  background-image: linear-gradient(to right, rgba(0,0,0,.5), transparent), url("../images/lsi/nanosatellite.jpg");
+  background-size: cover; 
+  background-position: 50% 70%;
+}
+#bnrBg-lsi-WindTurbine {
+  background-image: url("../images/lsi/WindTurbine.jpg");
+  background-size: cover; 
+  background-position: 50% 0%;
+  height: 40vh;
+}
+#bg-lsi-gear {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+#bg-lsi-gear:after {
+  content: "";
+  background-image: url("../images/bg/gear-technology.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+#flexBg-lsi-eligibility {
+  background-image: url("../images/lsi/IGI.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-lsi-admission {
+  background-image: url("../images/lsi/BridgePosterPresentation.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-lsi-fee {
+  background-image: url("../images/lsi/JocobsHallTour.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#bnrBg-lsi-curriculum-nanosatellites {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/lsi/CodingNanosatellite.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-lsi-curriculum-structures {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/lsi/DesigningStructures.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-lsi-curriculum-bio {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/lsi/BioDesign.jpg");
+  background-size: cover; 
+  background-position: 50% 10%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-lsi-curriculum-stem {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/lsi/STEMDisciplines.jpg");
+  background-size: cover; 
+  background-position: 50% 60%;
   background-blend-mode: hard-light;
   position: relative;
 }

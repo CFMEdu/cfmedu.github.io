@@ -63,6 +63,32 @@ p {
   font-size: clamp(.938rem, 2vw, 1rem);
   line-height: 1.75;
 }
+.font-XL {
+  font-size: 4rem;
+  font-size: clamp(2rem, 4.2vw, 4rem);
+}
+.font-L {
+  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+.font-M {
+  font-size: 2.8rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+.font-S {
+  font-size: 2rem;
+  font-size: clamp(1.75rem, 3.5vw, 2rem);
+}
+.font-XS {
+  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+}
+.fontWeight600 {
+  font-weight: 600;
+}
+.textShadow {
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.5), 4px 8px 13px rgba(0,0,0,0.1), 4px 18px 23px rgba(0,0,0,0.1);
+}
 hr.style1{
   border: 0; 
   height: 1px; 
@@ -249,6 +275,14 @@ ul.circle li:before {
 }
 .width100 {
   width: 100%;
+}
+.width-80-60 {
+  width: 80vw;
+}
+@media screen and (min-width: 768px) {
+  .width-80-60 {
+    width: 60vw;
+  }  
 }
 .padding-0-1 {
   padding: 0 1vw; 
@@ -490,9 +524,6 @@ main a.myBtn {
 }
 .school {
   background-image: url("../images/bg/school.png");
-}
-.school-light {
-  background-image: url("../images/bg/school-light.png");
 }
 
 /* =========================
@@ -933,11 +964,6 @@ main a.myBtn {
   background-size: cover;
   background-attachment: fixed;
 }
-#mission .glassOverlayWrapper,
-#mission .glassOverlayWindow:before {
-  background-image: url("../images/about/bg-ucb-library.jpg");
-  background-position: 50%;
-}
 .glassOverlayWindow {
   border-top: 1px solid rgba(0,0,0,.2);
   overflow: hidden;
@@ -991,9 +1017,6 @@ main a.myBtn {
     width: 50%;
     height: 60vh;
   }
-}
-#mission h2 {
-  font-weight: 700;
 }
 
 /* =========================
@@ -1069,14 +1092,6 @@ main a.myBtn {
   line-height: 1.25;
   letter-spacing: 1px;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
-}
-.bnrTitle .font-L {
-  font-size: 3.5rem;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-}
-.bnrTitle .font-XL {
-  font-size: 4rem;
-  font-size: clamp(2rem, 4.2vw, 4rem);
 }
 @media screen and (min-width: 768px) {
   .bnrContent-bl h1 {
@@ -1813,14 +1828,6 @@ main a.myBtn {
     max-height: 600px;
   }
 }
-.flexImg.marginMobile-0-2 {
-  margin: 0 2vw; 
-}
-@media screen and (min-width: 768px) {
-  .flexImg.marginMobile-0-2 {
-    margin: 0;
-  }
-}
 
 /* =========================
 # Flex - Orders
@@ -1895,11 +1902,18 @@ main a.myBtn {
   justify-content: center;
   text-align: center;
 }
-.quoteWrapper.quotation {
+.linedPaper-w {
   background-color: #ffffff;   /*lined paper background*/
   background-image:
   linear-gradient(90deg, transparent 79px, rgba(171,206,212,.5) 79px, rgba(171,206,212,.5) 81px, transparent 81px),
   linear-gradient(rgba(238,238,238,.9) .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
+.linedPaper-g {
+  background-color: transparent;
+  background-image:
+  linear-gradient(90deg, transparent 79px, rgba(255,255,255,.5) 79px, rgba(255,255,255,.5) 81px, transparent 81px),
+  linear-gradient(rgba(255,255,255,.9) .1em, transparent .1em);
   background-size: 100% 1.2em;
 }
 .quoteContent {
@@ -2450,17 +2464,17 @@ footer .flexRow {
 #testimonials .swiper-pagination-bullet:hover {
   background-color: #007a8c;
 }
-/* ATDP-Curriculum */
-#atdp-curriculum .swiper-container {
-  width: 100%;
-  height: 50vh;
+
+/* Curriculum */
+.curriculum .swiper-container {
+  height: 60vh;
 }
 @media screen and (min-width: 768px) {
-  #atdp-curriculum .swiper-container {
-    height: 65vh;
+  .curriculum .swiper-container {
+    height: 70vh;
   }
 }
-#atdp-curriculum .swiper-slide h2 {
+.curriculum .swiper-slide h2 {
   font-size: clamp(2.25rem, 6vw, 4rem);
   font-weight: 700;
   letter-spacing: 2px;
@@ -2468,47 +2482,48 @@ footer .flexRow {
   padding: 0 10vw 5vh;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.3), 4px 8px 13px rgba(0,0,0,0.1), 4px 18px 23px rgba(0,0,0,0.1);
 }
-#atdp-curriculum .swiper-button-next:hover,
-#atdp-curriculum .swiper-button-prev:hover {
+.curriculum .swiper-button-next:hover,
+.curriculum .swiper-button-prev:hover {
   color: #007a8c;
 }
-#atdp-curriculum .swiper-pagination-bullet {
+.curriculum .swiper-pagination-bullet {
   width: 5vw;
   height: 6px;
   border-radius: 0;
   background: #ffffff;
   margin-bottom: 15px !important;
 }
-#atdp-curriculum .swiper-pagination-bullet-active {
+.curriculum .swiper-pagination-bullet-active {
   background-color: #007a8c;
 }
-#atdp-curriculum .swiper-pagination-bullet:hover {
+.curriculum .swiper-pagination-bullet:hover {
   background-color: #007a8c;
 }
-/* ATDP-Gallery */
-#atdp-gallery .swiper-container {
+
+/* Gallery */
+.gallery .swiper-container {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-#atdp-gallery .swiper-slide {
+.gallery .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
 }
-#atdp-gallery .swiper-pagination {
+.gallery .swiper-pagination {
   bottom: 0;
 }
-#atdp-gallery .swiper-pagination-bullet {
+.gallery .swiper-pagination-bullet {
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #cccccc;
 }
-#atdp-gallery .swiper-pagination-bullet-active {
+.gallery .swiper-pagination-bullet-active {
   background-color: #007a8c;
 }
-#atdp-gallery .swiper-pagination-bullet:hover {
+.gallery .swiper-pagination-bullet:hover {
   background-color: #007a8c;
 }
