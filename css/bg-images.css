@@ -175,10 +175,10 @@
 }
 #bg-lsi-gear:after {
   content: "";
-  background-image: url("../images/bg/gear-technology.png");
-  background-size: 60%;
+  background-image: url("../images/bg/gear-technology.png"), url("../images/bg/blue-tech-elements-flip.png");
+  background-size: 60%, 30%;
   background-repeat: no-repeat;
-  background-position: 0% 100%;
+  background-position: 0% 100%, 90% 100%;
   opacity: .5;
   top: 0;
   left: 0;
@@ -229,6 +229,110 @@
   background-position: 50% 60%;
   background-blend-mode: hard-light;
   position: relative;
+}
+
+/* =========================
+# SSD
+========================= */
+#bnrBg-ssd {
+  background-image: url("../images/ssd/bg-ssd.jpg");
+  background-size: cover; 
+  background-position: 50% 45%;
+}
+#ssd-logo img {
+  height: 80px;
+  width: auto;
+  padding-right: 20px;
+}
+#bnrBg-ssd-intro {
+  background-image: url("../images/ssd/bg-ssd-intro.png");
+  background-size: cover; 
+  background-position: 50% 55%;
+  height: 40vh;
+  position: relative;
+}
+#ssd-intro-desktop {
+  display: none;
+}
+#ssd-intro-mobile {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  #bnrBg-ssd-intro {
+    background-image: url("../images/ssd/bg-ssd-intro.png");
+    height: 80vh;
+  }
+  #ssd-intro-desktop {
+    display: block;
+    background-image: linear-gradient(to right, rgba(255,255,255,.6), transparent);
+  }
+  #ssd-intro-mobile {
+    display: none;
+  }
+}
+#bg-ssd-ggb {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+#bg-ssd-ggb:after {
+  content: "";
+  background-image: url("../images/bg/sf-skyline-green.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: .2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+#bg-ssd-curriculum-component {
+  background-image: linear-gradient(to top, rgba(0,0,0,.5), transparent),url("../images/ssd/bg-ssd-ucb-library.jpg");
+  background-size: cover; 
+  background-position: 50% 0%;
+  height: 40vh;
+  position: relative;
+}
+#bg-ssd-residential-component {
+  background-image: linear-gradient(to top, rgba(0,0,0,.5), transparent),url("../images/ssd/bg-ssd-residential-compont.jpg");
+  background-size: cover; 
+  background-position: 50% 100%;
+  height: 40vh;
+  position: relative;
+}
+#flexBg-ssd-housing {
+  background-image: url("../images/ssd/housing.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ssd-meals {
+  background-image: url("../images/ssd/meals.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ssd-activities {
+  background-image: url("../images/ssd/sonoma-canopy-tours.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ssd-activities-optional {
+  background-image: url("../images/ssd/sf-excursion.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ssd-application {
+  background-image: url("../images/ssd/ziplining.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ssd-fee {
+  background-image: url("../images/ssd/socker-game.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
 }
 
 /* =========================

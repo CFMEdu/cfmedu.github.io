@@ -74,6 +74,7 @@ p {
 .font-M {
   font-size: 2.8rem;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
 }
 .font-S {
   font-size: 2rem;
@@ -83,11 +84,25 @@ p {
   font-size: 1.75rem;
   font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
+.superscript { 
+  position: relative; top: -0.5em; 
+  font-size: 75%;
+  line-height: 1.5;
+}
 .fontWeight600 {
   font-weight: 600;
 }
+.fontWeight700 {
+  font-weight: 700;
+}
+.fontWeight900 {
+  font-weight: 900;
+}
 .textShadow {
-  text-shadow: 4px 4px 3px rgba(0,0,0,0.5), 4px 8px 13px rgba(0,0,0,0.1), 4px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: 4px 4px 5px rgba(0,0,0,.5), 4px 8px 13px rgba(0,0,0,.1), 4px 18px 23px rgba(0,0,0,.1);
+}
+.textShadow-w {
+  text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 2px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff;
 }
 hr.style1{
   border: 0; 
@@ -122,12 +137,28 @@ ul.firstTier li:before {
   width: 1.5rem;
   margin-left: -1.5rem;
 }
-ul.pencil li:before {
-  content: "\f14b";
+ul.camera-retro li:before {
+  content: "\f083";
+  color: #00a598;
+}
+ul.camera li:before {
+  content: "\f030";
   color: #ed4e33;
 }
 ul.check li:before {
   content: "\f046";
+  color: #ed4e33;
+}
+ul.house li:before {
+  content: "\f015";
+  color: #00a598;
+}
+ul.meal li:before {
+  content: "\f0f5";
+  color: #ed4e33;
+}
+ul.pencil li:before {
+  content: "\f14b";
   color: #ed4e33;
 }
 ul.square li:before {
@@ -273,6 +304,13 @@ ul.circle li:before {
 .displayBlock {
   display: block;
 }
+/*.positionAbsolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}*/
 .width100 {
   width: 100%;
 }
