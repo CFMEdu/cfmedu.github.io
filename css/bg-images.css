@@ -47,6 +47,11 @@
   background-size: cover; 
   background-position: 50% 32%;
 }
+#bnrBg-ucb-overlook {
+  background-image: url("../images/ucberkeley/bg-ucb-overlook.jpg");
+  background-size: cover; 
+  background-position: 50% 65%;
+}
 
 /* =========================
 # ATDP
@@ -55,11 +60,6 @@
   background-image: url("../images/atdp/bg-atdp.jpg");
   background-size: cover; 
   background-position: 50% 80%;
-}
-#bnrBg-ucb-overlook {
-  background-image: url("../images/ucberkeley/bg-ucb-overlook.jpg");
-  background-size: cover; 
-  background-position: 50% 65%;
 }
 #atdp-logo img {
   height: 70px;
@@ -290,14 +290,14 @@
   position: absolute;
   z-index: -1;   
 }
-#bg-ssd-curriculum-component {
+#bnrBg-ssd-curriculum-component {
   background-image: linear-gradient(to top, rgba(0,0,0,.5), transparent),url("../images/ssd/bg-ssd-ucb-library.jpg");
   background-size: cover; 
   background-position: 50% 0%;
   height: 40vh;
   position: relative;
 }
-#bg-ssd-residential-component {
+#bnrBg-ssd-residential-component {
   background-image: linear-gradient(to top, rgba(0,0,0,.5), transparent),url("../images/ssd/bg-ssd-residential-compont.jpg");
   background-size: cover; 
   background-position: 50% 100%;
@@ -349,3 +349,74 @@
   }
 }
 
+/* =========================
+# OFK
+========================= */
+#bnrBg-ofk {
+  background-image: url("../images/ofk/bg-ofk.jpg");
+  background-size: cover; 
+  background-position: 50% 45%;
+}
+#bnrBg-ofk-intro {
+  background-image: url("../images/ofk/bg-ofk-intro.jpg");
+  background-size: cover; 
+  background-position: 50% 45%;
+  height: 60vh;
+}
+#flexBg-ofk-about {
+  background-image: url("../images/ofk/ofk-about.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#ofk-slide-1 {
+  background-image: url("../images/ofk/ofk-advantage-1.jpg");
+  background-size: cover; 
+  background-position: 50% 40%;
+}
+#ofk-slide-2 {
+  background-image: url("../images/ofk/ofk-advantage-2.jpg");
+  background-size: cover; 
+  background-position: 50% 30%;
+}
+#ofk-slide-3 {
+  background-image: url("../images/ofk/ofk-advantage-3.jpg");
+  background-size: cover; 
+  background-position: 50% 40%;
+}
+#ofk-value img {
+  border-radius: 18px 18px 0 0;
+  height: 30vh;
+}
+#ofk-value figcaption {
+  border-radius: 0 0 18px 18px;
+}
+#flexBg-ofk-housing {
+  background-image: url("../images/ofk/ofk-housing.jpg");
+  background-size: cover; 
+  background-position: 50% 0%;
+}
+#flexBg-ofk-meals {
+  background-image: url("../images/ofk/ofk-meals.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ofk-activities {
+  background-image: url("../images/ofk/ofk-activities.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ofk-admission {
+  background-image: url("../images/ofk/ofk-admission.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#flexBg-ofk-fee {
+  background-image: url("../images/ofk/ofk-fee.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+}
+#bnrBg-ofk-wrapUp {
+  background-image: url("../images/ofk/bg-ofk-wrapUp.jpg");
+  background-size: cover; 
+  background-position: 50% 10%;
+}

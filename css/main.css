@@ -85,7 +85,8 @@ p {
   font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 .superscript { 
-  position: relative; top: -0.5em; 
+  position: relative; 
+  top: -0.5em; 
   font-size: 75%;
   line-height: 1.5;
 }
@@ -304,13 +305,6 @@ ul.circle li:before {
 .displayBlock {
   display: block;
 }
-/*.positionAbsolute {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}*/
 .width100 {
   width: 100%;
 }
@@ -527,6 +521,21 @@ main a.myBtn {
 .whiteFont {
   color: #ffffff;
 }
+.apple {
+  color: #598935;
+}
+.earlsGreen {
+  color: #bbc735;
+}
+.ochre {
+  color: #dc772d;
+}
+.cerulean {
+  color: #00b0da;
+}
+.japaneseLaurel {
+  color: #008000;
+}
 .mystic {
   background-color: #e4eeed;
 }
@@ -535,6 +544,9 @@ main a.myBtn {
 }
 .whiteBg {
   background-color: #ffffff;
+}
+.STEM {
+  background-color: rgba(139,198,62,.5);
 }
 .whiteBg-trans {
   background-color: rgba(255,255,255,.9);
@@ -1197,6 +1209,7 @@ main a.myBtn {
 # Text Between Lines
 ========================= */
 .textBetweenLine,
+.textBetweenLine-w,
 .textBetweenDoubleLine {
   display: flex;
   flex-direction: row;
@@ -1218,6 +1231,19 @@ main a.myBtn {
 }
 .textBetweenLine:after {
   margin-left: .5%;
+}
+.textBetweenLine-w:before,
+.textBetweenLine-w:after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #ffffff;
+}
+.textBetweenLine-w:before {
+  margin-right: 1.5%;
+}
+.textBetweenLine-w:after {
+  margin-left: 1.5%;
 }
 .textBetweenDoubleLine:before,
 .textBetweenDoubleLine:after {
@@ -2442,7 +2468,7 @@ footer .flexRow {
 }
 .swiper-slide {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
@@ -2564,4 +2590,99 @@ footer .flexRow {
 }
 .gallery .swiper-pagination-bullet:hover {
   background-color: #007a8c;
+}
+
+/* OFK - Advantages */
+@media screen and (min-width: 992px) {
+  #ofk-advantages .swiper-container {
+    width: 90vw;
+  }
+}
+.ofkSlides {
+  margin: 20px 0vw 50px !important;
+  width: 100%;
+  height: 75vh;
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07);
+}
+@media screen and (min-width: 992px) {
+  .ofkSlides {
+    height: 70vh;
+    margin: 20px 6vw 50px !important;
+  }
+}
+.ofkSlides article {
+  height: 75vh;
+  padding: 3% 10%;
+  background-color: rgba(255,255,255,.75);
+}
+@media screen and (min-width: 992px) {
+  .ofkSlides article {
+    height: 70vh;
+    padding: 5% 5%;
+  }
+}
+#ofk-advantages .swiper-button-prev:after,
+#ofk-advantages .swiper-button-next:after {
+  content: "";
+  color: #008000;
+  font-family: "FontAwesome";
+  font-size: 50px;
+}
+#ofk-advantages .swiper-button-prev:after {
+  content: "\f053";
+} 
+#ofk-advantages .swiper-button-next:after {
+  content: "\f054";
+}
+#ofk-advantages .swiper-button-prev:hover:after,
+#ofk-advantages .swiper-button-next:hover:after {
+  color: #ed4e33;
+}
+#ofk-advantages .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #aaaaaa;
+  margin-bottom: -15px !important;
+}
+#ofk-advantages .swiper-pagination-bullet-active {
+  background-color: #008000;
+}
+#ofk-advantages .swiper-pagination-bullet:hover {
+  background-color: #ed4e33;
+}
+
+
+/* =========================
+# Table
+========================= */
+table {
+  border-collapse: collapse;
+  margin: 0 auto; 
+}
+th, td {
+  border: 1px solid #aaaaaa;
+  padding: 0 5px;
+}
+th {
+  font-weight: 700; 
+}
+tr > th:first-child,
+tr > td:first-child {
+  width: 20%;
+}
+#ofk-curriculum .flexRow div caption {
+  color: #ffffff;
+  padding: 2.5%;
+  font-weight: 900;
+  border-radius: 15px 15px 0 0;
+}
+#ofk-curriculum .flexRow div:nth-child(1) caption {
+  background-color: #218099;
+}
+#ofk-curriculum .flexRow div:nth-child(2) caption {
+  background-color: #fdb515;
+}
+#ofk-curriculum .flexRow div:nth-child(3) caption {
+  background-color: #6a0dad;
 }
