@@ -326,7 +326,7 @@
 			</section>  <!-- End of Highlights -->
 
 			<!-- Advantages  -->
-			<section id="ofk-advantages" class="textCenter">
+			<section id="ofk-advantages" class="textCenter margin-0-2">
 				<!-- Slider main container -->
 				<div class="swiper-container">
 					<!-- Additional required wrapper -->
@@ -384,14 +384,17 @@
 		<!-- ====== Curriculum ======  -->
 		<section id="ofk-curriculum" class="marginTop margin-0-2">
 			<h2 class="divHeader textBetweenLine">Curriculum</h2>
-			<span class="displayBlock flamingo padding-0-2">* 2020 class example: courses marked with asterisks require additional material fee; highlighted in green are STEM subjects.
-</span>
+			<span class="displayBlock padding-0-2">
+				* 2020 class example: classes marked with asterisks require additional material fee; highlighted in green are STEM subjects.
+			</span>
 
 			<div class="flexRow alignStart justifyAround">
 				<!-- Period B -->
-				<div class="flex100 flex30-lg margin-2-0">
+				<div class="flex100 flex30-lg padding-2-0">
 				  <table summary="OFK Period B Class List">
-				  	<caption>Period B (10:15 am - 11:45 am)</caption>
+				  	<caption>
+				  		Period B (10:15 am - 11:45 am)
+				  	</caption>
 				  	<thead>
 			  	    <tr>
 			  	      <th>Grade</th>
@@ -464,13 +467,20 @@
 			  	      <td class="STEM">Basic Applied Statistics for High School Students</td>
 			  	    </tr>
 			  	  </tbody>
+			  	  <tfoot>
+			  	  	<tr>
+			  	  		<td colspan="2"></td>
+			  	  	</tr>
+			  	  </tfoot>
 				  </table>
 				</div>	<!-- End of Period B -->
 
 				<!-- Period C -->
-				<div class="flex100 flex30-lg margin-2-0">
+				<div class="flex100 flex30-lg padding-2-0">
 				  <table summary="OFK Period C Class List">
-				  	<caption>Period C (12:30 pm - 2:00 pm)</caption>
+				  	<caption>
+				  		Period C (12:30 pm - 2:00 pm)
+				  	</caption>
 				  	<thead>
 			  	    <tr>
 			  	      <th>Grade</th>
@@ -551,13 +561,20 @@
 			  	      <td class="STEM">SAT Test Preparation: Math (C+D)</td>
 			  	    </tr>
 			  	  </tbody>
+			  	  <tfoot>
+			  	  	<tr>
+			  	  		<td colspan="2"></td>
+			  	  	</tr>
+			  	  </tfoot>
 			  	</table>
 				</div> 	<!-- End of Period C -->
 
 				<!-- Period D -->
-				<div class="flex100 flex30-lg margin-2-0">
+				<div class="flex100 flex30-lg padding-2-0">
 				  <table summary="OFK Period D Class List">
-				  	<caption>Period D (2:15 pm - 3:45 pm)</caption>
+				  	<caption>
+				  		Period D (2:15 pm - 3:45 pm)
+				  	</caption>
 				  	<thead>
 			  	    <tr>
 			  	      <th>Grade</th>
@@ -627,13 +644,18 @@
 			  	    </tr>
 			  	    <tr>
 			  	      <td>9-11</td>
-			  	      <td>Comprehensive PSAT Test Preparation (C+D)</td>
+			  	      <td>Comprehensive PSAT Prep (C+D)</td>
 			  	    </tr>
 			  	    <tr>
 			  	      <td>9-11</td>
 			  	      <td class="STEM">SAT Test Preparation: Math (C+D)</td>
 			  	    </tr>
 			  	  </tbody>
+			  	  <tfoot>
+			  	  	<tr>
+			  	  		<td colspan="2"></td>
+			  	  	</tr>
+			  	  </tfoot>
 			  	</table>
 				</div>		<!-- End of Period D -->
 
@@ -997,6 +1019,9 @@
 	    pagination: {
 	      el: '.swiper-pagination',
 	      clickable: true,
+	      renderBullet: function (index, className) {
+	        return '<span class="' + className + '">' + (index + 1) + '</span>';
+	      },
 	    },
 	    navigation: {
 	      nextEl: '.swiper-button-next',
