@@ -2599,26 +2599,21 @@ footer .flexRow {
   }
 }
 .ofkSlides {
-  margin: 20px 0vw 50px !important;
+  margin: 20px auto 50px !important;
   width: 100%;
   height: 75vh;
   box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07);
 }
-@media screen and (min-width: 992px) {
-  .ofkSlides {
-    height: 70vh;
-    margin: 20px 6vw 50px !important;
-  }
-}
 .ofkSlides article {
-  height: 75vh;
+  height: auto;
   padding: 3% 10%;
   background-color: rgba(255,255,255,.75);
 }
 @media screen and (min-width: 992px) {
   .ofkSlides article {
-    height: 70vh;
+    height: auto;
     padding: 5% 5%;
+    border-radius: 25px;
   }
 }
 #ofk-advantages .swiper-button-prev:after,
@@ -2639,11 +2634,14 @@ footer .flexRow {
   color: #ed4e33;
 }
 #ofk-advantages .swiper-pagination-bullet {
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 30px;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   background: #aaaaaa;
   margin-bottom: -15px !important;
+  border-radius: 25%;
 }
 #ofk-advantages .swiper-pagination-bullet-active {
   background-color: #008000;
@@ -2671,18 +2669,26 @@ tr > th:first-child,
 tr > td:first-child {
   width: 20%;
 }
-#ofk-curriculum .flexRow div caption {
+#ofk-curriculum table caption {
   color: #ffffff;
   padding: 2.5%;
   font-weight: 900;
   border-radius: 15px 15px 0 0;
 }
-#ofk-curriculum .flexRow div:nth-child(1) caption {
+#ofk-curriculum table tfoot td {
+  border: 0;
+  padding: 2.5%;
+  border-radius: 0 0 15px 15px;
+}
+#ofk-curriculum div div:nth-child(1) caption,
+#ofk-curriculum div div:nth-child(1) tfoot td {
   background-color: #218099;
 }
-#ofk-curriculum .flexRow div:nth-child(2) caption {
+#ofk-curriculum div div:nth-child(2) caption,
+#ofk-curriculum div div:nth-child(2) tfoot td {
   background-color: #fdb515;
 }
-#ofk-curriculum .flexRow div:nth-child(3) caption {
+#ofk-curriculum div div:nth-child(3) caption,
+#ofk-curriculum div div:nth-child(3) tfoot td {
   background-color: #6a0dad;
 }
