@@ -2612,8 +2612,8 @@ footer .flexRow {
 @media screen and (min-width: 992px) {
   .ofkSlides article {
     height: auto;
-    padding: 5% 5%;
-    border-radius: 25px;
+    padding: 5%;
+    border-radius: 5px;
   }
 }
 #ofk-advantages .swiper-button-prev:after,
