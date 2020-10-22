@@ -344,8 +344,8 @@ ul.circle li:before {
 .padding-5-5 {
   padding: 5%;
 }
-.paddingTop-12vh {
-  padding-top: 12vh;
+.paddingTop-10vh {
+  padding-top: 10vh;
 }
 .margin-0-2 {
   margin: 0 2vw; 
@@ -1302,6 +1302,9 @@ main a.myBtn {
 .alignSelfCenter {
   -ms-flex-item-align: center;
   align-self: center;
+}
+.alignContentCenter {
+  align-content: center;
 }
 .justifyStart {
   -ms-flex-pack: start;

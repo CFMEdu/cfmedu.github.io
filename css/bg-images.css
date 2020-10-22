@@ -357,6 +357,82 @@
 }
 
 /* =========================
+# WFCC
+========================= */
+#bnrBg-wfcc {
+  background-image: url("../images/wfcc/bg-wfcc.jpg");
+  background-size: cover; 
+  background-position: 50% 70%;
+}
+#wfcc-logo img:first-child {
+  height: 120px;
+  width: auto;
+  padding-right: 20px;
+}
+#wfcc-logo img:nth-child(2) {
+  height: 70px;
+  width: auto;
+  padding-right: 20px;
+}
+#bnrBg-wfcc-intro {
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.3)), url("../images/wfcc/wfcc-students-writing.jpg");
+  background-size: cover; 
+  background-position: 50% 80%;
+  height: 60vh;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  #bnrBg-wfcc-intro {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), transparent), url("../images/wfcc/wfcc-students-writing.jpg");
+  }
+}
+#wfcc-eligibility img {
+  height: 35vh;
+}
+#flexBg-wfcc-admission {
+  background-image: url("../images/wfcc/wfcc-admission.jpg");
+  background-size: cover; 
+  background-position: 50%;
+  height: 60vh;
+  position: relative;
+}
+#flexBg-wfcc-fee {
+  background-image: url("../images/wfcc/wfcc-fee.jpg");
+  background-size: cover; 
+  background-position: 50%;
+  height: 60vh;
+  position: relative;
+}
+#bnrBg-wfcc-curriculum-essay {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/wfcc/wfcc-essay.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+  background-blend-mode: soft-light;
+  position: relative;
+}
+#bnrBg-wfcc-curriculum-research {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/wfcc/wfcc-research-writing.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+#bnrBg-wfcc-curriculum-journalism {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/wfcc/wfcc-journalism.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+  background-blend-mode: soft-light;
+  position: relative;
+}
+#bnrBg-wfcc-curriculum-communication {
+  background-image: linear-gradient(to top, rgba(70,83,94,.5), rgba(70,83,94,1)), url("../images/wfcc/wfcc-writing-for-communication.jpg");
+  background-size: cover; 
+  background-position: 50% 50%;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+
+/* =========================
 # SVSD
 ========================= */
 #bnrBg-svsd {
