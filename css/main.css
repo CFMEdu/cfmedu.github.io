@@ -836,7 +836,7 @@ main a.myBtn {
   .navMenu > ul > li > a.selected,
   .navMenu > ul > li > a.shrink.selected {
     color: #ffa500;
-    font-weight: 700;
+    font-weight: 600;
   }
   .navMenu > ul > li > a:hover,
   .navMenu > ul > li > a.shrink:hover {
@@ -901,7 +901,7 @@ main a.myBtn {
   }
   .navDropdown a.selected {
     color: #ffa500;
-    font-weight: 700;
+    font-weight: 600;
   }
   .navDropdown a:hover,
   .navDropdown a.selected:hover {
