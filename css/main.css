@@ -835,7 +835,7 @@ main a.myBtn {
   }
   .navMenu > ul > li > a.selected,
   .navMenu > ul > li > a.shrink.selected {
-    color: #ffa500;
+    color: #fdb515;
     font-weight: 600;
   }
   .navMenu > ul > li > a:hover,
@@ -900,7 +900,7 @@ main a.myBtn {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .navDropdown a.selected {
-    color: #ffa500;
+    color: #fdb515;
     font-weight: 600;
   }
   .navDropdown a:hover,
@@ -908,6 +908,9 @@ main a.myBtn {
     color: #3e4444;
     text-decoration: none;
     background-color: #ffbf4b;
+  }
+  .navDropdown a.selected:hover {
+    color: #ffffff;
   }
   .navDropdown > li:last-child > a {
     border-bottom: none;
