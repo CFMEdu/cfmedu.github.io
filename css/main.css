@@ -84,10 +84,6 @@ p {
   font-size: 1.25rem;
   font-size: clamp(.938rem, 2.5vw, 1.25rem);
 }
-/*.font-XS {
-  font-size: 1.75rem;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
-}*/
 .superscript { 
   position: relative; 
   top: -0.5em; 
@@ -116,6 +112,14 @@ hr.style1{
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.fade {
+  border: 0;
+  height: 2px;
+  max-width: 100%;
+  background-position: 50%;
+  margin: 1.35em auto;
+  background-image: linear-gradient(90deg, rgba(33,128,153,0) 0, rgba(33,128,153,1) 50%, rgba(33,128,153,0) 100%);
 }
 i {
   font-style: italic;
@@ -185,6 +189,23 @@ ul.circle li:before {
   margin-left: -1rem;
   vertical-align: middle;
 }
+.hours:before,
+.assignments:before {
+  content: "";
+  font-family: "FontAwesome";
+  display: inline-block; 
+  font-size: 1.5rem;
+  padding-right: .5rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  color: #ffa500;
+}
+.hours:before {
+  content: "\f017";
+}
+.assignments:before {
+  content: "\f040";
+}
 .dotLine {
   text-align: center;
 }
@@ -234,11 +255,11 @@ ul.circle li:before {
 # Speech Bobbles
 ========================= */
 .cutout-b {
-  background: #000000;
+  background: #00a598;
   color: #ffffff;
   font-weight: 600 !important;
   margin: 0 auto;
-  padding: 1%;
+  padding: 0 1%;
   mix-blend-mode: multiply; 
 }
 .cutout-w {
@@ -390,6 +411,9 @@ ul.circle li:before {
 .pushUp {
   margin-top: -150px;
 }
+.pushUp img {
+  max-height: 70vh;
+}
 .trapezoidHolder {
   position: relative;
   overflow: hidden;
@@ -505,7 +529,7 @@ main a.myBtn {
   box-shadow: 3px 3px 20px 5px #cccccc;
   border-radius: 20px;
   background-color: rgba(255,255,255,.2);
-  transition: all .5s ease;
+  transition: all .5s ease-out;
 }
 .blue {
   color: #045184;
@@ -1083,14 +1107,14 @@ main a.myBtn {
   height: 50vh;
   overflow: hidden;  /* for skrollr */
 }
-.mainBnrBg.bnrContainer {
+.bnrContainer.mainBnrBg {
   height: 60vh;
 }
 @media screen and (min-width: 768px) {
   .bnrContainer {
     height: 60vh;
   }
-  .mainBnrBg.bnrContainer {
+  .bnrContainer.mainBnrBg {
     height: 70vh;
   }
 }
@@ -1098,7 +1122,7 @@ main a.myBtn {
   .bnrContainer {
     height: 70vh;
   }
-  .mainBnrBg.bnrContainer {
+  .bnrContainer.mainBnrBg {
     height: 85vh;
   }
 }
@@ -1212,6 +1236,7 @@ main a.myBtn {
 /* =========================
 # Text Between Lines
 ========================= */
+.textBeforeLine,
 .textBetweenLine,
 .textBetweenLine-w,
 .textBetweenDoubleLine {
@@ -1221,6 +1246,13 @@ main a.myBtn {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
+}
+.textBeforeLine:after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-image: linear-gradient(
+    90deg, rgba(33,128,153,0) 0, rgba(33,128,153,1) 50%, rgba(33,128,153,0) 100%);
 }
 .textBetweenLine:before,
 .textBetweenLine:after {
@@ -1404,6 +1436,11 @@ main a.myBtn {
   }
 }
 /* 00-sm-md-lg-xl */
+.flex0 {
+  -ms-flex: 0%;
+  flex: 0%;
+  max-width: 0%;
+}
 .flex10 {
   -ms-flex: 10%;
   flex: 10%;
@@ -1953,9 +1990,9 @@ main a.myBtn {
 =========================*/ 
 .textContainer {
   position: relative;
-  margin: 0 auto;
+  max-width: 80%;
   padding: 1rem 1.5rem;
-  max-width: 1000px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .textContainer {
@@ -2608,19 +2645,23 @@ footer .flexRow {
 .ofkSlides {
   margin: 20px auto 50px !important;
   width: 100%;
-  height: 75vh;
+  min-height: 75vh;
+  height: auto;
   box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07);
 }
 .ofkSlides article {
+  min-height: 75vh;
   height: auto;
   padding: 3% 10%;
   background-color: rgba(255,255,255,.75);
 }
 @media screen and (min-width: 992px) {
+  .ofkSlides {
+    min-height: 72vh;
+  }
   .ofkSlides article {
-    height: auto;
+    min-height: 72vh;
     padding: 5%;
-    border-radius: 5px;
   }
 }
 #ofk-advantages .swiper-button-prev:after,
@@ -2698,4 +2739,97 @@ tr > td:first-child {
 #ofk-curriculum div div:nth-child(3) caption,
 #ofk-curriculum div div:nth-child(3) tfoot td {
   background-color: #6a0dad;
+}
+
+
+/* =========================
+# Panel
+========================= */
+.panel {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+@media screen and (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.panel .content {
+  width: 100%;
+  background-color: #ffffff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: calc(3% + 50px);
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
+              0 1px 4px rgba(0,0,0,0.07),
+              0 2px 6px rgba(0,0,0,0.07), 
+              0 4px 8px rgba(0,0,0,0.07), 
+              0 8px 16px rgba(0,0,0,0.07),
+              0 16px 32px rgba(0,0,0,0.07),
+              0 32px 64px rgba(0,0,0,0.07);
+  transform: perspective(1px) skewY(1.5deg);
+}
+@media screen and (min-width: 768px) {
+  .panel .content {
+    width: 50%;
+    padding-right: calc(5% + 4%);
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+}
+.panel .content div {
+  transform: perspective(1px) skewY(-1.5deg);
+}
+.panel .content .slopeBg {
+  position: absolute;
+  background-color: inherit;
+  height: 5%;
+  left: 0;
+  right: 0;
+  bottom: -2.5%;
+  transform: perspective(1px) skewY(-1.5deg);
+}
+.panel .landscape {
+  width: 90%;
+  margin-top: -50px;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .panel .landscape {
+    width: 50%;
+    margin-left: -4%;
+    margin-top: 5%;
+  }
+}
+.panel .landscape img {
+  width: 100%;
+  max-height: 50vh;
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
+              0 1px 4px rgba(0,0,0,0.07),
+              0 2px 6px rgba(0,0,0,0.07), 
+              0 4px 8px rgba(0,0,0,0.07), 
+              0 8px 16px rgba(0,0,0,0.07),
+              0 16px 32px rgba(0,0,0,0.07),
+              0 32px 64px rgba(0,0,0,0.07);
+}
+@media screen and (min-width: 768px) {
+  .panel .landscape img {
+    max-height: 65vh;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .panel .landscape {
+    margin-top: 2%;
+  }
+  .panel .landscape img {
+    max-height: 35vh;
+  }
 }
