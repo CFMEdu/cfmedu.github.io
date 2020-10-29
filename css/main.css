@@ -797,12 +797,14 @@ main a.myBtn {
     justify-content: space-between;
     margin: 0;
   }
-  .navMenu > ul > li:nth-child(2) > a:after,
-  .navMenu > ul > li:nth-child(3) > a:after {
+  .navMenu > ul > li > a:after {
     content: "\f107";
     font-family: "FontAwesome";
     display: inline-block;
     padding-left: 3px;
+  }
+  .navMenu > ul > li:last-child > a:after {
+    content: "";
   }
 }
 .navMenu > ul > li > a {
