@@ -39,6 +39,10 @@
 			<div class="navMenu">
 				<ul>
 					<li><a href="about.html" class="navDeco selected">About</a>
+						<ul class="navDropdown">
+							<li><a href="about.html#mission">Our Mission</a></li>
+							<li><a href="about.html#testimonials">Testimonials</a></li>
+						</ul>
 					</li>
 					<li><a href="berkeley.html" class="navDeco">UC Berkeley</a>
 						<ul class="navDropdown">
@@ -308,6 +312,33 @@
 		      prevEl: '.swiper-button-prev',
 		    },
 		  });
+	</script>
+
+	<script>
+		$(function() {
+		  $(document).on("scroll", onScroll);
+
+		  $(".navMenu a, .subNavigation a").on('click', function(e) {
+		    if (this.hash !== "") {
+		      e.preventDefault();
+		      $(document).off("scroll");
+
+		      $("a").each(function() {
+		        $(this).removeClass("active");
+		      });
+		      $(this).addClass("active");
+		      
+		      var hash = this.hash;
+
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top - $('.navBar').height() - $('.subNavigation').height()
+		      }, 800, 'swing', function(){
+		        // window.location.hash = hash;
+		        $(document).on("scroll", onScroll);
+		      });
+		    }
+		  });
+		});
 	</script>
 
 </body>
