@@ -16,10 +16,11 @@ body {
   line-height: 1.5;
   color: #3e4444;
   text-align: left;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   display: flex;
   flex-direction: column;
-  margin: 0;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 main {
   flex: 1; 
@@ -655,6 +656,7 @@ main a.myBtn {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1920px;
   height: 80px;
   padding: 0 2vw;
   background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,0));
@@ -813,6 +815,14 @@ main a.myBtn {
   font-size: clamp(1.15rem, 2.5vw, 1.25rem);
   margin-top: 5vh;
 }
+.navMenu > ul > li > a.selected {
+  color: #fdb515;
+  font-weight: 600;
+}
+.navMenu > ul > li > a:hover,
+.navMenu > ul > li > a.selected:hover {
+  color: #0091ae;
+}
 @media screen and (min-width: 992px) {
   .navMenu > ul > li > a:link, 
   .navMenu > ul > li > a:visited {
@@ -828,18 +838,17 @@ main a.myBtn {
     line-height: 50px;
   }
   .navMenu > ul > li > a:hover,
-  .navMenu > ul > li > a.shrink:hover,
-  .navMenu > ul > li > a.selected,
-  .navMenu > ul > li > a.shrink.selected {
+  .navMenu > ul > li > a.shrink:hover {
     text-decoration: none;
   }
   .navMenu > ul > li > a.selected,
   .navMenu > ul > li > a.shrink.selected {
     color: #fdb515;
-    font-weight: 600;
   }
   .navMenu > ul > li > a:hover,
-  .navMenu > ul > li > a.shrink:hover {
+  .navMenu > ul > li > a.selected:hover,
+  .navMenu > ul > li > a.shrink:hover,
+  .navMenu > ul > li > a.shrink.selected:hover {
     color: #ffbf4b;
   }
 }
@@ -873,6 +882,17 @@ main a.myBtn {
 /* =========================
 # Navigation Menu - Dropdown
 ========================= */
+.navDropdown a {
+  margin-left: 10px;
+}
+.navDropdown a.selected {
+  color: #fdb515;
+  font-weight: 600;
+}
+.navDropdown a:hover,
+.navDropdown a.selected:hover {
+  color: #0091ae;
+}
 @media screen and (min-width: 992px) {
   .navDropdown {
     display: none;
@@ -897,6 +917,7 @@ main a.myBtn {
     position: relative;
     line-height: 35px;
     padding: 1vh 1.5vw; 
+    margin: 0; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .navDropdown a.selected {
@@ -923,6 +944,7 @@ main a.myBtn {
 .subNavigation {
   display: flex;
   width: 100%;
+  max-width: 1920px;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
@@ -2278,16 +2300,18 @@ main a.myBtn {
   overflow: hidden;
   width: 30%;
   max-width: 30%;
-  height: 25vh;
+  height: auto;
   margin: 2% -1%;
   background: #ffffff;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+.photoGalleryItem.cursorDefault {
+  cursor: context-menu;
+}
+@media screen and (min-width: 992px) {
   .photoGalleryItem {
     width: 20%;
     max-width: 20%;
-    height: 30vh;
   }
 }
 .photoGalleryItem.rotate10 {
@@ -2770,7 +2794,7 @@ tr > td:first-child {
   justify-content: flex-start;
   align-items: center;
   margin-left: 2%;
-  margin-right: 2%;
+  margin-right: 2%
 }
 @media screen and (min-width: 768px) {
   .panel {
@@ -2782,8 +2806,8 @@ tr > td:first-child {
 .panel .content {
   width: 100%;
   background-color: #ffffff;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 6%;
+  padding-right: 6%;
   padding-top: 5%;
   padding-bottom: calc(3% + 50px);
   box-shadow: 0 -1px 2px rgba(0,0,0,0.07), 
@@ -2793,27 +2817,16 @@ tr > td:first-child {
               0 8px 16px rgba(0,0,0,0.07),
               0 16px 32px rgba(0,0,0,0.07),
               0 32px 64px rgba(0,0,0,0.07);
-  transform: perspective(1px) skewY(1.5deg);
 }
 @media screen and (min-width: 768px) {
   .panel .content {
-    width: 50%;
+    width: 60%;
+    min-height: 50vh;
+    padding-left: 5%;
     padding-right: calc(5% + 4%);
-    padding-top: 3%;
-    padding-bottom: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
-}
-.panel .content div {
-  transform: perspective(1px) skewY(-1.5deg);
-}
-.panel .content .slopeBg {
-  position: absolute;
-  background-color: inherit;
-  height: 5%;
-  left: 0;
-  right: 0;
-  bottom: -2.5%;
-  transform: perspective(1px) skewY(-1.5deg);
 }
 .panel .landscape {
   width: 90%;
@@ -2822,7 +2835,7 @@ tr > td:first-child {
 }
 @media screen and (min-width: 768px) {
   .panel .landscape {
-    width: 50%;
+    width: 40%;
     margin-left: -4%;
     margin-top: 5%;
   }
@@ -2841,13 +2854,5 @@ tr > td:first-child {
 @media screen and (min-width: 768px) {
   .panel .landscape img {
     max-height: 65vh;
-  }
-}
-@media screen and (min-width: 2560px) {
-  .panel .landscape {
-    margin-top: 2%;
-  }
-  .panel .landscape img {
-    max-height: 35vh;
   }
 }

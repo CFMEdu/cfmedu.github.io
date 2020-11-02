@@ -142,7 +142,7 @@
 #bnrBg-atdp-courses {
   background-image: linear-gradient(to bottom, rgba(255,255,255,.1), rgba(255,255,255,0)), url("../images/atdp/courses/bg-atdp-courses.jpg");
   background-size: cover; 
-  background-position: 50% 98%;
+  background-position: 50% 50%;
 }
 #bnrBg-architecture {
   background-image: url("../images/atdp/courses/atdp-architecture.jpg");
