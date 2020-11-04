@@ -2857,3 +2857,10 @@ tr > td:first-child {
 }
 
 
+.linedPaper-w {
+  background-color: #ffffff;   /*lined paper background*/
+  background-image:
+  linear-gradient(90deg, transparent 79px, rgba(171,206,212,.5) 79px, rgba(171,206,212,.5) 81px, transparent 81px),
+  linear-gradient(rgba(238,238,238,.9) .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
