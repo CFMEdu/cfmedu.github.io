@@ -2381,56 +2381,38 @@ main a.myBtn {
 # Footer
 ========================= */
 footer {
-  height: auto;
   background-color: #b9d3b6;
 }
 footer a {
   text-decoration: none;
+  line-height: 25px;
 }
 footer a:hover {
   text-decoration: underline;
 }
-footer .flexRow {
-  border-bottom: 1px solid #aaaaaa;
-}
-.flexFooter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 3vw;
+footer .flexHalf:first-child {
+  padding: 0 1%;
 }
 .footerRow {
-  flex: 100%;
-  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding: 5px 0;
   border-bottom: 1px solid #aaaaaa;
 }
 @media screen and (min-width: 768px) {
-  .flexFooter .footerRow:first-child {
+  footer .footerRow:first-child {
     align-items: flex-end;
   }
 }
-@media screen and (min-width: 768px) {
-  .flexFooter .footerRow:last-child {
-    border-bottom: none;
-  }
-}
-#coName.footerRow {
-  align-items: flex-end;
-}
-.coName a,
 .coName a:hover {
   text-decoration: none;
 }
 .coName h3 {
   line-height: 25px;
   padding: 0 5px;
-  margin: 0;
+  margin: 0 auto;
   color: #3d6ca3;
   font-size: 16px;
 }
@@ -2441,7 +2423,6 @@ footer .flexRow {
 #coSlogan {
   color: #ffffff;
   background-color: #4c5f66;
-  border: 1px solid #4c5f66;
 }
 .coMedia a {
   padding-left: 10px;
@@ -2454,41 +2435,48 @@ footer .flexRow {
 .coMedia img:hover {
   box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.2),0 2px 10px 0 rgba(0,0,0,0.12);
 }
-#coAbout.footerRow a {
+#coAbout a {
   color: #4c5f66;
   font-size: 16px;
   font-weight: 600;
-  line-height: 25px;
   padding: 10px 0 0 0;
 }
-#coAbout.footerRow a:last-child {
+#coAbout a:last-child {
   color: #e9832e;
 }
-#coAbout.footerRow a:hover {
+#coAbout a:hover {
   color: #007a8c;
 }
-#coContact.footerRow ul li, #coContact.footerRow ul li a {
+#coContact ul li, 
+#coContact ul li a {
   color: #4c5f66;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  line-height: 25px;
   padding: 10px 20px 0 0;
 }
-#coContact.footerRow a:hover {
+#coContact a:hover {
   color: #007a8c;
   text-decoration: underline;
 }
-#searchBar.footerRow div {
+/* Customising Programmable Search Engine ---> */
+#searchBar div {
   flex: 1;
 }
+.gsc-control-cse * {
+  border: 0;
+}
+.gsc-input-box td.gsib_a {
+  width: 100%;
+}   /* <--- End of Programmable Search Engine */
 .footerBox {
   justify-content: center;
-  margin-bottom: 50px;
+  align-content: center;
+  padding-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .footerBox {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 .progBox {
@@ -2497,6 +2485,7 @@ footer .flexRow {
   text-align: left;
   line-height: 30px;
   padding: 2%;
+  margin: 2px;
 }
 .progBox a {
   color: #3e4444;
@@ -2513,9 +2502,8 @@ footer .flexRow {
 }
 .copyright {
   text-align: center;
-  height: 15vh;
-  line-height: 15vh;
-  margin-bottom: 0;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -2854,13 +2842,4 @@ tr > td:first-child {
   .panel .landscape img {
     max-height: 65vh;
   }
-}
-
-
-.linedPaper-w {
-  background-color: #ffffff;   /*lined paper background*/
-  background-image:
-  linear-gradient(90deg, transparent 79px, rgba(171,206,212,.5) 79px, rgba(171,206,212,.5) 81px, transparent 81px),
-  linear-gradient(rgba(238,238,238,.9) .1em, transparent .1em);
-  background-size: 100% 1.2em;
 }
