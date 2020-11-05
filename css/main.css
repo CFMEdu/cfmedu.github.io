@@ -2401,10 +2401,8 @@ footer .flexHalf:first-child {
   padding: 5px 0;
   border-bottom: 1px solid #aaaaaa;
 }
-@media screen and (min-width: 768px) {
-  footer .footerRow:first-child {
-    align-items: flex-end;
-  }
+footer .footerRow:first-child {
+  align-items: flex-end;
 }
 .coName a:hover {
   text-decoration: none;
@@ -2437,29 +2435,23 @@ footer .flexHalf:first-child {
 }
 #coAbout a {
   color: #4c5f66;
-  font-size: 16px;
   font-weight: 600;
-  padding: 10px 0 0 0;
+  padding: 5px 0;
 }
 #coAbout a:last-child {
   color: #e9832e;
 }
-#coAbout a:hover {
+#coAbout a:hover,
+#coContact a:hover {
   color: #007a8c;
 }
 #coContact ul li, 
 #coContact ul li a {
   color: #4c5f66;
-  text-decoration: none;
-  font-size: 16px;
   font-weight: 500;
-  padding: 10px 20px 0 0;
+  padding: 5px 0;
 }
-#coContact a:hover {
-  color: #007a8c;
-  text-decoration: underline;
-}
-/* Customising Programmable Search Engine ---> */
+/* === Customising Search Engine === */
 #searchBar div {
   flex: 1;
 }
@@ -2468,21 +2460,25 @@ footer .flexHalf:first-child {
 }
 .gsc-input-box td.gsib_a {
   width: 100%;
-}   /* <--- End of Programmable Search Engine */
+}
+/* === End of Search Engine === */
 .footerBox {
   justify-content: center;
   align-content: center;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .footerBox {
+    padding-top: 50px;
     padding-bottom: 0;
   }
 }
 .progBox {
   flex: 30%;
   max-width: 30%;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
   line-height: 30px;
   padding: 2%;
   margin: 2px;
@@ -2501,8 +2497,12 @@ footer .flexHalf:first-child {
   font-weight: normal;
 }
 .copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin: 0 auto;
 }
 
