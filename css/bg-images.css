@@ -185,7 +185,7 @@
 }
 #bg-lsi-gear:after {
   content: "";
-  background-image: url("../images/bg/gear-technology.png"), url("../images/bg/blue-tech-elements-flip.png");
+  background-image: url("../images/bg/gear-technology.jpg"), url("../images/bg/blue-tech-elements.jpg");
   background-size: 60%, 30%;
   background-repeat: no-repeat;
   background-position: 0% 100%, 90% 100%;
@@ -298,7 +298,7 @@
 }
 #bg-ssd-ggb:after {
   content: "";
-  background-image: url("../images/bg/sf-skyline-green.png");
+  background-image: url("../images/bg/sf-skyline-green.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -547,4 +547,27 @@
   background-image: url("../images/ofk/bg-ofk-wrapUp.jpg");
   background-size: cover; 
   background-position: 50% 10%;
+}
+
+/* =========================
+# Sitemap
+========================= */
+#bnrBg-sitemap {
+  background-image: url("../images/sitemap/bg-sitemap.jpg");
+  background-size: cover; 
+  background-position: 50% 30%;
+}
+#sitemap:after {
+  content: "";
+  background-image: url("../images/bg/world-map.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 80%;
+  opacity: .1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;   
 }
