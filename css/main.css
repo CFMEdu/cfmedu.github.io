@@ -137,53 +137,57 @@ ul.firstTier {
   padding-left: 1rem;
   margin: 2vh 0; 
 }
-ul.firstTier li {
+ul.firstTier > li {
   padding-left: .5rem;
 }
-ul.firstTier li:before {
+ul.firstTier > li:before {
   content: "";
   font-family: "FontAwesome";
   display: inline-block; 
   width: 1.5rem;
   margin-left: -1.5rem;
 }
-ul.camera-retro li:before {
+ul.camera-retro > li:before {
   content: "\f083";
   color: #00a598;
 }
-ul.camera li:before {
+ul.camera > li:before {
   content: "\f030";
   color: #ed4e33;
 }
-ul.check li:before {
+ul.check > li:before {
   content: "\f046";
   color: #ed4e33;
 }
-ul.house li:before {
+ul.minus > li:before {
+  content: "\f146 ";
+  color: #ed4e33;
+}
+ul.house > li:before {
   content: "\f015";
   color: #00a598;
 }
-ul.meal li:before {
+ul.meal > li:before {
   content: "\f0f5";
   color: #ed4e33;
 }
-ul.pencil li:before {
+ul.pencil > li:before {
   content: "\f14b";
   color: #ed4e33;
 }
-ul.square li:before {
+ul.square > li:before {
   content: "\f096";
   color: #ed4e33;
 }
-ul.star li:before {
+ul.star > li:before {
   content: "\f005";
   color: #00a598;
 }
-ul.trophy li:before {
+ul.trophy > li:before {
   content: "\f091";
   color: #00a598;
 }
-ul.circle li:before {
+ul.circle > li:before {
   content: "\f111";
   font-size: .5rem;
   width: 1rem;
@@ -602,7 +606,7 @@ main a.myBtn {
   background-image: linear-gradient(to bottom right, rgba(185,211,182,1), transparent);
 }
 .school {
-  background-image: url("../images/bg/school.png");
+  background-image: url("../images/bg/school.jpg");
 }
 
 /* =========================
@@ -2848,4 +2852,16 @@ tr > td:first-child {
   .panel .landscape img {
     max-height: 65vh;
   }
+}
+
+/* =========================
+# Sitemap
+========================= */
+#sitemap a {
+  color: #3e4444;
+  text-decoration: none;
+}
+#sitemap a:hover {
+  color: #007a8c;
+  text-decoration: underline;
 }
