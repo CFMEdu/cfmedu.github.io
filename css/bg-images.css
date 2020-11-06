@@ -555,15 +555,18 @@
 #bnrBg-sitemap {
   background-image: url("../images/sitemap/bg-sitemap.jpg");
   background-size: cover; 
-  background-position: 50% 30%;
+  background-position: 100% 30%;
+}
+#sitemap {
+  position: relative;
 }
 #sitemap:after {
   content: "";
   background-image: url("../images/bg/world-map.png");
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 100% 80%;
-  opacity: .1;
+  background-position: 100% 100%;
+  opacity: .08;
   position: absolute;
   top: 0;
   left: 0;

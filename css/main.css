@@ -132,6 +132,10 @@ video {
 strong {
   font-weight: 600;
 }
+a.noLink:hover {
+  color: #3e4444 !important;
+  text-decoration: none !important;
+}
 ul.firstTier {
   line-height: 1.75;
   padding-left: 1rem;
@@ -2857,6 +2861,11 @@ tr > td:first-child {
 /* =========================
 # Sitemap
 ========================= */
+#sitemap h2 {
+  margin-top: 30px;
+  font-weight: 600;
+  font-family: "Crimson Text", serif;
+}
 #sitemap a {
   color: #3e4444;
   text-decoration: none;
@@ -2864,4 +2873,24 @@ tr > td:first-child {
 #sitemap a:hover {
   color: #007a8c;
   text-decoration: underline;
+}
+ul.firstLevel {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.firstLevel li {
+  display: flex;
+  line-height: 30px;
+  padding: .5% 2%;
+  border: 1px solid #aaaaaa; 
+  margin-right: -1px;
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+ul.firstLevel li a:nth-child(2):before {
+  content: "\f02d";
+  font-family: "FontAwesome";
+  font-size: .8rem;
+  display: inline-block; 
+  margin-right: .3rem;
 }
