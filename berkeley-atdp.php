@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>ATDP | CFM Educational Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CFM Educational Services - We provide summer academic enrichment programs.">
+  
+  <!-- Vendor -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="fresco/dist/css/fresco.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- Local -->
+  <link rel="shortcut icon" href="icons/logo/cfm-favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/bg-images.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<!-- ====== Header/Navigation ======  -->
+	<header>
+		<nav class="navBar">			
+			<div class="navLogo">
+				<a href="index.php">
+					<img src="icons/logo/cfm-logo.png" alt="CFM logo"/>
+				</a>
+			</div>
+
+			<div class="navToggle">
+				<span class="iconBar"></span>
+		    <span class="iconBar"></span>
+		    <span class="iconBar"></span>
+			</div>
+			
+			<div class="navMenu">
+				<ul>
+					<li><a href="about.php" class="navDeco">About</a>
+						<ul class="navDropdown">
+							<li><a href="about.php#mission">Our Mission</a></li>
+							<li><a href="about.php#testimonials">Testimonials</a></li>
+						</ul>
+					</li>
+					<li><a href="berkeley.php" class="navDeco selected">UC Berkeley</a>
+						<ul class="navDropdown">
+							<li><a href="berkeley-atdp.php" class="selected">ATDP</a></li>
+							<li><a href="berkeley-lsi.php">LSI</a></li>
+							<li><a href="berkeley-ssd.php">SSD</a></li>
+							<li><a href="berkeley-walex.php">WALEX</a></li>
+							<li><a href="berkeley-wfcc.php">WFCC</a></li>
+						</ul>
+					</li>
+					<li id="svsd"><a href="silicon-valley-school-district.php" class="navDeco">Silicon Valley School Dist.</a>
+						<ul class="navDropdown">
+							<li><a href="ofk.php">OFK</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.php" class="navDeco">Contact Us</a>
+					</li>				
+				</ul>
+			</div>
+		
+		</nav> 
+	</header>    <!-- ====== End Header/Navigation ======  -->
+
+
+	<!-- ====== Main Content ======  -->
+	<main>
+
+		<!-- ====== Top Banner ======  -->
+		<section>
+			<div id="bnrBg-atdp" class="bnrContainer">
+				<div class="gradientOverlay-right"></div>
+				<div class="gradientOverlay-bottom"></div>
+				<div class="gradientOverlay-left"></div>
+				<div class="bnrContent-bl"
+						 data-center-center="opacity: 1"
+             data-0-top="opacity: 0">
+					<h1 class="bnrTitle montserrat">
+						ATDP
+					</h1>
+				</div>
+			</div>
+		</section>	<!-- ====== End of Top Banner ======  -->
+	
+
+		<!-- ====== Subnavigation ======  -->
+		<section>
+      <div id="checkDiv"></div>
+		  <div class="subNavigation">
+		    <a href="#atdp-intro">Introduction</a>
+	      <a href="#atdp-overview">Overview</a>
+	      <a href="#atdp-eligibility">Eligibility</a>
+		    <a href="#atdp-admission">Admission</a>
+	      <a href="#atdp-fee">Fee</a>
+	      <a href="#atdp-curriculum">Curriculum</a>
+	      <a href="#atdp-gallery">Gallery</a>
+	    </div>
+		</section>  <!-- ====== End of Subnavigation ======  -->
+
+
+		<!-- ====== Introduction ======  -->
+		<section id="atdp-intro" class="marginTop">
+			<!-- Title -->
+			<section class="textContainer">
+				<div class="divHeader textLeft margin-0-2">
+					<span class="font-XS">UC Berkeley, Graduate School of Education</span>
+					<h1>Academic Talent Development Program</h1>
+					<h2>Global Programs</h2>
+				</div>				
+				<div id="atdp-logo" class="marginTop margin-0-2">
+					<img src="icons/logo/ATDPGlobalLogo.png" alt="atdp gp logo"/>
+					<img src="icons/logo/cfm-summer.svg" alt="cfm summer logo"/>
+				</div>
+			</section>	<!-- End of Title -->
+
+			<!-- Banner -->
+			<section id="bnrBg-atdp-intro" class="marginTop marginBottom margin-0-2"
+					 data-bottom-top="background-position: 50% 0%"
+					 data-top-bottom="background-position: 50% 50%">
+				<div class="bottomUp">
+					<h3 class="divHeader textRight">
+						<span class="cutout-w font-S speechBobble-up">
+							What are you doing this summer?
+						</span>
+						<br>
+						<span class="cutout-w font-S">
+							Staying at home? Travelling?
+						</span>
+						<br>
+						<span class="cutout-w font-S speechBobble-down">
+							Come to UC Berkeley instead!
+						</span>
+					</h3>
+				</div>
+			</section>	<!-- End of Banner -->
+
+			<!-- What we are thinking -->
+			<section class="marginTop">
+			 	<div class="dotLine">
+			 	  <span class="dotLineStar"></span>
+			 	  <span class="dotLineStar"></span>
+			 	  <span class="dotLineStar"></span>
+			 	</div>
+			 	<h3 class="divHeader margin-2-0">Here’s what we're thinking</h3>
+			 	<div class="marginTop">
+					<ul class="flexRow justifyCenter textCenter">
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-performing-art.png" loading="lazy" alt="performing art"/>
+							</div>
+							<div class="montserrat padding-2-2 flexColumn alignCenter">
+								<h3 class="smallCaps underLineThin">Enhance</h3>
+								<p>your knowledge and skills via comprehensive cultural immersion</p>
+							</div>
+						</li>
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-group.png" loading="lazy" alt="atdp student group" />
+							</div>
+							<div class="montserrat padding-2-2 flexColumn alignCenter">
+								<h3 class="smallCaps underLineThin">Improve</h3>
+								<p>your communication skills by interacting with new types of people - from all over the world!</p>
+							</div>
+						</li>
+						<li class="flexOneThird flexColumn alignCenter padding-0-2">
+							<div class="roundImage">
+								<img src="images/atdp/atdp-community-service.png" loading="lazy" alt="atdp student volunteering" />
+							</div>
+							<div class="montserrat padding-2-2 flexColumn alignCenter">
+								<h3 class="smallCaps underLineThin">Give back</h3>
+								<p>through unique community service and outreach opportunities, all while building upon your resume</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			 	<div class="dotLine">
+			 	  <span class="dotLineStar"></span>
+			 	  <span class="dotLineStar"></span>
+			 	  <span class="dotLineStar"></span>
+			 	</div>
+			</section>	<!-- End of What we are thinking -->
+
+			<!-- Introduction Article -->
+			<article>
+				<div class="trapezoidHolder marginTop margin-0-2 pushDown">
+					<div class="trapezoid bottom35 satherGate"></div>
+					<div class="textContainer">
+						<p>
+							<strong>How you spend your summers</strong> is something top-tier American universities will be interested in when you apply for college. Universities like to hear about meaningful, well-planned, self-motivated, and challenging life experiences, demonstrating a persistent drive to challenge oneself to accomplish goals.
+						</p>				
+						<p>
+							<strong>The UC Berkeley Graduate School of Education Academic Talent Development Program (ATDP)</strong> is designed to do just that - to challenge you and sharpen your academic profile for your future educational pursuits. This experience provides valuable exposure to American education at a world-renowned university, allowing for international students to develop independent critical thinking skills, get a taste of American campus life, and participate in exciting cultural events and tours.
+						</p>				
+						<p>
+							This is more than a recreational summer camp or an elite college campus tour; <strong>ATDP is an academic enrichment program</strong> that promotes learning and academic exploration, giving motivated students a priceless learning opportunity.
+						</p>
+					</div>
+				</div>
+				<div class="flexRow justifyCenter pushUp">
+					<img class="flex80 boxShadow-up" src="images/atdp/students-at-memorial-glade.jpg" alt="ATDP students at memorial glade" />
+				</div>
+			</article>			<!-- End of Introduction Article -->
+		</section>  <!-- ====== End of Introduction ======  -->
+
+
+		<!-- ====== Overview ======  -->
+		<section id="atdp-overview" class="marginTop">
+			<h2 class="divHeader padding-5-0 textBetweenLine">Program Overview</h2>
+			<div class="flexRow justifyCenter padding-0-2 textCenter">
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/calendar.png" alt="calendar" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Dates
+					</div>
+					<div class="padding-2-0">
+						July 10 - August 07, 2021<br>(4 weeks)
+					</div>
+				</div>				
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/accomplishment.png" alt="accomplishment" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Awards
+					</div>
+					<div>
+						<ul class="firstTier circle textLeft">
+							<li>ATDP certificate and evaluation report by <i>UC Berkeley, Graduate School of Education</i>
+							</li>
+							<li>Service learning hours and certificate by City of Berkeley organizations
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/staff.png" alt="staffing" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Staffing
+					</div>
+					<div class="padding-2-0">
+						Talented and diverse UC Berkeley students of different academic backgrounds as residential counselors
+					</div>
+				</div>
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/service.png" alt="service learning" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Service Learning
+					</div>
+					<div class="padding-2-0">
+						About 4 hours/week with community service, environmental research, and fundraising programs
+					</div>
+				</div>
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/culture.png" alt="culture activities" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Cultural Activities
+					</div>
+					<div class="padding-2-0">
+						High-value extracurricular activities on weekends and some weekdays that are educational, fun and cultural, and that foster building international friendships
+					</div>
+				</div>
+				<div class="flex85 flex50-sm flex45-md flex30-lg padding-2-2 flexColumn alignCenter boxShadowOnHover">
+					<div>
+						<img class="flexIcon" src="icons/program/curriculum.png" alt="curriculum" />
+					</div>
+					<div class="iconTitle smallCaps">
+						Curriculum
+					</div>
+					<div>
+						<ul class="firstTier circle textLeft padding-0-2">
+							<li>Architecture Track</li>
+							<li>Business Track</li>
+							<li>Engineering Track</li>
+							<li>Science Track</li>
+							<li>Social Studies Track</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>		<!-- ====== End of Overview ======  -->
+
+
+		<!-- ====== Eligibility ======  -->
+		<section id="atdp-eligibility" class="marginTop school">
+			<div class="padding-5-0 margin-0-5">
+				<h2 class="divHeader">Application Eligibility</h2>
+				<div class="flexRow justifyAround">
+					<figure class="flex75 flex50-sm flex25-xl flexColumn margin-2-0 padding-0-1">
+						<img class="width100" src="images/atdp/atdp-elig-1.jpg" alt="atdp students"/>
+						<figcaption class="flex whiteBg padding-2-2 boxShadow">
+							Academically talented students with decent English proficiency
+						</figcaption>	
+					</figure>
+					<figure class="flex75 flex50-sm flex25-xl flexColumn margin-2-0 padding-0-1">
+						<img class="width100" src="images/atdp/atdp-elig-2.jpg" alt="atdp students"/>
+						<figcaption class="flex whiteBg padding-2-2 boxShadow">
+							Motivatedated students who would like to develop independent learning skills and experience American culture and campus life
+						</figcaption>
+					</figure>
+					<figure class="flex75 flex50-sm flex25-xl flexColumn margin-2-0 padding-0-1">
+						<img class="width100" src="images/atdp/atdp-elig-3.jpg" alt="atdp students"/>
+						<figcaption class="flex whiteBg padding-2-2 boxShadow">
+							Students who aspire to apply to elite U.S. universities and to study pre-college subjects
+						</figcaption>
+					</figure>
+					<figure class="flex75 flex50-sm flex25-xl flexColumn margin-2-0 padding-0-1">
+						<img class="width100" src="images/atdp/atdp-elig-4.jpg" alt="atdp studnets"/>
+						<figcaption class="flex whiteBg padding-2-2 boxShadow">
+							High school students completing grades 8-11, while grade 7 & 8 may be eligible
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>		<!-- ====== End of Eligibility ======  -->
+
+
+		<!-- ====== Admission ======  -->
+		<section id="atdp-admission" class="marginTop margin-0-2">
+			<div class="flexRow alignCenter">
+		    <div id="flexBg-atdp-admission" class="flexHalf flexImg">
+		    </div>
+				<div class="flexHalf flexText marginTop-50-0">
+					<h2 class="divHeader">Admission Requirements</h2>
+					<div class="padding-2-2">
+						<ul class="firstTier check">
+							<li>Application fee</li>
+							<li>Application form</li>
+							<li>Essay</li>
+							<li>Grade report</li>
+							<li>Resume</li>
+							<li>Teacher's recommendation</li>
+							<li>Video interview</li>
+						</ul>
+					</div>
+		    </div>
+		  </div>				
+		</section>		<!-- ====== End of Admission ======  -->
+
+
+		<!-- ====== Fee ======  -->
+		<section id="atdp-fee" class="margin-0-2">
+			<div class="flexRow alignCenter">
+				<div class="flexHalf flexText flexOrder-2-1 marginTop-50-0">
+					<h2 class="divHeader">Pregram Fee</h2>
+					<div class="padding-2-2">
+						<ul class="firstTier check">
+							<li><strong class="persianGreen">Including:</strong> Tuition, Room & board, Linens, Insurance, Service learning opportunities, Residential counselors & tutoring, Excursions & activities, Airport & group transportation, Miscellaneous fees</li>
+						</ul>
+						<ul class="firstTier minus">
+							<li><strong class="persianGreen">Not including:</strong> Airfare, B-2 visa, Textbooks & class materials, Personal expenses</li>
+						</ul>
+					</div>
+		    </div>
+		    <div id="flexBg-atdp-fee" class="flexHalf flexImg marginTop-50-0 flexOrder-1-2">
+		    </div>
+		  </div>				
+		</section>		<!-- ====== End of Fee ======  -->
+
+
+		<!-- ====== Curriculum ======  -->
+		<section id="atdp-curriculum" class="marginTop margin-0-2">
+			<div class="dotLine">
+			  <span class="dotLineStar"></span>
+			  <span class="dotLineStar"></span>
+			  <span class="dotLineStar"></span>
+			</div>
+			<h2 class="divHeader margin-2-0">Curriculum & Courses</h2>
+
+			<div class="curriculum">
+				<!-- Slider main container -->
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+				  <div class="swiper-wrapper">
+				  	<!-- Slides -->
+				    <div id="bnrBg-atdp-curriculum-architecture" class="swiper-slide textCenter paddingTop-10vh">
+				    	<div class="whiteFont montserrat">
+			    			<h2>Architecture Track</h2>
+			    			<a href="berkeley-atdp-courses.php#architecture" class="myBtn myBtn-viewCourse">View Courses</a>
+			    		</div>
+				    </div>
+				    <div id="bnrBg-atdp-curriculum-business" class="swiper-slide textCenter paddingTop-10vh">
+				    	<div class="whiteFont montserrat">
+			    			<h2>Business Track</h2>
+			    			<a href="berkeley-atdp-courses.php#business" class="myBtn myBtn-viewCourse">View Courses</a>
+			    		</div>
+				    </div>
+				    <div id="bnrBg-atdp-curriculum-engineering" class="swiper-slide textCenter paddingTop-10vh">
+				    	<div class="whiteFont montserrat">
+			    			<h2>Engineering Track</h2>
+			    			<a href="berkeley-atdp-courses.php#engineering" class="myBtn myBtn-viewCourse">View Courses</a>
+			    		</div>
+				    </div>
+				    <div id="bnrBg-atdp-curriculum-science" class="swiper-slide textCenter paddingTop-10vh">
+				    	<div class="whiteFont montserrat">
+			    			<h2>Science Track</h2>
+			    			<a href="berkeley-atdp-courses.php#science" class="myBtn myBtn-viewCourse">View Courses</a>
+			    		</div>
+				    </div>
+				    <div id="bnrBg-atdp-curriculum-social-studies" class="swiper-slide textCenter paddingTop-10vh">
+				    	<div class="whiteFont montserrat">
+			    			<h2>Social Studies Track</h2>
+			    			<a href="berkeley-atdp-courses.php#social-studies" class="myBtn myBtn-viewCourse">View Courses</a>
+			    		</div>
+				    </div>
+				  </div>
+				  <!-- Pagination -->
+				  <div class="swiper-pagination"></div>
+				  <!-- Navigation Arrows -->
+				  <div class="swiper-button-next whiteFont"></div>
+				  <div class="swiper-button-prev whiteFont"></div>
+				</div>   <!-- End of Slider container -->
+			</div>
+		</section>		<!-- ====== End of Curriculum ======  -->
+
+
+		<!-- ====== Gallery ======  -->
+		<section id="atdp-gallery" class="marginTop marginBottom">
+			<h2 class="divHeader margin-2-0 textBetweenLine">Extracuriculum Activities</h2>
+			<!-- Swiper Coverflow -->
+			<div class="gallery margin-0-2">
+				<div class="swiper-container">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-1.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-2.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-3.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-4.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-5.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-6.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-7.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-8.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-9.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-10.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-11.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-12.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-13.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-14.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-15.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-16.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-17.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-18.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-19.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-20.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-21.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-22.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-23.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-24.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-25.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-26.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-27.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-28.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-29.jpg)"></div>
+				    <div class="swiper-slide" style="background-image:url(images/atdp/gallery/atdp-gallery-30.jpg)"></div>
+				  </div> <!-- End of Swiper Wrapper -->
+				  <!-- Add Pagination -->
+				  <div class="swiper-pagination"></div>
+				</div>  <!-- End of Swiper Container -->
+			</div> 	<!-- End of Swiper Coverflow -->
+		</section> 		<!-- ====== End of Gallery ====== -->
+
+
+		<!-- ====== Image Banner ======  -->
+		<section id="bnrBg-ucb-overlook" class="marginTop">
+			<div class="mainBnrBg bnrContainer">
+				<div class="gradientOverlay-top-w"></div>
+				<div class="textCenter">
+					<div class="bnrTitle absolute padding-5-0">
+						<span class="displayBlock gold fondamento font-L"><i>All the flowers of tomorrow</i></span>
+						<span class="displayBlock gold fondamento font-L"><i>are in the seeds of today</i></span>
+						<span class="displayBlock blue fondamento font-XL"><i>Berkeley is my Dream School</i></span>
+					</div>
+				</div>
+			</div>
+		</section>		<!-- ====== End of Image Banner ======  -->
+
+
+	</main>   <!-- ====== End of Main ======  -->
+
+
+	<!-- ====== Footer ======  -->
+	<footer>
+		<div class="flexRow padding-0-5">
+			<!-- Company Info -->
+			<div class="flexHalf marginTop">			
+				<div class="footerRow">
+				  <div class="coName">
+				  	<a href="index.php">
+					  	<h3 id="coName">CFM Educational Services</h3>
+					  	<h3 id="coSlogan">Education with Integrity.</h3>
+					  </a>
+				 	</div>
+				  <div class="coMedia">
+					 	<a href="https://www.facebook.com/cfmeducation/"><img src="icons/media/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.facebook.com/cfm.berkeley.atdp/"><img src="icons/media/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.instagram.com/berkeley_summer/"><img src="icons/media/instagram.png" alt="Instagram"/></a>
+					 	<a href="https://www.youtube.com/user/cfmeducation"><img src="icons/media/youtube.png" alt="YouTube"/></a>
+					 	<a href="https://twitter.com/cfmeducation"><img src="icons/media/twitter.png" alt="Twitter"/></a>
+				  </div>
+				</div>
+				<div id="coAbout" class="footerRow">
+					<a href="about.php"><i class="fa fa-user" aria-hidden="true"></i> ABOUT US</a>
+					<a href="about.php#testimonials"><i class="fa fa-comments" aria-hidden="true"></i> TESTIMONIALS</a>
+					<a href="sitemap.php"><i class="fa fa-sitemap" aria-hidden="true"></i> SITE MAP</a>
+				</div>
+				<div id="coContact" class="footerRow">
+					<ul>
+						<li><a href="mailto:cfm@cfmedu.com"><i class="fa fa-envelope" aria-hidden="true"></i> cfm@cfmedu.com</a></li>
+						<li><a href="tel:15104400254"><i class="fa fa-phone-square" aria-hidden="true"></i> +1 (510) 440-0254</a></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> 831 San Marco Avenue, Fremont, CA 94539, USA</li>
+					</ul>
+		   	</div>
+				<div id="searchBar" class="footerRow">
+					Search Site: 
+					<script async src="https://cse.google.com/cse.js?cx=010718062103033866532:6ifanfasqh4"></script>
+					<div class="gcse-search"></div>
+		   	</div>
+		 	</div>  <!-- End of Compnay Info -->
+			
+			<!-- Program Links -->
+			<div class="flexHalf footerRow footerBox">
+				<figure class="progBox atdp montserrat">
+			    <figcaption><a href="berkeley-atdp.php">ATDP</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-atdp-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-atdp.php#atdp-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox lsi montserrat">
+			    <figcaption><a href="berkeley-lsi.php">LSI</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-lsi-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-lsi.php#lsi-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox wfcc montserrat">
+			    <figcaption><a href="berkeley-wfcc.php">WFCC</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-wfcc-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox ssd montserrat">
+			    <figcaption><a href="berkeley-ssd.php">SSD</a></figcaption>
+			    <ul>
+		        <li><a class="externalLink" href="https://classes.berkeley.edu/" target="_blank"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-ssd.php#ssd-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox ofk montserrat">
+			    <figcaption><a href="ofk.php">OFK</a></figcaption>
+			    <ul>
+		        <li><a href="ofk.php#ofk-curriculum"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="ofk.php#ofk-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox walex montserrat">
+			    <figcaption><a href="berkeley-walex.php">WALEX</a></figcaption>
+			    <ul>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+			</div>  <!-- End of Program Links -->
+	  </div>
+			
+		<div class="copyright">
+			Copyright &copy; 2020 CFM Educational Services. All rights reserved.
+		</div>
+
+
+
+	</footer>   <!-- ====== End of Footer ======  -->
+
+
+	<script src="js/main.js"></script>
+	<script src="js/animation.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+  <script src="fresco/dist/js/fresco.min.js"></script>
+	
+	<!-- Initialize Swiper -->
+	<script>
+	  var swiper = new Swiper('#atdp-curriculum .swiper-container', {
+	    slidesPerView: 1,
+	    spaceBetween: 30,
+	    keyboard: {
+	      enabled: true,
+	    },
+	    loop: true,
+	    pagination: {
+	      el: '.swiper-pagination',
+	      clickable: true,
+	    },
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	  });
+	</script>
+
+	<script>
+	  var swiper = new Swiper('#atdp-gallery .swiper-container', {
+	    effect: 'coverflow',
+	    grabCursor: true,
+	    centeredSlides: true,
+	    loop: true,
+	    slidesPerView: 'auto',
+	    coverflowEffect: {
+	      rotate: 50,
+	      stretch: 0,
+	      depth: 100,
+	      modifier: 1,
+	      slideShadows: true,
+	    },
+	    pagination: {
+	      el: '.swiper-pagination',
+	    },
+	  });
+	</script>
+
+
+
+</body>
+</html>

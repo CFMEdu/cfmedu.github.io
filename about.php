@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>About | CFM Educational Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CFM Educational Services - We provide summer academic enrichment programs.">
+  
+  <!-- Vendor -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="fresco/dist/css/fresco.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- Local -->
+  <link rel="shortcut icon" href="icons/logo/cfm-favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/bg-images.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<!-- ====== Header/Navigation ======  -->
+	<header>
+		<nav class="navBar">			
+			<div class="navLogo">
+				<a href="index.php">
+					<img src="icons/logo/cfm-logo.png" alt="CFM logo"/>
+				</a>
+			</div>
+			<div class="navToggle">
+				<span class="iconBar"></span>
+		    <span class="iconBar"></span>
+		    <span class="iconBar"></span>
+			</div>
+			<div class="navMenu">
+				<ul>
+					<li><a href="about.php" class="navDeco selected">About</a>
+						<ul class="navDropdown">
+							<li><a href="about.php#mission">Our Mission</a></li>
+							<li><a href="about.php#testimonials">Testimonials</a></li>
+						</ul>
+					</li>
+					<li><a href="berkeley.php" class="navDeco">UC Berkeley</a>
+						<ul class="navDropdown">
+							<li><a href="berkeley-atdp.php">ATDP</a></li>
+							<li><a href="berkeley-lsi.php">LSI</a></li>
+							<li><a href="berkeley-ssd.php">SSD</a></li>
+							<li><a href="berkeley-walex.php">WALEX</a></li>
+							<li><a href="berkeley-wfcc.php">WFCC</a></li>
+						</ul>
+					</li>
+					<li id="svsd"><a href="silicon-valley-school-district.php" class="navDeco">Silicon Valley School Dist.</a>
+						<ul class="navDropdown">
+							<li><a href="ofk.php">OFK</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.php" class="navDeco">Contact Us</a>
+					</li>				
+				</ul>
+			</div>	
+		</nav> 
+	</header>    <!-- ====== End Header/Navigation ======  -->
+
+
+	<!-- ====== Main Content ======  -->
+	<main>
+
+
+		<!-- ====== Top Banner ======  -->
+		<section>
+			<div id="bnrBg-about" class="bnrContainer">
+				<div class="gradientOverlay-right"></div>
+				<div class="gradientOverlay-bottom"></div>
+				<!-- <div class="gradientOverlay-left"></div> -->
+				<div class="bnrContent-bl"
+						 data-center-center="opacity: 1"
+             data-0-top="opacity: 0">
+					<h1 class="bnrTitle montserrat">
+						About
+					</h1>
+				</div>
+			</div>
+		</section>		<!-- ====== End of Top Banner ======  -->
+
+		
+		<!-- ====== Subnavigation ======  -->
+		<section>
+      <div id="checkDiv"></div>
+		  <div class="subNavigation">
+		    <a href="#about">About CFM</a>
+	      <a href="#mission">Our Mission</a>
+	      <a href="#testimonials">Testimonials</a>
+	    </div>
+		</section>		<!-- ====== End of Subnavigation ======  -->
+
+
+		<section>
+			<!-- ====== About CFM ======  -->
+			<article id="about" class="marginTop">
+				<div class="textContainer">
+					<h1 class="divHeader">
+						CFM Educational Services
+					</h1>
+					<p>
+						Founded in 1991 in the Silicon Valley, CFM Educational Services (CFM) for more than 20 years partnered with universities and educational organizations across North America, Europe, and Asia to establish, manage, and recruit for both academic and training programs specifically designed to meet the needs of international students. Programs ranged from Business Administration and Management, TESOL, Educational Administration, Montessori Childhood Education, Sports Management, Emergency Management, etc. at various levels of academic degree and professional certification. CFM has accumulated extensive experience in providing credible international education and reliable student services.
+					</p>
+					<p>
+						Most recently since 2013, CFM has been devoting in the development and management of short-term academic enrichment programs for young learners partnering with institution entities at UC Berkeley and in the Silicon Valley education community. Our students select the program that best fits their own academic and professional goals, staying up to date with global trends and developing competency across a variety of disciplines - such as architecture, business, engineering, humanities, law, programming, social studies, and a variety of STEM subjects. Together with these outstanding academic enrichment programs, “<strong><a href="berkeley.php">CFM Summer @UC Berkeley</a></strong>” is a trustworthy representation of education quality and integrity.
+					</p>
+				</div>
+			</article>   <!-- ====== End of About CFM ======  -->
+
+
+			<!-- ====== Our Mission ======  -->
+			<section id="mission" class="marginTop"> 
+		    <div class="glassOverlayWrapper">
+		      <div class="glassOverlayWindow">
+		      </div>
+		      <div class="glassOverlayText">
+		        <h2 class="divHeader textBetweenDoubleLine">Our Mission</h2>
+	          <h3 class="IMFellGreatPrimer">
+	          	It is through education that we hope to make an impact in our society and individual lives. We do education with integrity.
+	          </h3>
+		      </div>
+		    </div>
+			</section> <!-- ====== End of Our Mission ======  -->
+
+
+			<!-- ====== Testimonials ======  -->
+			<section id="testimonials" class="marginTop marginBottom">
+				<h2 class="divHeader">
+					What Our Students and Parents Said
+				</h2>
+				<!-- Slider main container -->
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+				  <div class="swiper-wrapper">
+				  	<!-- Slides -->
+				  	<div class="swiper-slide">
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">I hope this email finds you very well after the tough task for taking care of those teenage adults. Chloe has been back for about a week and she has been missing those good days in UC Berkeley very much. On behalf of my family, I would like to thank you and your ATDP team for all of these arrangements in this special summer, which really provide Chloe an incredible memory and rich enlightenment to her future life. Thanks a lot again for this special summer to her and to our family.</q>
+					  	  <p class="author">— Chloe’s father</p>
+					  	</article>
+					  </div>
+					  <div class="swiper-slide">
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">Thank you for the weekly updates, and really appreciate all you did for the students. I hope they should learn to be grateful for all your efforts. Thank you again for what you taught, all you did to let them be a better one. I saw Lawrence posted things in WeChat these two days which I can feel his sad for leaving soon, looks he really enjoyed the 1 month study and school life, I think all kids had a wonderful time in Berkeley, and you deserve thousands of thanks from parents. Thanks again, and hope he can have another opportunity to be back to Berkeley again.</q>
+					  	  <p class="author">— Lawrence’s mother</p>
+					  	</article>
+					  </div>
+					  <div class="swiper-slide">
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">We are Natalie's parents. We really appreciate what you and your colleagues have done this summer during ATDP program. It's a great and unforgettable experience for Natalie. She told us a lot of things in these four weeks, knowing many many new friends. She has confirmed to take architecture as her major, and UC Berkeley is her primary target university. She is now working very hard on this. Here we want to say thanks again to whole ATDP team who organized such wonderful program.</q>
+					  	  <p class="author">— Natalie’s parents</p>
+					  	</article>
+					  </div>
+					  <div class="swiper-slide">
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">In OFK summer program, I have learn about the Geometry. So I can improve my math and also I learn about the way that USA in class. I learned how to take a picture that use in the newspaper and try to sue Photoshop and edit the picture to put in the newspaper. Specially math is harder, but the teacher is good, so she let us understand how math works. I have lot more fun in OFK summer program!</q>
+					  	  <p class="author">— Tom</p>
+					  	</article>
+					  </div>
+					  <div class="swiper-slide">	
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">My husband and I would like to say thank you to you and all the CFM staff members for taking care of Caroline for the past 2 weeks. She really enjoyed meeting new friends from all over the world and learning new things at the same time.I hope you have a great summer.</q>
+					  	  <p class="author">— Fonny</p>
+					  	</article>
+					  </div>
+					  <div class="swiper-slide">	
+					  	<article class="testimonialSlides boxShadow">
+					  	  <q class="whatTheySay montserrat">Glad to inform that Tiffany has arrived home safely this morning. Thank you so much for your team and your special care towards Tiffany. I hope that we can have a chance to meet up next time when you return to Taipei in upcoming January. Even though we haven't officially met but you feel like a very old friend to me. My husband and I would like to show my sincere appreciation face to face with you for everything that you have supported to Tiffany. I think that Tiffany should have learned a lot from this summer program with ATDP. I really cherish your kindness towards Tiffany not only during her illness but also your life experience sharing just like a god mother to her.</q>
+					  	  <p class="author">— Tiffany’s mother</p>
+					  	</article>
+					  </div>	
+				  </div>
+				  <!-- Pagination -->
+				  <div class="swiper-pagination"></div>
+				  <!-- Navigation Arrows -->
+				  <div class="swiper-button-next whiteFont"></div>
+				  <div class="swiper-button-prev whiteFont"></div>
+				</div>   <!-- End of Slider container -->
+			</section>   <!-- ====== End of Testimonials ======  -->
+		
+		</section>   <!-- ====== End of About CFM ======  -->
+
+	</main>   <!-- ====== End of Main ======  -->
+
+
+	<!-- ====== Footer ======  -->
+	<footer>
+		<div class="flexRow padding-0-5">
+			<!-- Company Info -->
+			<div class="flexHalf marginTop">			
+				<div class="footerRow">
+				  <div class="coName">
+				  	<a href="index.php">
+					  	<h3 id="coName">CFM Educational Services</h3>
+					  	<h3 id="coSlogan">Education with Integrity.</h3>
+					  </a>
+				 	</div>
+				  <div class="coMedia">
+					 	<a href="https://www.facebook.com/cfmeducation/"><img src="icons/media/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.facebook.com/cfm.berkeley.atdp/"><img src="icons/media/facebook.png" alt="Facebook"/></a>
+					 	<a href="https://www.instagram.com/berkeley_summer/"><img src="icons/media/instagram.png" alt="Instagram"/></a>
+					 	<a href="https://www.youtube.com/user/cfmeducation"><img src="icons/media/youtube.png" alt="YouTube"/></a>
+					 	<a href="https://twitter.com/cfmeducation"><img src="icons/media/twitter.png" alt="Twitter"/></a>
+				  </div>
+				</div>
+				<div id="coAbout" class="footerRow">
+					<a href="about.php"><i class="fa fa-user" aria-hidden="true"></i> ABOUT US</a>
+					<a href="about.php#testimonials"><i class="fa fa-comments" aria-hidden="true"></i> TESTIMONIALS</a>
+					<a href="sitemap.php"><i class="fa fa-sitemap" aria-hidden="true"></i> SITE MAP</a>
+				</div>
+				<div id="coContact" class="footerRow">
+					<ul>
+						<li><a href="mailto:cfm@cfmedu.com"><i class="fa fa-envelope" aria-hidden="true"></i> cfm@cfmedu.com</a></li>
+						<li><a href="tel:15104400254"><i class="fa fa-phone-square" aria-hidden="true"></i> +1 (510) 440-0254</a></li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> 831 San Marco Avenue, Fremont, CA 94539, USA</li>
+					</ul>
+		   	</div>
+				<div id="searchBar" class="footerRow">
+					Search Site: 
+					<script async src="https://cse.google.com/cse.js?cx=010718062103033866532:6ifanfasqh4"></script>
+					<div class="gcse-search"></div>
+		   	</div>
+		 	</div>  <!-- End of Compnay Info -->
+			
+			<!-- Program Links -->
+			<div class="flexHalf footerRow footerBox">
+				<figure class="progBox atdp montserrat">
+			    <figcaption><a href="berkeley-atdp.php">ATDP</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-atdp-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-atdp.php#atdp-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox lsi montserrat">
+			    <figcaption><a href="berkeley-lsi.php">LSI</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-lsi-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-lsi.php#lsi-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox wfcc montserrat">
+			    <figcaption><a href="berkeley-wfcc.php">WFCC</a></figcaption>
+			    <ul>
+		        <li><a href="berkeley-wfcc-courses.php"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox ssd montserrat">
+			    <figcaption><a href="berkeley-ssd.php">SSD</a></figcaption>
+			    <ul>
+		        <li><a class="externalLink" href="https://classes.berkeley.edu/" target="_blank"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="berkeley-ssd.php#ssd-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox ofk montserrat">
+			    <figcaption><a href="ofk.php">OFK</a></figcaption>
+			    <ul>
+		        <li><a href="ofk.php#ofk-curriculum"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a href="ofk.php#ofk-gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+				<figure class="progBox walex montserrat">
+			    <figcaption><a href="berkeley-walex.php">WALEX</a></figcaption>
+			    <ul>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Courses</a></li>
+		        <li><a class="noLink"><i class="fa fa-angle-right" aria-hidden="true"></i> Gallery</a></li>
+			    </ul>
+			  </figure>
+			</div>  <!-- End of Program Links -->
+	  </div>
+			
+		<div class="copyright">
+			Copyright &copy; 2020 CFM Educational Services. All rights reserved.
+		</div>
+
+
+
+	</footer>   <!-- ====== End of Footer ======  -->
+
+
+  <script src="fresco/dist/js/fresco.min.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/animation.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		  var swiper = new Swiper('.swiper-container', {
+		    slidesPerView: 1,
+		    autoHeight: true,
+		    spaceBetween: 30,
+		    keyboard: {
+		      enabled: true,
+		    },
+		    loop: true,
+		    pagination: {
+		      el: '.swiper-pagination',
+		      clickable: true,
+		    },
+		    navigation: {
+		      nextEl: '.swiper-button-next',
+		      prevEl: '.swiper-button-prev',
+		    },
+		  });
+	</script>
+
+	<script>
+		$(function() {
+		  $(document).on("scroll", onScroll);
+
+		  $(".navMenu a, .subNavigation a").on('click', function(e) {
+		    if (this.hash !== "") {
+		      e.preventDefault();
+		      $(document).off("scroll");
+
+		      $("a").each(function() {
+		        $(this).removeClass("active");
+		      });
+		      $(this).addClass("active");
+		      
+		      var hash = this.hash;
+
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top - $('.navBar').height() - $('.subNavigation').height()
+		      }, 800, 'swing', function(){
+		        // window.location.hash = hash;
+		        $(document).on("scroll", onScroll);
+		      });
+		    }
+		  });
+		});
+	</script>
+
+</body>
+</html>
