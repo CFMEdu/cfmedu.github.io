@@ -361,7 +361,7 @@
 #bnrBg-walex {
   background-image: url("../images/walex/bg-walex.jpg");
   background-size: cover; 
-  background-position: 100% 80%;
+  background-position: 50% 100%;
 }
 #bnrBg-walex-intro {
   background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.3)), url("../images/walex/walex-digital-globe.jpg");
@@ -573,4 +573,13 @@
   bottom: 0;
   right: 0;
   z-index: -1;   
+}
+
+/* =========================
+# Contact Us
+========================= */
+#bnrBg-contact {
+  background-image: url("../images/contact/bg-contact.jpg");
+  background-size: cover; 
+  background-position: 50% 45%;
 }
