@@ -72,7 +72,7 @@
 	<main>
 
 		<!-- ====== Top Banner ======  -->
-		<section id="bnrBg-sitemap">  
+		<section id="bnrBg-contact">  
 			<div class="bnrContainer">
 				<div class="gradientOverlay-bottom"></div>
 				<div class="gradientOverlay-left"></div>
@@ -86,51 +86,47 @@
 			</div>
 		</section> 		<!-- ====== End of Top Banner ======  -->
 
-
-		<!-- ====== Site Map ======  -->
-		<section id="sitemap" class="padding-0-5">
-			<div class="marginTop marginBottom">
-				<h2><a href="index.html">Home</a></h2>
-				<h2><a href="about.html">About</a></h2>
-					<ul class="firstLevel">
-						<li class="flex100 flex50-sm flex30-md flex20-lg"><a href="about.html#about">About CFM</a></li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg"><a href="about.html#mission">Our Mission</a></li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg"><a href="about.html#testimonials">Testimonials</a></li>
-					</ul>
-				<h2><a href="berkeley.html">UC Berkeley</a></h2>
-					<ul class="firstLevel">
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="berkeley-atdp.html">ATDP</a>
-							<a class="flex65" href="berkeley-atdp-courses.html">Courses</a>
-						</li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="berkeley-lsi.html">LSI</a>
-							<a class="flex65" href="berkeley-lsi-courses.html">Courses</a>
-						</li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="berkeley-ssd.html">SSD</a>
-							<a class="flex65" href="https://classes.berkeley.edu/" target="_blank">Courses <i class="fa fa-external-link" aria-hidden="true"></i></a>
-						</li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="berkeley-walex.html">WALEX</a>
-							<a class="flex65 noLink">Courses</a>
-						</li>
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="berkeley-wfcc.html">WFCC</a>
-							<a class="flex65" href="berkeley-wfcc-courses.html">Courses</a>
-						</li>
-					</ul>
-				<h2><a href="silicon-valley-school-district.html">Silicon Valley School District</a></h2>
-					<ul class="firstLevel">
-						<li class="flex100 flex50-sm flex30-md flex20-lg">
-							<a class="flex35" href="ofk.html">OFK</a>
-							<a class="flex65" href="ofk.html#ofk-curriculum">Courses</a>
-						</li>
-					</ul>
-				<h2><a href="contact.html">Contact Us</a></h2>
-				<h2><a href="sitemap.html">Site Map (this page)</a></h2>
+		<!-- ====== Contact Form ======  -->
+		<section class="textContainer">
+			<h2 class="padding-5-0">Send Us a Message</h2>
+			<div class="flexRow justifyBetween marginBottom">
+				<div class="flex100 flex45-lg">
+					<form action="contact.php" method="post">
+					  <div class="elemGroup">
+					    <label>Name <span class="flamingo superscript">*</span></label>
+							<input type="text" id="name" name="Visitor_name" required>
+					  </div>
+					  <div class="elemGroup">`
+					    <label for="email">Email <span class="flamingo superscript">*</span></label>
+					    <input type="email" id="email" name="visitor_email" required>
+					  </div>
+					  <div class="elemGroup">
+					    <label for="title">Subject <span class="flamingo superscript">*</span></label>
+					    <input type="text" id="subject" name="email_subject" required>
+					  </div>
+					  <div class="elemGroup">
+					    <label for="message">Message <span class="flamingo superscript">*</span></label>
+					    <textarea id="message" name="visitor_message" required></textarea>
+					  </div>
+					  <button class="btn" type="submit">Send Message</button>
+					</form>
+				</div>
+				<div class="flex100 flex45-lg marginTop-50-0">
+					<div class="padding-2-0">
+						<span class="displayBlock font-S"><i class="fa fa-home" aria-hidden="true"></i> Office Address:</span>
+						<span class="font-XS"><a href="https://bit.ly/2UoKWOY" target="_blank">831 San Marco Avenue<br>Fremont 94539, USA</a></span>
+					</div>
+					<div class="padding-2-0">
+						<span class="displayBlock font-S"><i class="fa fa-envelope" aria-hidden="true"></i> Email:</span>
+						<span class="font-XS"><a href="mailto:cfm@cfmedu.com">cfm@cfmedu.com</a></span>
+					</div>
+					<div class="padding-2-0">
+						<span class="displayBlock font-S"><i class="fa fa-phone-square" aria-hidden="true"></i> Phone:</span>
+						<span class="font-XS"><a href="tel:15104400254">+1 (510) 440-0254</a></span>
+				</div>
+				</div>
 			</div>
-		</section>   <!-- ====== End of Site Map ======  -->
+		</section>
 
 
 	</main>   <!-- ====== End of Main ======  -->
@@ -231,11 +227,10 @@
 	</footer>   <!-- ====== End of Footer ======  -->
 
 
-	<script src="js/main.js"></script>
-	<script src="js/animation.js"></script>
+  <script src="fresco/dist/js/fresco.min.js"></script>
 	<script src="js/skrollr.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
-  <script src="fresco/dist/js/fresco.min.js"></script>
+	<script src="js/main.js"></script>
 
 
 
