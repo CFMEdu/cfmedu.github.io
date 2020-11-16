@@ -94,12 +94,18 @@
 					<!-- Form -->
 					<form  method="post" action="send.php" id="contact-form">
 
-					  <div class="elemGroup">
-					    <label>Name <span class="flamingo superscript">*</span></label>
-							<input type="text" id="name" name="name" required>
+					  <div class="elemGroup flexRow justifyBetween">
+					  	<div>
+						    <label for="fname">First Name <span class="flamingo superscript">*</span></label>
+								<input type="text" id="fname" name="fname" required>
+							</div>
+							<div>
+						    <label for="lname">Last Name <span class="flamingo superscript">*</span></label>
+								<input type="text" id="lname" name="lname" required>
+							</div>
 					  </div>
 					  
-					  <div class="elemGroup">`
+					  <div class="elemGroup">
 					    <label for="email">Email <span class="flamingo superscript">*</span></label>
 					    <input type="email" id="email" name="email" required>
 					  </div>
