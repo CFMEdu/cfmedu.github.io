@@ -2900,6 +2900,11 @@ ul.firstLevel li a:nth-child(2):before {
 .elemGroup {
   margin: 1.5% auto;
 }
+.elemGroup.flexRow > div {
+  -ms-flex: 49%;
+  flex: 49%;
+  max-width: 49%;
+}
 .textContainer label {
   padding-bottom: 4px;
   font-size: 1.25em;
